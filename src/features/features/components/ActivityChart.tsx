@@ -22,6 +22,13 @@ export const ActivityChart = () => {
                         contentStyle={{backgroundColor: '#0f172a', border: '1px solid #1e293b'}}
                         itemStyle={{color: '#3b82f6'}}
                     />
+                    <Line 
+                        type="monotone"
+                        dataKey="count"
+                        stroke="#3b82f6"
+                        strokeWidth={2}
+                        dot={{ r: 4, fill: '#3b82f6'}}
+                    />
                 </LineChart>
             </ResponsiveContainer>
         </div>
