@@ -16,7 +16,12 @@ export const ActivityChart = () => {
             <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={data}>
                     <CartesianGrid strokeDasharray="3 2" stroke="#1e293b" />
-                    <XAxis dataKey="time" stroke="#64748b"/>
+                    <XAxis dataKey="time" stroke="#64748b" fontSize={12}/>
+                    <YAxis stroke="#64748b" fontSize={12}/>
+                    <Tooltip 
+                        contentStyle={{backgroundColor: '#0f172a', border: '1px solid #1e293b'}}
+                        itemStyle={{backgroundColor: '#3b82f6'}}
+                    />
                 </LineChart>
             </ResponsiveContainer>
         </div>
