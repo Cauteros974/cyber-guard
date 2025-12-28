@@ -3,5 +3,8 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 const data = [
     {time: '00:00', count: 10},
     {time: '04:00', count: 5},
-    {time: '08:00', count: 18}
+    {time: '08:00', count: 18},
+    { time: '12:00', count: 45 }, // Peak attacks at lunchtime
+    { time: '16:00', count: 30 },
+    { time: '20:00', count: 25 },
 ]
