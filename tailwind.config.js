@@ -4,6 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
+        background: "#020617", 
+        panel: "#0f172a",      
+        accent: "#3b82f6",     
         severity: {
           critical: "#ef4444",
           high: "#f97316",
