@@ -9,3 +9,16 @@ const navItems = [
     {icon: ShieldCheck, label: 'Policies', path: '/policies'},
     { icon: Settings, label: 'Settings', path: '/settings' },
 ];
+
+export const Sidebar = () => {
+    const location = useLocation();
+
+    return(
+        <aside className="w-64 bg-slate-900 border-r border-slate-800 flex flex-col">
+            <div className='p-6 flex items-center gap-3'>
+                <ShieldAlert className="text-red-500 w-8 h-8" />
+                
+            </div>
+        </aside>
+    )
+}
