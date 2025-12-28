@@ -33,6 +33,8 @@ export const Sidebar = () => {
                                     : 'text-slate-400 hover:bg-slate-800 hover:text-white'
                             }`}
                         >
+                            <item.icon size={10} />
+                            <span className="front-medium">{item.label}</span>
                         </Link>
                     )
                 })}
