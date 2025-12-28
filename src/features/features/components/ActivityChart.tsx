@@ -20,7 +20,7 @@ export const ActivityChart = () => {
                     <YAxis stroke="#64748b" fontSize={12}/>
                     <Tooltip 
                         contentStyle={{backgroundColor: '#0f172a', border: '1px solid #1e293b'}}
-                        itemStyle={{backgroundColor: '#3b82f6'}}
+                        itemStyle={{color: '#3b82f6'}}
                     />
                 </LineChart>
             </ResponsiveContainer>
