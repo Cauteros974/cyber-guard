@@ -13,6 +13,12 @@ export const ActivityChart = () => {
     return(
         <div className="h-[300px] w-full bg-panel p-6 rounded-xl border border-slate-800">
             <h3 className="text-lg font-simebold mb-4">Network Activity (24h)</h3>
+            <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={data}>
+                    <CartesianGrid strokeDasharray="3 2" stroke="#1e293b" />
+                    <XAxis dataKey="time" stroke="#64748b"/>
+                </LineChart>
+            </ResponsiveContainer>
         </div>
     )
 }
