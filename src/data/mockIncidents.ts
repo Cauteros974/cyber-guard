@@ -10,6 +10,5 @@ export const MOCK_INCIDENTS: Incident[] = [
     technique: "T1110.001",
     source: "192.168.1.105",
     timestamp: "2024-05-20T10:15:00Z"
-  },
-  
+  }
 ];
