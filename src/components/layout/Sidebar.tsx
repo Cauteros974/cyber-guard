@@ -21,8 +21,16 @@ export const Sidebar = () => {
             </div>
 
             <nav className="flex-1 px-4 space-y-2">
-                {navItems.map((items) => {
+                {navItems.map((item) => {
                     const isActive = location.pathname === item.path;
+                    return(
+                        <Link
+                            key={item.path}
+                            to={item.path}
+                            className={`flex items-center gap-3 px-4`}
+                        >
+                        </Link>
+                    )
                 })}
             </nav>
         </aside>
