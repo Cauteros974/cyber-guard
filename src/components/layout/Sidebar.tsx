@@ -36,9 +36,9 @@ export const Sidebar = () => {
                             <item.icon size={20} />
                             <span className="front-medium">{item.label}</span>
                         </Link>
-                    )
+                    );
                 })}
             </nav>
         </aside>
-    )
-}
+    );
+};
