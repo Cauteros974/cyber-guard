@@ -32,5 +32,5 @@ export const ActivityChart = () => {
                 </LineChart>
             </ResponsiveContainer>
         </div>
-    )
-}
+    );
+};
