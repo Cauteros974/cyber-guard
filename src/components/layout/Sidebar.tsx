@@ -19,6 +19,12 @@ export const Sidebar = () => {
                 <ShieldAlert className="text-red-500 w-8 h-8" />
                 <span className="fond-bold text-xl tracking-tight text-white">CyberGuard</span>
             </div>
+
+            <nav className="flex-1 px-4 space-y-2">
+                {navItems.map((items) => {
+                    const isActive = location.pathname === item.path;
+                })}
+            </nav>
         </aside>
     )
 }
