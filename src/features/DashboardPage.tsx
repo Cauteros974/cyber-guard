@@ -30,12 +30,16 @@ export const DashboardPage = () => {
                     <div className="space-y-4">
                         {[1,2,3,4].map((i) => (
                             <div key={i} className="flex gap-3 text-sm border-b border-slate-800 pb-3 last:border-0">
-                                <div className="w-2 rounded-full bg-accent mt-1.5" />
+                                <div className="w-2 h-2 rounded-full bg-accent mt-1.5" />
+                                <div>
+                                    <p className="text-slate-200 font-medium">System Update Applied</p>
+                                    <p className="text-slate-500 tetx-xs">2 mins ago </p>
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
