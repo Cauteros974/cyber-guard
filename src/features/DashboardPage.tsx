@@ -13,7 +13,9 @@ export const DashboardPage = () => {
             {/*Cards*/}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <StatCard title="Active Incidents" value={12} icon={ShieldAlert} color="text-red-500 bg-red-500" />
-                <StatCard title="Critical Threats" value={3} icon={Zap} color="text-orange-500" />
+                <StatCard title="Critical Threats" value={3} icon={Zap} color="text-orange-500 bg-orange-500" />
+                <StatCard title="Devices Online" value="1,240" icon={Monitor} color="text-blue-500 bg-blue-500" />
+                <StatCard title="Policy Compliance" value="98.2%" icon={ShieldCheck} color="text-green-500 bg-green-500" />
             </div>
         </div>
     )
