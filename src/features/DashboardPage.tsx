@@ -23,6 +23,16 @@ export const DashboardPage = () => {
                 <div className="lg:col-span-2">
                     <ActivityChart />
                 </div>
+
+                {/* Activity Feed (Quick list) */}
+                <div className="bg-panel p-6 rounded-xl border border-slate-800">
+                    <h3 className="text-lg font-semibold mb-4">Latest Events</h3>
+                    <div className="space-y-4">
+                        {[1,2,3,4].map((i) => (
+                            
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     )
