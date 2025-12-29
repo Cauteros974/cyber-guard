@@ -29,7 +29,9 @@ export const DashboardPage = () => {
                     <h3 className="text-lg font-semibold mb-4">Latest Events</h3>
                     <div className="space-y-4">
                         {[1,2,3,4].map((i) => (
-                            
+                            <div key={i} className="flex gap-3 text-sm border-b border-slate-800 pb-3 last:border-0">
+                                <div className="w-2 rounded-full bg-accent mt-1.5" />
+                            </div>
                         ))}
                     </div>
                 </div>
