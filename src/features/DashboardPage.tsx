@@ -17,6 +17,13 @@ export const DashboardPage = () => {
                 <StatCard title="Devices Online" value="1,240" icon={Monitor} color="text-blue-500 bg-blue-500" />
                 <StatCard title="Policy Compliance" value="98.2%" icon={ShieldCheck} color="text-green-500 bg-green-500" />
             </div>
+
+            <div className="grid grid-cols-1 gap-6">
+                {/*Main Chart*/}
+                <div className="lg:col-span-2">
+                    <ActivityChart />
+                </div>
+            </div>
         </div>
     )
 }
