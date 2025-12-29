@@ -33,7 +33,7 @@ export const DashboardPage = () => {
                                 <div className="w-2 h-2 rounded-full bg-accent mt-1.5" />
                                 <div>
                                     <p className="text-slate-200 font-medium">System Update Applied</p>
-                                    <p className="text-slate-500 tetx-xs">2 mins ago </p>
+                                    <p className="text-slate-500 text-xs">2 mins ago • WS-OFFICE-09</p>
                                 </div>
                             </div>
                         ))}
