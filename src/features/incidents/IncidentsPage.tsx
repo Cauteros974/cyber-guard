@@ -18,6 +18,9 @@ export const IncidentsPage = () => {
         }),
         columnHelper.accessor('title', {header: 'Incident Title'}),
         columnHelper.accessor('tactic', {header: 'Tactic'}),
-        columnHelper.accessor('status', { header: 'Status'}),
+        columnHelper.accessor('status', { 
+            header: 'Status',
+            cell: info => <span className="capitalize text-slate-400"></span>
+          }),
     ]
 }
