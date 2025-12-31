@@ -27,6 +27,5 @@ export const IncidentsPage = () => {
             header: 'Detected',
             cell: info => new Date(info.getValue()).toLocaleString()
         }),
-
-    ]
-}
+    ], []);
+};
