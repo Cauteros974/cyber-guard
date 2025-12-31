@@ -28,4 +28,10 @@ export const IncidentsPage = () => {
             cell: info => new Date(info.getValue()).toLocaleString()
         }),
     ], []);
+
+    const table = useReactTable({
+        data: incidents,
+        columns,
+        getCoreRowModel: getCoreRowModel(),
+    });
 };
