@@ -6,3 +6,9 @@ const styles: Record<Severity, string> = {
   medium: "bg-yellow-500/10 text-yellow-500 border-yellow-500/20",
   low: "bg-green-500/10 text-green-500 border-green-500/20",
 };
+
+export const SeverityBadge = ({ level }: { level: Severity }) => (
+  <span className={`px-2 py-1 rounded border text-[10px] font-bold uppercase ${styles[level]}`}>
+    {level}
+  </span>
+);
