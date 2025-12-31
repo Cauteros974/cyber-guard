@@ -34,4 +34,14 @@ export const IncidentsPage = () => {
         columns,
         getCoreRowModel: getCoreRowModel(),
     });
+
+    return(
+        <div className="space-y-6">
+            <header className="flex justify-berween items-center">
+                <div>
+                    <h1 className="text-2xl font-bold">Incidents Log</h1>
+                </div>
+            </header>
+        </div>
+    )
 };
