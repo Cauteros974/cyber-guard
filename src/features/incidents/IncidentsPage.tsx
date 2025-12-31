@@ -10,11 +10,13 @@ const columnHelper = createColumnHelper<Incident>();
 export const IncidentsPage = () => {
     const {incidents} = useIncidentStore();
 
-    const columns = useMemo() => [
+    const columns = useMemo(() => [
         columnHelper.accessor('id', { header: 'ID', cell: info => <span className="text-slate-500 font-mono">{info.getValue()}</span> }),
         columnHelper.accessor('severity', {
             header: 'Severity',
             cell: info => <SeverityBadge level={info.getValue()} />
-        }
+        }),
+        columnHelper.accessor('title', {header: 'Incident Title'}),
+        columnHelper.accessor('tactic', {header: 'Tactic'})
     ]
 }
