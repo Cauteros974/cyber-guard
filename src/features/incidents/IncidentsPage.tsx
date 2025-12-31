@@ -45,6 +45,16 @@ export const IncidentsPage = () => {
                     Export Report
                 </button>
             </header>
+
+            <div className="bg-panel rounded-xl border border-slate-800 overflow-hidden">
+                <table className="w-full text-left border-collaps">
+                    <thead className="bg-slate-800/50">
+                        {table.getHeaderGroups().map(headerGroup => (
+                            
+                        ))}
+                    </thead>
+                </table>
+            </div>
         </div>
     )
 };
