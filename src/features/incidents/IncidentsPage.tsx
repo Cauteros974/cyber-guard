@@ -17,6 +17,7 @@ export const IncidentsPage = () => {
             cell: info => <SeverityBadge level={info.getValue()} />
         }),
         columnHelper.accessor('title', {header: 'Incident Title'}),
-        columnHelper.accessor('tactic', {header: 'Tactic'})
+        columnHelper.accessor('tactic', {header: 'Tactic'}),
+        columnHelper.accessor('status', { header: 'Status'}),
     ]
 }
