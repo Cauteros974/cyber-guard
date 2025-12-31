@@ -3,6 +3,7 @@ import { useReactTable, getCoreRowModel, flexRender, createColumnHelper } from '
 import { useIncidentStore } from "../../store/useIncidentStore";
 import { type Incident } from "../../types/incident";
 import { SeverityBadge } from "./components/SeverityBadge";
+import { Info } from "lucide-react";
 
 
 const columnHelper = createColumnHelper<Incident>();
@@ -21,6 +22,11 @@ export const IncidentsPage = () => {
         columnHelper.accessor('status', { 
             header: 'Status',
             cell: info => <span className="capitalize text-slate-400">{info.getValue().replace('-', ' ')}</span>
-          }),
+        }),
+        columnHelper.accessor('timestamp', {
+            header: 'Detected',
+            cell: info => new Date(info.getValue())
+        })
+
     ]
 }
