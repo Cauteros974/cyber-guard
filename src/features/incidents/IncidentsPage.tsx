@@ -50,7 +50,13 @@ export const IncidentsPage = () => {
                 <table className="w-full text-left border-collaps">
                     <thead className="bg-slate-800/50">
                         {table.getHeaderGroups().map(headerGroup => (
-                            
+                            <tr key={headerGroup.id}>
+                                {headerGroup.headers.map(header => (
+                                    <th key={header.id} className="p-4 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                                        {flexRender(header.column.columnDef.header, header.getContext())}
+                                    </th>
+                                ))}
+                            </tr>
                         ))}
                     </thead>
                 </table>
