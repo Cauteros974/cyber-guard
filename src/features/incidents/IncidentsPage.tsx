@@ -60,8 +60,19 @@ export const IncidentsPage = () => {
                             </tr>
                         ))}
                     </thead>
+                    <tbody className="divide-y divide-slate-800">
+                        {table.getRowModel().rows.map(row => (
+                            <tr key={row.id} className="hover:bg-slate-800/30 transition-colors">
+                                {row.getVisibleCells().map(cell => (
+                                    <td key={cell.id} className="p-4 text-sm text-slate-200">
+                                        {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                                    </td>
+                                ))}
+                            </tr>
+                        ))}
+                    </tbody>
                 </table>
             </div>
         </div>
-    )
+    );
 };
