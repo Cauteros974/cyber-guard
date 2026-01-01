@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "tailwindcss";
+@reference "./index.css";
 
 body {
   @apply bg-background text-slate-200;
