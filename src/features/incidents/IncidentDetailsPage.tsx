@@ -14,7 +14,10 @@ export const IncidentDetailsPage = () => {
 
     return(
         <div className="space-y-6 max-w-5xl mx-auto">
-            <button>
+            <button
+                onClick={() => navigate('/incidents')}
+                className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors"
+            >
                 <ArrowLeft size={18} /> Back to Incidents
             </button>
         </div>
