@@ -29,6 +29,9 @@ export const IncidentDetailsPage = () => {
                     </div>
                     <p className="text-slate-400 font-mono text-sm">ID: {incident.id} | Source: {incident.source}</p>
                 </div>
+                <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-medium transition-all">
+                    Mark as Resolved
+                </button>
             </div>
         </div>
     )
