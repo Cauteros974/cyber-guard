@@ -11,5 +11,13 @@ export const IncidentDetailsPage = () => {
     const incident = incidents.find(inc => inc.id === id);
 
     if(!incident) return <div className="p-10">Incident not found</div>
+
+    return(
+        <div className="space-y-6 max-w-5xl mx-auto">
+            <button>
+                <ArrowLeft size={18} /> Back to Incidents
+            </button>
+        </div>
+    )
 };
 
