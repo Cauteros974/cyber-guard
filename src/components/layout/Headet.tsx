@@ -11,11 +11,21 @@ export const Header = () => {
 
             <div className="header-actions">
                 <div className="notification-badge">
-                    <Bell size={18}>
+                    <Bell size={20}>
                         <span className="dot"></span>
                     </Bell>
                 </div>
+
+                <div className="user-profile">
+                    <div className="user-info">
+                        <p className="user-name">Admin_Analyst</p>
+                        <p className="user-role">SOC Level 3</p>
+                    </div>
+                    <div className="avatar">
+                        <User className="user-avatar" />
+                    </div>
+                </div>
             </div>
         </header>
-    )
-}
+    );
+};
