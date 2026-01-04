@@ -69,6 +69,10 @@ export const IncidentDetailsPage = () => {
                                 <p className="text-xs text-slate-500 uppercase">Tactic</p>
                                 <p className="font-medium text-accent">{incident.tactic}</p>
                             </div>
+                            <div>
+                                <p className="text-xs text-slate-500 uppercase">Technique</p>
+                                <p className="font-medium text-slate-200">{incident.technique}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
