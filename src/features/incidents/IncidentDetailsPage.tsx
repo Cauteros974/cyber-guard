@@ -59,6 +59,19 @@ export const IncidentDetailsPage = () => {
                         ))}
                     </div>
                 </div>
+
+                {/* MITRE ATT&CK Info */}
+                <div className="space-y-6">
+                    <div className="bg-panel rounded-xl border border-slate-800 p-6">
+                        <h3 className="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4">MITRE ATT&CK</h3>
+                        <div className="space-y-4">
+                            <div>
+                                <p className="text-xs text-slate-500 uppercase">Tactic</p>
+                                <p className="font-medium text-accent">{incident.tactic}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
