@@ -1,15 +1,20 @@
-import { Header } from "./Header";
+import { Header } from "./Headet";
+import { Sidebar } from "lucide-react";
 
-export const MainLayout = ({ children }) => {
-  return (
-    <div className="flex h-screen bg-slate-950 text-slate-50 overflow-hidden">
-      <Sidebar />
-      <div className="flex flex-col flex-1">
-        <Header />
-        <main className="p-6 overflow-y-auto">
-          {children}
-        </main>
+interface Props {
+    children: React.ReactNode;
+}
+
+export const MainLayout = ({ children }: Props) => {
+    return (
+      <div className="layout">
+        <Sidebar />
+        <div className="main-container">
+          <Header />
+          <main className="content-area">
+            {children}
+          </main>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  };
