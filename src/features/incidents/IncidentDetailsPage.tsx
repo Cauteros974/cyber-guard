@@ -33,6 +33,14 @@ export const IncidentDetailsPage = () => {
                     Mark as Resolved
                 </button>
             </div>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                {/* Timeline */}
+                <div className="lg:col-span-2 bg-panel rounded-xl border border-slate-800 p-6">
+                    <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
+                        <Clock size={20} className="text-accent" /> Attack Timeline
+                    </h3>
+                </div>
+            </div>
         </div>
     )
 };
