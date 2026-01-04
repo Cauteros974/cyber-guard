@@ -1,13 +1,14 @@
 import { LayoutDashboard, ShieldAlert, Zap, Monitor, Settings, ShieldCheck } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import './Layout.css';
 
 const navItems = [
-    {icon: LayoutDashboard, label: 'Dashboard', path: '/'},
-    {icon: ShieldAlert, label: 'Incidents', path: '/incidents'},
-    {icon: Zap, label: 'Threat Intel', path: '/threat-intel' },
-    {icon: Monitor, label: 'Devices', path: '/devices'},
-    {icon: ShieldCheck, label: 'Policies', path: '/policies'},
-    { icon: Settings, label: 'Settings', path: '/settings' },
+    { path: '/', icon: LayoutDashboard, label: 'Dashboard' },
+    { path: '/incidents', icon: ShieldAlert, label: 'Incidents' },
+    { path: '/threat-intel', icon: Zap, label: 'Threat Intel' },
+    { path: '/devices', icon: Monitor, label: 'Devices' },
+    { path: '/policies', icon: ShieldCheck, label: 'Policies' },
+    { path: '/settings', icon: Settings, label: 'Settings' },
 ];
 
 export const Sidebar = () => {
