@@ -22,7 +22,7 @@ export const Header = () => {
                         <p className="user-role">SOC Level 3</p>
                     </div>
                     <div className="avatar">
-                        <User className="user-avatar" />
+                        <User size={20} />
                     </div>
                 </div>
             </div>
