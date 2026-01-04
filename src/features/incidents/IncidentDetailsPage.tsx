@@ -10,6 +10,6 @@ export const IncidentDetailsPage = () => {
 
     const incident = incidents.find(inc => inc.id === id);
 
-    if(!incident) return(<div className="p-10">Incident not found</div>)
+    if(!incident) return <div className="p-10">Incident not found</div>
 };
 
