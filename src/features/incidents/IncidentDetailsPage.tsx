@@ -75,9 +75,16 @@ export const IncidentDetailsPage = () => {
                             </div>
                         </div>
                     </div>
+
+                    <div className="bg-blue-900/10 border border-blue-500/20 rounded-xl p-6">
+                        <h3 className="font-semibold text-blue-400 mb-2">Recommendation</h3>
+                        <p className="text-sm text-blue-300/80 leading-relaxed">
+                            Isolate the host immediately. Reset credentials for the compromised user and audit all active sessions from IP {incident.source}.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    )
+    );
 };
 
