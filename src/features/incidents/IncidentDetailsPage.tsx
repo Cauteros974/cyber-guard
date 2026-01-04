@@ -53,6 +53,7 @@ export const IncidentDetailsPage = () => {
                                 <div>
                                     <p className="text-xs text-slate-500 font-mono">{step.time}</p>
                                     <h4 className="font-semibold text-slate-200">{step.event}</h4>
+                                    <p className="text-sm text-slate-400 leading-relaxed">{step.desc}</p>
                                 </div>
                             </div>
                         ))}
