@@ -50,6 +50,10 @@ export const IncidentDetailsPage = () => {
                                 <div className="absolute left-0 w-10 h-10 bg-slate-900 border border-slate-700 rounded-full flex items-center justify-center z-10">
                                     <step.icon size={16} className="text-accent" />
                                 </div>
+                                <div>
+                                    <p className="text-xs text-slate-500 font-mono">{step.time}</p>
+                                    <h4 className="font-semibold text-slate-200">{step.event}</h4>
+                                </div>
                             </div>
                         ))}
                     </div>
