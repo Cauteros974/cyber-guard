@@ -20,6 +20,16 @@ export const IncidentDetailsPage = () => {
             >
                 <ArrowLeft size={18} /> Back to Incidents
             </button>
+
+            <div className="flex justify-between items-start">
+                <div>
+                    <div className="flex items-center gap-3 mb-2">
+                        <h1 className="text-3xl font-bold">{incident.title}</h1>
+                        <SeverityBadge level={incident.severity} />
+                    </div>
+                    <p className="text-slate-400 font-mono text-sm">ID: {incident.id} | Source: {incident.source}</p>
+                </div>
+            </div>
         </div>
     )
 };
