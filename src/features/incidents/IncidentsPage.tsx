@@ -3,6 +3,7 @@ import { useReactTable, getCoreRowModel, flexRender, createColumnHelper } from '
 import { useIncidentStore } from "../../store/useIncidentStore";
 import { type Incident } from "../../types/incident";
 import { SeverityBadge } from "./components/SeverityBadge";
+import { useParams, useNavigate } from "react-router-dom";
 import { Info } from "lucide-react";
 
 
@@ -10,6 +11,8 @@ const columnHelper = createColumnHelper<Incident>();
 
 export const IncidentsPage = () => {
     const {incidents} = useIncidentStore();
+    const { id } = useParams();
+    const navigate = useNavigate();
 
     const columns = useMemo(() => [
         columnHelper.accessor('id', { header: 'ID', cell: info => <span className="text-slate-500 font-mono">{info.getValue()}</span> }),
@@ -17,7 +20,16 @@ export const IncidentsPage = () => {
             header: 'Severity',
             cell: info => <SeverityBadge level={info.getValue()} />
         }),
-        columnHelper.accessor('title', {header: 'Incident Title'}),
+        columnHelper.accessor('title', {
+            header: 'Incident Title',
+            cell: info => (
+                <button
+                    onClick={() => navigate (`/incidents/${info.row.original.id}`)}
+                >
+
+                </button>
+            )
+        }),
         columnHelper.accessor('tactic', {header: 'Tactic'}),
         columnHelper.accessor('status', { 
             header: 'Status',
