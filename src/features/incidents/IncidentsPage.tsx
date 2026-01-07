@@ -25,8 +25,9 @@ export const IncidentsPage = () => {
             cell: info => (
                 <button
                     onClick={() => navigate (`/incidents/${info.row.original.id}`)}
+                    className="hover:text-accent font-medium transition-colors text-left"
                 >
-
+                    {info.getValue()}
                 </button>
             )
         }),
