@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useIncidentStore } from "../store/useIncidentStore";
 import type { Incident, Severity } from "../types/incident";
 
-const SEVERITY: Severity[] = ['low', 'medium', 'high', 'critical'];
+const SEVERITIES: Severity[] = ['low', 'medium', 'high', 'critical'];
 const TITLES =  ['Unauthorized Access Attempt', 'Malware DNS Beaconing', 'SQL Injection Detected', 'Mass File Deletion'];
 
 export const useAttackSimulator = () => {
@@ -15,13 +15,13 @@ export const useAttackSimulator = () => {
                 const newIncident: Incident = {
                     id: `INC-${Math.floor(Math.random() * 10000)}`,
                     title: TITLES[Math.floor(Math.random() * TITLES.length)],
-                    severity: SEVERITY[Math.floor(Math.random() * TITLES.length)],
+                    severity: SEVERITIES[Math.floor(Math.random() * SEVERITIES.length)],
                     status: 'open',
                     tactic: 'Initial Access',
-                    technique: 'T1109',
+                    technique: 'T1190',
                     source: `192.168.1.${Math.floor(Math.random() * 255)}`,
-                    timestamp: new Date().toISOString,
-                };
+                    timestamp: new Date().toISOString(),
+                  };
                 addIncident(newIncident);
                 console.log("! New incident detected", newIncident);
             }
