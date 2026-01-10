@@ -19,7 +19,7 @@ export const DevicesPage = () => {
                 {devices.map((dev) => (
                     <div key={dev.id} className="flex justify-between items-start mb-4">
                         <div className="p-2 bg-slate-800 rounded-lg">
-                            {dev.type === 'server' ? <Server size={20} className="text-blue-400" /> }
+                            {dev.type === 'server' ? <Server size={20} className="text-blue-400" /> : <Laptop size={20} className="text-purple-400" />}
                         </div>
                     </div>
                 ))}
