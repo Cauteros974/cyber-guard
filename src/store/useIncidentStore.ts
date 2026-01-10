@@ -10,5 +10,8 @@ interface IncidentState {
 
 export const useIncidentStore = create<IncidentState>((set) => ({
   incidents: MOCK_INCIDENTS,
-  setIncidents: (incidents) => set({ incidents }),
+  addIncident: (newIncident) =>
+    set((state) => ({
+      incidents: [newIncidene, ...state.incidents]
+    }))
 }));
