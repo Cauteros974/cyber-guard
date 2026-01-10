@@ -24,12 +24,12 @@ export const DevicesPage = () => {
                         <div className={`flex items-center gap-1 text-[5px] font-bold uppercase px-2 py-0.5 rounded-full ${
                             dev.status === 'online' ? 'bg-green-500/10 text-green=-500' : 'bg-red-500/10 text-red-500'
                         }`}>
-                            {dev.status === 'online' ? <CheckCircle size={10} /> : <AlertCircle size={10} />} 
-
+                            {dev.status === 'online' ? <CheckCircle size={10} /> : <AlertCircle size={10} />}
+                            {dev.status}
                         </div>
                     </div>
                 ))}
             </div>
         </div>
-    )
-}
+    );
+};
