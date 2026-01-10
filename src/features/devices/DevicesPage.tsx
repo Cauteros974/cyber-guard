@@ -57,4 +57,4 @@ const MetricBar = ({ label, value, color}: { label: string, value: number, color
             />
         </div>
     </div>
-)
+);
