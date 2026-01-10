@@ -13,7 +13,8 @@ export const useAttackSimulator = () => {
             //Chance of attack occurrence(e.g 20% every 10 sec)
             if(Math.random() > 0.8) {
                 const newIncident: Incident = {
-                    id: `INC-${Math.floor(Math.random())}`
+                    id: `INC-${Math.floor(Math.random() * 10000)}`,
+                    title: TITLES[Math.floor(Math.random() * TITLES.length)],
                 }
             }
         })
