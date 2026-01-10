@@ -1,4 +1,4 @@
-import { Header } from "./Headet";
+import { Header } from "./Header";
 import { Sidebar } from "lucide-react";
 
 interface Props {
