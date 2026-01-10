@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useIncidentStore } from "../store/useIncidentStore";
-import { type Severity, type Incident} from "../features/incidents/IncidentsPage";
+import type { Incident, Severity } from "../types/incident";
 
-const SEVERITY: Severity[] = ['low', 'medium', 'height', 'critical'];
+const SEVERITY: Severity[] = ['low', 'medium', 'high', 'critical'];
 const TITLES =  ['Unauthorized Access Attempt', 'Malware DNS Beaconing', 'SQL Injection Detected', 'Mass File Deletion'];
 
 export const useAttackSimulator = () => {
