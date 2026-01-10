@@ -50,8 +50,11 @@ const MetricBar = ({ label, value, color}: { label: string, value: number, color
             <span>{label}</span>
             <span>{label}</span>
         </div>
-        <div className="h-1.5 w-full bg-slate-600">
-            <div className={`h-full ${color} transition-all duration-500`}></div>
+        <div className="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+            <div 
+                className={`h-full ${color} transition-all duration-500`}
+                style={{ width: `${value}%`}}
+            />
         </div>
     </div>
 )
