@@ -3,7 +3,7 @@ import { useIncidentStore } from "../store/useIncidentStore";
 import { type Severity, type Incident} from "../features/incidents/IncidentsPage";
 
 const SEVERITY: Severity[] = ['low', 'medium', 'height', 'critical'];
-const TITLES: ['Unauthorized Access Attempt', 'Malware DNS Beaconing '];
+const TITLES =  ['Unauthorized Access Attempt', 'Malware DNS Beaconing', 'SQL Injection Detected', 'Mass File Deletion'];
 
 export const useAttackSimulator = () => {
     const addIncident = useIncidentStore((state) => state.addIncident);
@@ -29,4 +29,4 @@ export const useAttackSimulator = () => {
 
         return () => clearInterval(interval);
     }, [addIncident]);
-}
+};
