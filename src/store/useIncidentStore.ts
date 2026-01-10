@@ -13,4 +13,7 @@ export const useIncidentStore = create<IncidentState>((set) => ({
   setIncidents: (incidents) => 
     set({ incidents}),
   addIncident: (newIncident) => 
+    set((state) => ({
+      incidents: [newIncident, ...state.incidents],
+    })),
 }))
