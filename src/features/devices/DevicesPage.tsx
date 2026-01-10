@@ -15,7 +15,15 @@ export const DevicesPage = () => {
                 <p className="text-slate-400 text-sm">Monitoring{devices.length} active devices in the network.</p>
             </header>
 
-            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {devices.map((dev) => (
+                    <div key={dev.id} className="flex justify-between items-start mb-4">
+                        <div className="p-2 bg-slate-800 rounded-lg">
+                            {dev.type === 'server' ? <Server size={20} className="text-blue-400" /> }
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
