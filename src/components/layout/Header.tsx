@@ -1,7 +1,11 @@
 import { Bell, Search, User } from "lucide-react";
+import { useIncidentStore } from "../../store/useIncidentStore";
 import './Layout.css';
 
 export const Header = () => {
+    const incidents = useIncidentStore((state) => state.incidents);
+    const activeCount = incidents.filter(i => i.status === 'open').length;
+    
     return(
         <header className="header">
             <div className="search-bar">
