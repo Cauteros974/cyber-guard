@@ -21,6 +21,12 @@ export const DevicesPage = () => {
                         <div className="p-2 bg-slate-800 rounded-lg">
                             {dev.type === 'server' ? <Server size={20} className="text-blue-400" /> : <Laptop size={20} className="text-purple-400" />}
                         </div>
+                        <div className={`flex items-center gap-1 text-[5px] font-bold uppercase px-2 py-0.5 rounded-full ${
+                            dev.status === 'online' ? 'bg-green-500/10 text-green=-500' : 'bg-red-500/10 text-red-500'
+                        }`}>
+                            {dev.status === 'online' ? <CheckCircle size={10} /> : <AlertCircle size={10} />} 
+
+                        </div>
                     </div>
                 ))}
             </div>
