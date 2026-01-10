@@ -26,5 +26,7 @@ export const useAttackSimulator = () => {
                 console.log("! New incident detected", newIncident);
             }
         }, 100000);
-    })
+
+        return () => clearInterval(interval);
+    }, [addIncident]);
 }
