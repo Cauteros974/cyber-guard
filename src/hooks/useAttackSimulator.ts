@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useIncidentStore } from "../store/useIncidentStore";
-import { type Incident, type Severity} from "../features/incidents/IncidentsPage";
+import { Severity, type Incident} from "../features/incidents/IncidentsPage";
 
 const SEVERITY: Severity[] = ['low', 'medium', 'height', 'critical'];
 const TITLES: ['Unauthorized Access Attempt', 'Malware DNS Beaconing '];
@@ -15,6 +15,8 @@ export const useAttackSimulator = () => {
                 const newIncident: Incident = {
                     id: `INC-${Math.floor(Math.random() * 10000)}`,
                     title: TITLES[Math.floor(Math.random() * TITLES.length)],
+                    severity: SEVERITY[Math.floor(Math.random() * TITLES.length)],
+                    status: 'open',
                 }
             }
         })
