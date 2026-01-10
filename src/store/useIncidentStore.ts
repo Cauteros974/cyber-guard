@@ -5,13 +5,12 @@ import { MOCK_INCIDENTS } from '../data/mockIncidents';
 interface IncidentState {
   incidents: Incident[];
   setIncidents: (incidents: Incident[]) => void;
- 
 }
 
 export const useIncidentStore = create<IncidentState>((set) => ({
   incidents: MOCK_INCIDENTS,
   addIncident: (newIncident) =>
     set((state) => ({
-      incidents: [newIncidene, ...state.incidents]
+      incidents: [newIncident, ...state.incidents]
     }))
 }));
