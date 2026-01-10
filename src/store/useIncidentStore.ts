@@ -1,16 +1,16 @@
 import { create } from 'zustand';
 import { type Incident } from '../types/incident';
-import { MOCK_INCIDENTS } from '../data/mockIncidents';
+import { MOCK_INCIDENTS } from '../data/mockData';
 
 interface IncidentState {
   incidents: Incident[];
   setIncidents: (incidents: Incident[]) => void;
+  addIncident: (incident: Incident) => void;
 }
 
 export const useIncidentStore = create<IncidentState>((set) => ({
   incidents: MOCK_INCIDENTS,
-  addIncident: (newIncident) =>
-    set((state) => ({
-      incidents: [newIncident, ...state.incidents]
-    }))
-}));
+  setIncidents: (incidents) => 
+    set({ incidents}),
+  addIncident: (newIncident) => 
+}))
