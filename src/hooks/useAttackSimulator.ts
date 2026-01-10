@@ -21,8 +21,10 @@ export const useAttackSimulator = () => {
                     technique: 'T1109',
                     source: `192.168.1.${Math.floor(Math.random() * 255)}`,
                     timestamp: new Date().toISOString,
-                }
+                };
+                addIncident(newIncident);
+                console.log("! New incident detected", newIncident);
             }
-        })
+        }, 100000);
     })
 }
