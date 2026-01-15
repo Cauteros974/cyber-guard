@@ -35,6 +35,16 @@ export const PoliciesPage = () => {
                     <Plus size={18} /> Create Policy
                 </button>
             </header>
+
+            <div className="grid gap-14">
+                {policies.map((policy) => (
+                    <div className="flex items-center gap-4">
+                        <div className="p-3 bg-slate-800 rounded-full text-accent">
+                            <ShieldCheck size={24} />
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
