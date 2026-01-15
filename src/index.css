@@ -1,17 +1,21 @@
 :root {
-  --bg-dark: #669ffa;
-  --panel-dark: #0f172a;
-  --accent-blue: #3b82f6;
+  /* SOC color palette */
+  --bg-color: #669ffa;
+  --panel-bg: #0f172a;
+  --panel-hover: #1e293b;
   --border-color: #1e293b;
-  
-  /* Security statuses */
+  --accent: #3b82f6;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+
+  /* Threat levels */
   --critical: #ef4444;
   --high: #f97316;
   --medium: #eab308;
   --low: #22c55e;
-  
-  --font-main: 'Inter', system-ui, sans-serif;
-  --radius: 12px;
+
+  --sidebar-width: 260px;
+  --header-height: 64px;
 }
 
 * {
@@ -21,28 +25,15 @@
 }
 
 body {
-  background-color: var(--bg-dark);
-  color: #f8fafc;
-  font-family: var(--font-main);
-  line-height: 1.5;
-}
-
-/* Generic container for Dashboard */
-.layout-container {
-  display: flex;
-  height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Inter', -apple-system, sans-serif;
   overflow: hidden;
 }
 
-.main-content {
-  flex: 1;
-  overflow-y: auto;
-  padding: 24px;
-}
-
-.card {
-  background: var(--panel-dark);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius);
-  padding: 20px;
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
 }
