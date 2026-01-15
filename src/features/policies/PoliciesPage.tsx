@@ -48,6 +48,13 @@ export const PoliciesPage = () => {
                                 <p className="text-sm text-slate-500">{policy.description}</p>
                             </div>
                         </div>
+
+                        <div className="flex items-center gap-6">
+                            <div className="flex items-center gap-2">
+                                <span className="text-xs text-slate-500">Status</span>
+                                
+                            </div>
+                        </div>
                     </div>
                 ))}
             </div>
