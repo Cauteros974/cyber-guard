@@ -5,6 +5,7 @@ import { type Incident } from "../../types/incident";
 import { SeverityBadge } from "./components/SeverityBadge";
 import { useParams, useNavigate } from "react-router-dom";
 import { Info } from "lucide-react";
+import './Incidents.css';
 
 
 const columnHelper = createColumnHelper<Incident>();

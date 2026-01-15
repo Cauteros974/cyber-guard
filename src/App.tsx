@@ -1,35 +1,29 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Toaster } from 'sonner';
 import { MainLayout } from './components/layout/MainLayout';
 import { DashboardPage } from './features/DashboardPage';
 import { IncidentsPage } from './features/incidents/IncidentsPage';
+import { IncidentDetailsPage } from './features/incidents/IncidentDetailsPage';
+import { DevicesPage } from './features/devices/DevicesPage';
+import { PoliciesPage } from './features/policies/PoliciesPage';
 import { useAttackSimulator } from './hooks/useAttackSimulator';
-import { Toaster, toast } from 'sonner';
-
-function AppContent() {
-  useAttackSimulator();
-
-  return(
-  <>
-    <Toaster theme="dark" position='top-right' richColors />
-
-    <MainLayout>
-      <Routes>
-        <Route path="/" element = {<DashboardPage />} />
-        <Route path="/incidents" element = {<IncidentsPage />} />
-        <Route
-          path="*"
-          element = {<div className="p-10 text-center"> Page Under Construction</div>}
-        />
-      </Routes>
-    </MainLayout>
-  </>
-  );
-}
+import './index.css';
 
 function App() {
+  useAttackSimulator();
+
   return (
     <Router>
-      <AppContent />
+      <Toaster 
+        theme="dark" 
+        position="top-right" 
+        richColors 
+        closeButton
+      />
+
+      <MainLayout>
+        
+      </MainLayout>
     </Router>
   );
 }

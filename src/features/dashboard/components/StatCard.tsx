@@ -1,4 +1,5 @@
 import { type LucideIcon } from "lucide-react";
+import './Dashboard.css';
 
 interface StatCardProps {
     title: string;
