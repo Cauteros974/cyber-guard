@@ -1,21 +1,12 @@
 :root {
-  /* SOC color palette */
-  --bg-color: #669ffa;
+  --bg-color: #020617;
   --panel-bg: #0f172a;
-  --panel-hover: #1e293b;
   --border-color: #1e293b;
   --accent: #3b82f6;
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
-
-  /* Threat levels */
   --critical: #ef4444;
-  --high: #f97316;
-  --medium: #eab308;
   --low: #22c55e;
-
-  --sidebar-width: 260px;
-  --header-height: 64px;
 }
 
 * {
@@ -24,16 +15,14 @@
   padding: 0;
 }
 
-body {
+body, html {
   background-color: var(--bg-color);
   color: var(--text-main);
-  font-family: 'Inter', -apple-system, sans-serif;
-  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  height: 100%;
+  width: 100%;
 }
 
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-  font-family: inherit;
+#root {
+  height: 100vh;
 }
