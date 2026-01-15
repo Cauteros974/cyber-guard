@@ -47,7 +47,7 @@ export const PoliciesPage = () => {
                                 <h3 className="font-semibold text-slate-200">{policy.name}</h3>
                                 <p className="text-sm text-slate-500">{policy.description}</p>
                                 <span className={`text-[10px] font-bold uppercase mt-1 px-2 py-0.5 rounded border border-slate-700 inline-block`}>
-                                    Severity: {policy.name}
+                                    Severity: {policy.severity}
                                 </span>
                             </div>
                         </div>
