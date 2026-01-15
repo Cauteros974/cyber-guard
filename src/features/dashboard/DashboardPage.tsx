@@ -1,7 +1,7 @@
 import { ShieldAlert, Zap, Monitor, ShieldCheck } from "lucide-react";
 import { StatCard } from "./components/StatCard";
 import { ActivityChart } from "./components/ActivityChart";
-import "./Dashboard.css";
+import './Dashboard.css';
 
 export const DashboardPage = () => {
   return (

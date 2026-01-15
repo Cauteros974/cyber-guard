@@ -1,21 +1,35 @@
 import { type LucideIcon } from "lucide-react";
-import './Dashboard.css';
+import "./StatCard.css";
 
 interface StatCardProps {
-    title: string;
-    value: string | number;
-    icon: LucideIcon;
-    color: string;
+  title: string;
+  value: string | number;
+  icon: LucideIcon;
+  color?: string;
 }
 
-export const StatCard = ({ title, value, icon: Icon, color }: StatCardProps) => (
-    <div className="bg-panel p-6 rounded-xl border border-state-800 flex items-center gap-5">
-        <div className={`p-3 rounded-lg ${color} bg-opacity-10`}>
-            <Icon className={color.replace('bg-', 'text-')} size={24}/>
-        </div>
-        <div>
-            <p className="text-sm text-scale-400">{title}</p>
-            <p className="text-2xl font-bold">{value}</p>
-        </div>
+export const StatCard = ({
+  title,
+  value,
+  icon: Icon,
+  color,
+}: StatCardProps) => {
+  return (
+    <div className="stat-card">
+      <div
+        className="stat-icon-wrapper"
+        style={color ? { backgroundColor: `${color}22` } : undefined}
+      >
+        <Icon
+          className="stat-icon"
+          style={color ? { color } : undefined}
+        />
+      </div>
+
+      <div className="stat-content">
+        <p className="stat-label">{title}</p>
+        <p className="stat-value">{value}</p>
+      </div>
     </div>
-);
+  );
+};
