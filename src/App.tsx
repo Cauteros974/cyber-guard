@@ -10,7 +10,6 @@ import { useAttackSimulator } from './hooks/useAttackSimulator';
 import './index.css';
 
 function App() {
-  // Теперь useNavigate внутри этого хука найдет роутер без ошибок!
   useAttackSimulator();
 
   return (
