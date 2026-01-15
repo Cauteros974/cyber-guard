@@ -43,6 +43,9 @@ export const PoliciesPage = () => {
                             <div className="p-3 bg-slate-800 rounded-full text-accent">
                                 <ShieldCheck size={24} />
                             </div>
+                            <div>
+                                <h3 className="font-semibold text-slate-200">{policy.id}</h3>
+                            </div>
                         </div>
                     </div>
                 ))}
