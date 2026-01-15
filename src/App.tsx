@@ -3,12 +3,14 @@ import { MainLayout } from './components/layout/MainLayout';
 import { DashboardPage } from './features/DashboardPage';
 import { IncidentsPage } from './features/incidents/IncidentsPage';
 import { useAttackSimulator } from './hooks/useAttackSimulator';
+import { Toaster, toast } from 'sonner';
 
 function App() {
   useAttackSimulator();
   
   return (
     <Router>
+      <Toaster theme="dark" richColors />
       <MainLayout>
         <Routes>
           <Route path="/" element={<DashboardPage />} />
