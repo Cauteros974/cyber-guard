@@ -38,7 +38,7 @@ export const PoliciesPage = () => {
 
             <div className="grid gap-14">
                 {policies.map((policy) => (
-                    <div className="bg-panel border border-slate-800 p-5 rounded-xl flex items-center justify-between group">
+                    <div key ={policy.id}className="bg-panel border border-slate-800 p-5 rounded-xl flex items-center justify-between group">
                         <div className="flex items-center gap-4">
                             <div className="p-3 bg-slate-800 rounded-full text-accent">
                                 <ShieldCheck size={24} />
