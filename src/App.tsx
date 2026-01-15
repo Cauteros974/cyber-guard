@@ -10,7 +10,7 @@ function App() {
   
   return (
     <Router>
-      <Toaster theme="dark" richColors />
+      <Toaster theme="dark" position='top-right' richColors />
       <MainLayout>
         <Routes>
           <Route path="/" element={<DashboardPage />} />
