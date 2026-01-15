@@ -28,6 +28,12 @@ export const PoliciesPage = () => {
                 <div>
                     <h1 className="text-2xl font-bold">Security Policies</h1>
                 </div>
+                <button
+                    onClick={addPolicy}
+                    className="bg-accent hover:big-blue-600 text-white px-4 py-2 rounded-lg flex"
+                >
+                    <Plus size={15} />
+                </button>
             </header>
         </div>
     )
