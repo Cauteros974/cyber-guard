@@ -51,8 +51,10 @@ export const PoliciesPage = () => {
 
                         <div className="flex items-center gap-6">
                             <div className="flex items-center gap-2">
-                                <span className="text-xs text-slate-500">Status</span>
-                                
+                                <span className="text-xs text-slate-500 uppercase font-bold tracking-widest">Status</span>
+                                <button className="text-green-500 hover:text-green-400">
+                                    <Toggle size={30} />
+                                </button>
                             </div>
                         </div>
                     </div>
