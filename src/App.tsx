@@ -23,7 +23,7 @@ function AppContent() {
       </Routes>
     </MainLayout>
   </>
-  )
+  );
 }
 
 function App() {
