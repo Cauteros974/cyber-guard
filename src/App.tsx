@@ -22,7 +22,33 @@ function App() {
       />
 
       <MainLayout>
-        
+      <Routes>
+          {/* Main Page with graphics */}
+          <Route path="/" element={<DashboardPage />} />
+          
+          {/* List of all incidents*/}
+          <Route path="/incidents" element={<IncidentsPage />} />
+          
+          {/* Detailed page of a specific incident */}
+          <Route path="/incidents/:id" element={<IncidentDetailsPage />} />
+          
+          {/* Device monitoring */}
+          <Route path="/devices" element={<DevicesPage />} />
+          
+          {/* Security policies */}
+          <Route path="/policies" element={<PoliciesPage />} />
+
+          {/* Plug of settings */}
+          <Route path="/settings" element={
+            <div style={{ padding: '20px' }}>
+              <h2>Settings</h2>
+              <p style={{ color: 'var(--text-muted)' }}>Configuration options coming soon...</p>
+            </div>
+          } />
+
+          {/* Redirect to the main page if the page is not found*/}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </MainLayout>
     </Router>
   );
