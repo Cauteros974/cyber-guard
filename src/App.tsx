@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'sonner';
 import { MainLayout } from './components/layout/MainLayout';
-import { DashboardPage } from './features/DashboardPage';
+import { DashboardPage } from './features/dashboard/DashboardPage';
 import { IncidentsPage } from './features/incidents/IncidentsPage';
 import { IncidentDetailsPage } from './features/incidents/IncidentDetailsPage';
 import { DevicesPage } from './features/devices/DevicesPage';
