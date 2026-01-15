@@ -16,6 +16,10 @@ function AppContent() {
       <Routes>
         <Route path="/" element = {<DashboardPage />} />
         <Route path="/incidents" element = {<IncidentsPage />} />
+        <Route
+          path="*"
+          element = {<div className="p-10 text-center"> Page Under Construction</div>}
+        />
       </Routes>
     </MainLayout>
   </>
