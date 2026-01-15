@@ -1,45 +1,47 @@
 import { ShieldAlert, Zap, Monitor, ShieldCheck } from "lucide-react";
 import { StatCard } from "./components/StatCard";
 import { ActivityChart } from "./components/ActivityChart";
+import "./Dashboard.css";
 
 export const DashboardPage = () => {
-    return(
-        <div className="space-y-6">
-            <header>
-                <h1 className="text-2xl font-bold">Security Overview</h1>
-                <p className="text-slate-400">Real-time threat monitoring and system health.</p>
-            </header>
+  return (
+    <div className="dashboard-container">
+      <header className="dashboard-header">
+        <h1>Security Overview</h1>
+        <p>Real-time threat monitoring and system health.</p>
+      </header>
 
-            {/*Cards*/}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <StatCard title="Active Incidents" value={12} icon={ShieldAlert} color="text-red-500 bg-red-500" />
-                <StatCard title="Critical Threats" value={3} icon={Zap} color="text-orange-500 bg-orange-500" />
-                <StatCard title="Devices Online" value="1,240" icon={Monitor} color="text-blue-500 bg-blue-500" />
-                <StatCard title="Policy Compliance" value="98.2%" icon={ShieldCheck} color="text-green-500 bg-green-500" />
-            </div>
+      {/* Stats cards */}
+      <div className="stats-grid">
+        <StatCard title="Active Incidents" value={12} icon={ShieldAlert} />
+        <StatCard title="Critical Threats" value={3} icon={Zap} />
+        <StatCard title="Devices Online" value="1,240" icon={Monitor} />
+        <StatCard title="Policy Compliance" value="98.2%" icon={ShieldCheck} />
+      </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                {/*Main Chart*/}
-                <div className="lg:col-span-2">
-                    <ActivityChart />
-                </div>
-
-                {/* Activity Feed (Quick list) */}
-                <div className="bg-panel p-6 rounded-xl border border-slate-800">
-                    <h3 className="text-lg font-semibold mb-4">Latest Events</h3>
-                    <div className="space-y-4">
-                        {[1,2,3,4].map((i) => (
-                            <div key={i} className="flex gap-3 text-sm border-b border-slate-800 pb-3 last:border-0">
-                                <div className="w-2 h-2 rounded-full bg-accent mt-1.5" />
-                                <div>
-                                    <p className="text-slate-200 font-medium">System Update Applied</p>
-                                    <p className="text-slate-500 text-xs">2 mins ago • WS-OFFICE-09</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
+      <div className="dashboard-bottom">
+        {/* Main chart */}
+        <div className="chart-wrapper">
+          <ActivityChart />
         </div>
-    );
+
+        {/* Activity feed */}
+        <div className="activity-panel">
+          <h3>Latest Events</h3>
+
+          <div className="activity-list">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="activity-item">
+                <span className="activity-dot" />
+                <div>
+                  <p className="activity-title">System Update Applied</p>
+                  <p className="activity-meta">2 mins ago • WS-OFFICE-09</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
