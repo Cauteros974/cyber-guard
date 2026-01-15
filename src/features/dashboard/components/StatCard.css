@@ -16,3 +16,14 @@
     align-items: center;
     justify-content: center;
 }
+
+.stat-icon {
+    width: 24px;
+    height: 24px;
+}
+  
+.stat-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
