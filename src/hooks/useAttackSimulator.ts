@@ -1,32 +1,46 @@
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 import { useIncidentStore } from "../store/useIncidentStore";
 import type { Incident, Severity } from "../types/incident";
 
-const SEVERITIES: Severity[] = ['low', 'medium', 'high', 'critical'];
-const TITLES =  ['Unauthorized Access Attempt', 'Malware DNS Beaconing', 'SQL Injection Detected', 'Mass File Deletion'];
+const SEVERITIES: Severity[] = ["low", "medium", "high", "critical"];
+const TITLES = ["Unauthorized Access Attempt", "Malware DNS Beaconing", "SQL Injection Detected", "Mass File Deletion",];
 
 export const useAttackSimulator = () => {
-    const addIncident = useIncidentStore((state) => state.addIncident);
+  const addIncident = useIncidentStore((state) => state.addIncident);
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            //Chance of attack occurrence(e.g 20% every 10 sec)
-            if(Math.random() > 0.8) {
-                const newIncident: Incident = {
-                    id: `INC-${Math.floor(Math.random() * 10000)}`,
-                    title: TITLES[Math.floor(Math.random() * TITLES.length)],
-                    severity: SEVERITIES[Math.floor(Math.random() * SEVERITIES.length)],
-                    status: 'open',
-                    tactic: 'Initial Access',
-                    technique: 'T1190',
-                    source: `192.168.1.${Math.floor(Math.random() * 255)}`,
-                    timestamp: new Date().toISOString(),
-                  };
-                addIncident(newIncident);
-                console.log("! New incident detected", newIncident);
-            }
-        }, 100000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // attack chance (20% once per interval)
+      if (Math.random() > 0.8) {
+        const newIncident: Incident = {
+          id: `INC-${Math.floor(Math.random() * 10000)}`,
+          title: TITLES[Math.floor(Math.random() * TITLES.length)],
+          severity: SEVERITIES[Math.floor(Math.random() * SEVERITIES.length)],
+          status: "open",
+          tactic: "Initial Access",
+          technique: "T1190",
+          source: `192.168.1.${Math.floor(Math.random() * 255)}`,
+          timestamp: new Date().toISOString(),
+        };
+        
+        addIncident(newIncident);
 
-        return () => clearInterval(interval);
-    }, [addIncident]);
+        //Show a notification
+        toast.error(`Security Alert: ${newIncident.title}`, {
+          description: `Source: ${newIncident.source} | Severity: ${newIncident.severity}`,
+          action: {
+            label: "View",
+            onClick: () => navigate(`/incidents/${newIncident.id}`),
+          },
+        });
+
+        console.log("🚨 New incident detected:", newIncident);
+      }
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, [addIncident, navigate]);
 };
