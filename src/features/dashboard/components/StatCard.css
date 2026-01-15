@@ -27,3 +27,13 @@
     flex-direction: column;
     gap: 4px;
 }
+
+.stat-label {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+  
+.stat-value {
+    font-size: 24px;
+    font-weight: 700;
+}
