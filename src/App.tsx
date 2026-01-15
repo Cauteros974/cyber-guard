@@ -3,7 +3,7 @@ import { MainLayout } from './components/layout/MainLayout';
 import { DashboardPage } from './features/DashboardPage';
 import { IncidentsPage } from './features/incidents/IncidentsPage';
 import { useAttackSimulator } from './hooks/useAttackSimulator';
-import { Toaster, toast } from 'sonner';
+import { Toaster } from 'sonner';
 
 function App() {
   useAttackSimulator();
