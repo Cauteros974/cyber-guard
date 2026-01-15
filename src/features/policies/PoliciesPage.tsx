@@ -65,8 +65,8 @@ export const PoliciesPage = () => {
             </div>
 
             {/*Info Block*/}
-            <div className="bg-blue-500">
-                <p className="text-xs text-glue-500 leading-relaxed">
+            <div className="bg-blue-500/5 border border-blue-500/20 p-4 rounded-lg">
+                <p className="text-xs text-blue-400/80 leading-relaxed">
                     <strong>Note:</strong> Active policies are deployed across all endpoints (Devices) in real-time. 
                     Changes may take up to 60 seconds to propagate to the agents.
                 </p>
