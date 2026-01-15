@@ -1,5 +1,6 @@
 import { Header } from "./Header";
 import { Sidebar } from "lucide-react";
+import './Layout.css';
 
 interface Props {
     children: React.ReactNode;
