@@ -21,4 +21,14 @@ export const PoliciesPage = () => {
             description: 'You can now define new security rules.'
         });
     };
+
+    return(
+        <div className="space-y-6">
+            <header className="flex justify-content items-center">
+                <div>
+                    <h1 className="text-2xl font-bold">Security Policies</h1>
+                </div>
+            </header>
+        </div>
+    )
 }
