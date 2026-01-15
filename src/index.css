@@ -1,8 +1,48 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@reference "./index.css";
+:root {
+  --bg-dark: #669ffa;
+  --panel-dark: #0f172a;
+  --accent-blue: #3b82f6;
+  --border-color: #1e293b;
+  
+  /* Security statuses */
+  --critical: #ef4444;
+  --high: #f97316;
+  --medium: #eab308;
+  --low: #22c55e;
+  
+  --font-main: 'Inter', system-ui, sans-serif;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  @apply bg-background text-slate-200;
+  background-color: var(--bg-dark);
+  color: #f8fafc;
+  font-family: var(--font-main);
+  line-height: 1.5;
+}
+
+/* Generic container for Dashboard */
+.layout-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.card {
+  background: var(--panel-dark);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 20px;
 }
