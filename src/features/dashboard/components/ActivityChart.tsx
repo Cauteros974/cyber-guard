@@ -2,12 +2,12 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import './Dashboard.css';
 
 const data = [
-    {time: '00:00', count: 10},
-    {time: '04:00', count: 5},
-    {time: '08:00', count: 18},
-    { time: '12:00', count: 45 }, // Peak attacks at lunchtime
-    { time: '16:00', count: 30 },
-    { time: '20:00', count: 25 },
+    { name: '00:00', attacks: 40 },
+    { name: '04:00', attacks: 30 },
+    { name: '08:00', attacks: 65 },
+    { name: '12:00', attacks: 45 },
+    { name: '16:00', attacks: 90 },
+    { name: '20:00', attacks: 55 },
 ];
 
 export const ActivityChart = () => {
