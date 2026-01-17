@@ -12,25 +12,17 @@ const data = [
 
 export const ActivityChart = () => {
     return(
-        <div className="h-[300px] w-full bg-panel p-6 rounded-xl border border-slate-800">
-            <h3 className="text-lg font-simebold mb-4">Network Activity (24h)</h3>
-            <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={data}>
-                    <CartesianGrid strokeDasharray="3 2" stroke="#1e293b" />
-                    <XAxis dataKey="time" stroke="#64748b" fontSize={12}/>
-                    <YAxis stroke="#64748b" fontSize={12}/>
-                    <Tooltip 
-                        contentStyle={{backgroundColor: '#0f172a', border: '1px solid #1e293b'}}
-                        itemStyle={{color: '#3b82f6'}}
-                    />
-                    <Line 
-                        type="monotone"
-                        dataKey="count"
-                        stroke="#3b82f6"
-                        strokeWidth={2}
-                        dot={{ r: 4, fill: '#3b82f6'}}
-                    />
-                </LineChart>
+        <div className="chart-card">
+            <h3 className="chart-title">Network Activity (24h)</h3>
+            <ResponsiveContainer width="100%" height="90%">
+                <AreaChart data={data}>
+                    <defs>
+                        <linearGradient id="colorAttacks" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="5%" stopColor="var(--accent)" stopOpacity={0.3}/>
+                            <stop offset="95%" stopColor="var(--accent)" stopOpacity={0}/>
+                        </linearGradient>
+                    </defs>
+                </AreaChart>
             </ResponsiveContainer>
         </div>
     );
