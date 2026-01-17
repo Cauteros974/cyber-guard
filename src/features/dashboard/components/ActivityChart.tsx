@@ -29,6 +29,14 @@ export const ActivityChart = () => {
                         contentStyle={{ backgroundColor: 'var(--panel-bg)', borderColor: 'var(--border-color)', borderRadius: '8px' }}
                         itemStyle={{ color: 'var(--accent)' }}
                     />
+                    <Area 
+                        type="monotone" 
+                        dataKey="attacks" 
+                        stroke="var(--accent)" 
+                        fillOpacity={1} 
+                        fill="url(#colorAttacks)" 
+                        strokeWidth={3}
+                    />
                 </AreaChart>
             </ResponsiveContainer>
         </div>
