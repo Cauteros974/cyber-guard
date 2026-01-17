@@ -25,6 +25,10 @@ export const ActivityChart = () => {
                     <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" vertical={false} />
                     <XAxis dataKey="name" stroke="var(--text-muted)" fontSize={12} tickLine={false} axisLine={false} />
                     <YAxis stroke="var(--text-muted)" fontSize={12} tickLine={false} axisLine={false} />
+                    <Tooltip 
+                        contentStyle={{ backgroundColor: 'var(--panel-bg)', borderColor: 'var(--border-color)', borderRadius: '8px' }}
+                        itemStyle={{ color: 'var(--accent)' }}
+                    />
                 </AreaChart>
             </ResponsiveContainer>
         </div>
