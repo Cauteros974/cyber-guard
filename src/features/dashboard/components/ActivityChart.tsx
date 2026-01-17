@@ -22,6 +22,9 @@ export const ActivityChart = () => {
                             <stop offset="95%" stopColor="var(--accent)" stopOpacity={0}/>
                         </linearGradient>
                     </defs>
+                    <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" vertical={false} />
+                    <XAxis dataKey="name" stroke="var(--text-muted)" fontSize={12} tickLine={false} axisLine={false} />
+                    <YAxis stroke="var(--text-muted)" fontSize={12} tickLine={false} axisLine={false} />
                 </AreaChart>
             </ResponsiveContainer>
         </div>
