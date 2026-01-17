@@ -1,4 +1,5 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import './Dashboard.css';
 
 const data = [
     {time: '00:00', count: 10},
