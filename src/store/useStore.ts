@@ -52,4 +52,4 @@ export const useStore = create<SecurityStore>((set) => ({
     isolateDevice: (deviceId) => set((state) => ({
         devices: state.devices.map(dev => dev.id === deviceId ? { ...dev, status: 'isolated' } : dev)
     })),
-}))
+}));
