@@ -1,4 +1,4 @@
-import { LayoutDashboard, ShieldAlert, Zap, Monitor, Settings, ShieldCheck } from 'lucide-react';
+import { LayoutDashboard, ShieldAlert, Shield, Zap, Monitor, Settings, ShieldCheck } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import './Layout.css';
 
@@ -15,10 +15,10 @@ export const Sidebar = () => {
     const location = useLocation();
 
     return(
-        <aside className="w-64 bg-slate-900 border-r border-slate-800 flex flex-col">
-            <div className='p-6 flex items-center gap-3'>
-                <ShieldAlert className="text-red-500 w-8 h-8" />
-                <span className="fond-bold text-xl tracking-tight text-white">CyberGuard</span>
+        <aside className="sidebar">
+            <div className="sidebar-logo">
+                <Shield size={28} color="var(--accent)" fill="rgba(59, 130, 246, 0.2)" />
+                <span className="logo-text">CyberGuard</span>
             </div>
 
             <nav className="flex-1 px-4 space-y-2">
