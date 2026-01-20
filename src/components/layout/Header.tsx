@@ -38,7 +38,9 @@ export const Header = () => {
             <span className="user-name">Admin_Analyst</span>
             <span className="user-role">SOC level_3</span>
           </div>
-          
+          <div className="user_avatar">
+            <User size={10} />
+          </div>
         </div>
       </div>
     </header>
