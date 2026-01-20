@@ -62,7 +62,16 @@ export const IncidentDetailsPage = () => {
                     The actor is currently attempting to query the "Customers" table.
                 </p>
             </div>
+
+            {/*Right column: Timeline of events*/}
+            <div className="sidebar-info">
+                <div className="detail-info">
+                    <h3 style={{ marginBottom: '24px' }}>Attack Timeline</h3>
+                </div>
+            </div>
         </div>
+        
+        
     );
 };
 
