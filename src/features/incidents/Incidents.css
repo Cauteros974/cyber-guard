@@ -42,7 +42,7 @@
     transform: translateY(-1px);
 }
 
-/* Tanle Container*/
+/* Table Container*/
 .table-container {
     background-color: var(--pabel-bg);
     border: 1px solid var(--border-color);
@@ -55,4 +55,9 @@
     width: 100%;
     border-collapse: collapse;
     text-align: left;
+}
+
+/*Table Heading*/
+.table-header-cell {
+    background-color: rgba(30, 41, 69, 0.5);
 }
