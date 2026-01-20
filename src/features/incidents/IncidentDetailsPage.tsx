@@ -13,70 +13,137 @@ export const IncidentDetailsPage = () => {
   const handleExportPDF = () => {
     window.print();
   };
-  
+
   const events = [
-    { time: '10:45:22', title: 'Initial Access', desc: 'Brute force attempt detected on SSH port', type: 'critical' },
-    { time: '10:47:05', title: 'Lateral Movement', desc: 'User "admin" accessed internal database server', type: 'warning' },
-    { time: '10:52:00', title: 'Data Exfiltration', desc: 'Outbound traffic spike to unknown IP (8.8.4.4)', type: 'critical' },
+    {
+      time: '10:45:22',
+      title: 'Initial Access',
+      desc: 'Brute force attempt detected on SSH port',
+      type: 'critical'
+    },
+    {
+      time: '10:47:05',
+      title: 'Lateral Movement',
+      desc: 'User "admin" accessed internal database server',
+      type: 'warning'
+    },
+    {
+      time: '10:52:00',
+      title: 'Data Exfiltration',
+      desc: 'Outbound traffic spike to unknown IP (8.8.4.4)',
+      type: 'critical'
+    }
   ];
 
   return (
     <div className="dashboard-container">
-      <button onClick={() => navigate(-1)} className="nav-link" style={{ marginBottom: '20px', width: 'fit-content' }}>
+      {/* Back navigation */}
+      <button
+        onClick={() => navigate(-1)}
+        className="nav-link"
+        style={{ marginBottom: '20px', width: 'fit-content' }}
+      >
         <ArrowLeft size={16} /> Back to Incidents
       </button>
 
-      <div className="incident-details-container">
-        {/* Left column: Description and Analysis */}
-        <div className="main-info">
-          <div className="detail-card">
-            <div className="detail-header">
-              <div>
-                <span className="incident-id">{id || 'INC-2024-089'}</span>
-                <h1 className="incident-title">Potential Data Breach</h1>
-              </div>
-              <span className="badge badge-critical">Critical</span>
-            </div>
+      {/* Header */}
+      <div className="detail-header">
+        <h1>{incident.title}</h1>
 
+        <div className="header-buttons">
+          <button onClick={handleExportPDF} className="btn-secondary">
+            <FileDown size={18} /> Export PDF
+          </button>
+        </div>
+      </div>
+
+      <div className="incident-grid">
+        {/* LEFT COLUMN */}
+        <div className="main-content">
+          {/* Summary */}
+          <div className="detail-card">
             <div className="stats-grid" style={{ gridTemplateColumns: '1fr 1fr' }}>
               <div className="stat-card">
                 <Globe size={20} color="var(--accent)" />
                 <div>
                   <p className="stat-label">Source IP</p>
-                  <p className="stat-value">192.168.1.105</p>
+                  <p className="stat-value">{incident.sourceIp}</p>
                 </div>
               </div>
+
               <div className="stat-card">
                 <Server size={20} color="var(--accent)" />
                 <div>
                   <p className="stat-label">Affected Asset</p>
-                  <p className="stat-value">DB-PROD-01</p>
+                  <p className="stat-value">{incident.targetDevice}</p>
                 </div>
               </div>
             </div>
           </div>
 
+          {/* MITRE */}
           <div className="detail-card">
-            <h3>Investigation Notes</h3>
-            <p style={{ color: 'var(--text-muted)', marginTop: '16px' }}>
-              Multiple failed login attempts followed by a successful authentication from an unusual location. 
-              The actor is currently attempting to query the "Customers" table.
+            <h3>MITRE ATT&CK® Mapping</h3>
+            <div className="mitre-badge">
+              <span className="mitre-id">{incident.technique}</span>
+              <span className="mitre-label">Credential Access</span>
+            </div>
+          </div>
+
+          {/* Description */}
+          <div className="detail-card">
+            <h3>Incident Description</h3>
+            <p>
+              Detected anomalous activity involving
+              <strong> {incident.targetDevice}</strong>. The source IP
+              <strong> {incident.sourceIp}</strong> attempted unauthorized access.
             </p>
           </div>
         </div>
 
-        {/* Right column: Timeline of events */}
-        <div className="sidebar-info">
+        {/* RIGHT COLUMN */}
+        <div className="actions-sidebar">
+          {/* Quick Response */}
+          <div className="detail-card">
+            <h3>Quick Response</h3>
+
+            <div className="actions-buttons">
+              <button
+                className="btn-danger"
+                onClick={() => isolateDevice(incident.targetDevice)}
+              >
+                <ShieldX size={18} /> Isolate Device
+              </button>
+
+              <button className="btn-warning">
+                <Lock size={18} /> Block Source IP
+              </button>
+
+              <button
+                className="btn-success"
+                onClick={() => resolveIncident(incident.id)}
+              >
+                <CheckCircle size={18} /> Resolve Incident
+              </button>
+            </div>
+          </div>
+
+          {/* Timeline */}
           <div className="detail-card">
             <h3 style={{ marginBottom: '24px' }}>Attack Timeline</h3>
+
             <div className="timeline-list">
               {events.map((event, index) => (
                 <div key={index} className="timeline-item">
-                  <div className={`timeline-dot ${event.type === 'critical' ? 'critical' : ''}`} />
+                  <div
+                    className={`timeline-dot ${
+                      event.type === 'critical' ? 'critical' : ''
+                    }`}
+                  />
                   <div className="timeline-time">{event.time}</div>
                   <div className="timeline-content">
-                    <h4 style={{ fontSize: '14px' }}>{event.title}</h4>
-                    <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '4px' }}>{event.desc}</p>
+                    <h4>{event.title}</h4>
+                    <p>{event.desc}</p>
                   </div>
                 </div>
               ))}
