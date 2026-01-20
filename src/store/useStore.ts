@@ -47,6 +47,9 @@ export const useStore = create<SecurityStore>((set) => ({
         incidents: [incident, ...state.incidents]
     })),
     resolveIncident: (id) => set((state) => ({
-        incidents: state.incidents.map(inc => inc.id === id ? { ...inc, status: 'resolver'}: inc)
-    }))
+        incidents: state.incidents.map(inc => inc.id === id ? { ...inc, status: 'resolved' } : inc)
+    })),
+    isolateDevice: (deviceId) => set((state) => ({
+        devices: state.devices.map(dev => dev.id === deviceId ? { ...dev, status: 'isolated' } : dev)
+    })),
 }))
