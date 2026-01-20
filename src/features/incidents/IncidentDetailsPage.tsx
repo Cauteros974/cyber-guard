@@ -1,13 +1,18 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useStore } from '../../store/useStore';
-import { ArrowLeft, ShieldX, CheckCircle, FileDown, ShieldAlert, Globe, Server, User } from 'lucide-react';
+import { ArrowLeft, ShieldX, Lock, CheckCircle, FileDown, Globe, Server } from 'lucide-react';
 import './IncidentDetails.css';
 
 export const IncidentDetailsPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const {incidents, resolveIncident, isolateDevice } = useStore();
+  const { incidents, resolveIncident, isolateDevice } = useStore();
+
   const incident = incidents.find(i => i.id === id) || incidents[0];
+
+  const handleExportPDF = () => {
+    window.print();
+  };
   
   const events = [
     { time: '10:45:22', title: 'Initial Access', desc: 'Brute force attempt detected on SSH port', type: 'critical' },
