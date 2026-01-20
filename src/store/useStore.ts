@@ -25,3 +25,15 @@ interface SecurityStore {
     resolveIncident: (id: string) => void;
     isolateDevice: (deviceId: string) => void;
 }
+
+export const useStore = create<SecurityStore>((set) => ({
+    incidents: [
+        {
+            id: 'INC-2024-001', 
+            title: 'Brute Force Attack', 
+            severity: 'high',
+            status: 'open',
+            timestamp: new Date().toISOString(),
+        }
+    ]
+}))
