@@ -67,6 +67,15 @@ export const IncidentDetailsPage = () => {
             <div className="sidebar-info">
                 <div className="detail-info">
                     <h3 style={{ marginBottom: '24px' }}>Attack Timeline</h3>
+                    <div className="timeline-list">
+                        {evetnts.map((event, index) => (
+                            <div key={index} className="timeline-item">
+                                <div className={`timeline-dot ${event.type === 'critical' ? 'critical' : ''}`} />
+                                <div className="timeline-time">{event.time}</div>
+                                <div className="timeline-content">
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
