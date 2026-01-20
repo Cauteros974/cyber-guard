@@ -36,10 +36,20 @@ export const IncidentDetailsPage = () => {
                             <span className="badge badge-critical">Critical</span>
                         </div>
 
-                        <div className="stats-grid">
+                        <div className="stats-grid" style={{ gridTemplateColumns: '1fr 1fr' }}>
                             <div className="stat-card">
                                 <Globe size={20} color="var(--accent)" />
                             </div>
+                            <p className="stat-label">Source IP</p>
+                            <p className="stat-value">192.168.1.105</p>
+                        </div>
+                    </div>
+
+                    <div className="stat-card">
+                        <Server size={20} color = "var(--accent)" />
+                        <div>
+                            <p className="stat-label">Affected Asset</p>
+                            <p className="stat-value">DB-PROD-01</p>
                         </div>
                     </div>
                 </div>
