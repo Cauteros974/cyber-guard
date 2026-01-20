@@ -57,8 +57,9 @@ export const IncidentDetailsPage = () => {
 
             <div className="detail-card">
                 <h3>Investigation Notes</h3>
-                <p style={{ color: 'var(--text-muted', marginTop: '13px'}}>
+                <p style={{ color: 'var(--text-muted', marginTop: '16px'}}>
                     Multiple failed login attempts followed by a successful authentication from an unusual location.
+                    The actor is currently attempting to query the "Customers" table.
                 </p>
             </div>
         </div>
