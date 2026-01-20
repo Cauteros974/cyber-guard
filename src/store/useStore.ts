@@ -5,4 +5,15 @@ interface Incedent {
     title: string;
     severity: 'critical' | 'medium' | 'low';
     status: 'open' | 'resolved' | 'mitigated';
+    timestamp: string;
+    sourceIp: string;
+    targetDevie: string;
+    technique: string;
+}
+
+interface Device {
+    id: string;
+    name: string;
+    ip: string;
+    status: 'online' | 'offline' | 'isolated';
 }
