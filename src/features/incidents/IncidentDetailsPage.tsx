@@ -54,6 +54,13 @@ export const IncidentDetailsPage = () => {
                     </div>
                 </div>
             </div>
+
+            <div className="detail-card">
+                <h3>Investigation Notes</h3>
+                <p style={{ color: 'var(--text-muted', marginTop: '13px'}}>
+                    Multiple failed login attempts followed by a successful authentication from an unusual location.
+                </p>
+            </div>
         </div>
     );
 };
