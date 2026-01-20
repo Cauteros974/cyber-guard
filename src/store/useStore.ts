@@ -38,5 +38,15 @@ export const useStore = create<SecurityStore>((set) => ({
             targetDevice: 'SRV-DB-01',
             technique: 'T1110'
         }
-    ]
+    ],
+    devices: [
+        {id: 'SRV-DB-01', name: 'Database Server', ip: '10.0.0.5', status: 'online'},
+        {id: 'WS-OFFICE-09', name: 'Workstation 09', ip: '10.0.0.12', status: 'online'},
+    ],
+    addIncident: (incident) => set((state) => ({
+        incidents: [incident, ...state.incidents]
+    })),
+    resolveIncident: (id) => set((state) => ({
+        incidents: state.incidents.map(inc => inc.id === id ? { ...inc, status: 'resolver'}: inc)
+    }))
 }))
