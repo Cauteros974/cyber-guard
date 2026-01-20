@@ -23,8 +23,15 @@ export const Header = () => {
       <div className="header-center">
         <div className="search-wrapper">
           <Search size={18} className="search-icon" />
-          <input type= "text" className="text_hold" placeholder="Search incidents, IPs or assets..." />
+          <input type= "text" placeholder="Search incidents, IPs or assets..." />
         </div>
+      </div>
+
+      <div className="header-right">
+        <button className="icon-btn">
+          <Bell size={18} />
+          {hasCritical && <span className="notification-badge"></span>}
+        </button>
       </div>
     </header>
   )
