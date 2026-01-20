@@ -34,6 +34,9 @@ export const useStore = create<SecurityStore>((set) => ({
             severity: 'high',
             status: 'open',
             timestamp: new Date().toISOString(),
+            sourceIp: '192.168.1.50',
+            targetDevice: 'SRV-DB-01',
+            technique: 'T1110'
         }
     ]
 }))
