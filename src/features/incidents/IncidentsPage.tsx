@@ -4,19 +4,19 @@ import { useIncidentStore } from "../../store/useIncidentStore";
 import { type Incident } from "../../types/incident";
 import { SeverityBadge } from "./components/SeverityBadge";
 import { useParams, useNavigate } from "react-router-dom";
-import { Info } from "lucide-react";
 import './Incidents.css';
-
 
 const columnHelper = createColumnHelper<Incident>();
 
 export const IncidentsPage = () => {
-    const {incidents} = useIncidentStore();
-    const { id } = useParams();
+    const { incidents } = useIncidentStore();
     const navigate = useNavigate();
 
     const columns = useMemo(() => [
-        columnHelper.accessor('id', { header: 'ID', cell: info => <span className="text-slate-500 font-mono">{info.getValue()}</span> }),
+        columnHelper.accessor('id', { 
+            header: 'ID', 
+            cell: info => <span className="id-text">{info.getValue()}</span> 
+        }),
         columnHelper.accessor('severity', {
             header: 'Severity',
             cell: info => <SeverityBadge level={info.getValue()} />
@@ -25,23 +25,23 @@ export const IncidentsPage = () => {
             header: 'Incident Title',
             cell: info => (
                 <button
-                    onClick={() => navigate (`/incidents/${info.row.original.id}`)}
-                    className="hover:text-accent font-medium transition-colors text-left"
+                    onClick={() => navigate(`/incidents/${info.row.original.id}`)}
+                    className="incident-title-link"
                 >
                     {info.getValue()}
                 </button>
             )
         }),
-        columnHelper.accessor('tactic', {header: 'Tactic'}),
+        columnHelper.accessor('tactic', { header: 'Tactic' }),
         columnHelper.accessor('status', { 
             header: 'Status',
-            cell: info => <span className="capitalize text-slate-400">{info.getValue().replace('-', ' ')}</span>
+            cell: info => <span className="status-text">{info.getValue().replace('-', ' ')}</span>
         }),
         columnHelper.accessor('timestamp', {
             header: 'Detected',
-            cell: info => new Date(info.getValue()).toLocaleString()
+            cell: info => <span className="timestamp-text">{new Date(info.getValue()).toLocaleString()}</span>
         }),
-    ], []);
+    ], [navigate]);
 
     const table = useReactTable({
         data: incidents,
@@ -49,36 +49,36 @@ export const IncidentsPage = () => {
         getCoreRowModel: getCoreRowModel(),
     });
 
-    return(
-        <div className="space-y-6">
-            <header className="flex justify-berween items-center">
-                <div>
-                    <h1 className="text-2xl font-bold">Incidents Log</h1>
-                    <p className="text-slate-400 text-sm">Detailed history of all security events.</p>
+    return (
+        <div className="incidents-page">
+            <header className="page-header">
+                <div className="header-info">
+                    <h1 className="page-title">Incidents Log</h1>
+                    <p className="page-description">Detailed history of all security events.</p>
                 </div>
-                <button className="bg-accent hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm transition-all">
+                <button className="btn-primary" onClick={() => window.print()}>
                     Export Report
                 </button>
             </header>
 
-            <div className="bg-panel rounded-xl border border-slate-800 overflow-hidden">
-                <table className="w-full text-left border-collaps">
-                    <thead className="bg-slate-800/50">
+            <div className="table-container">
+                <table className="incidents-table">
+                    <thead>
                         {table.getHeaderGroups().map(headerGroup => (
                             <tr key={headerGroup.id}>
                                 {headerGroup.headers.map(header => (
-                                    <th key={header.id} className="p-4 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                                    <th key={header.id} className="table-header-cell">
                                         {flexRender(header.column.columnDef.header, header.getContext())}
                                     </th>
                                 ))}
                             </tr>
                         ))}
                     </thead>
-                    <tbody className="divide-y divide-slate-800">
+                    <tbody>
                         {table.getRowModel().rows.map(row => (
-                            <tr key={row.id} className="hover:bg-slate-800/30 transition-colors">
+                            <tr key={row.id} className="table-row">
                                 {row.getVisibleCells().map(cell => (
-                                    <td key={cell.id} className="p-4 text-sm text-slate-200">
+                                    <td key={cell.id} className="table-cell">
                                         {flexRender(cell.column.columnDef.cell, cell.getContext())}
                                     </td>
                                 ))}

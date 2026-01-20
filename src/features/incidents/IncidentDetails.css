@@ -83,7 +83,7 @@
 }
 
 .btn-danger{
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 12px;
     padding: 12px;
@@ -94,9 +94,9 @@
 }
 
 .btn-warning{
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 2px;
     padding: 12px;
     border-radius: 8px;
     color: var(--text-muted);
@@ -105,9 +105,20 @@
 }
 
 .btn-success{
+    display: inline-flex;
+    align-items: center;
+    gap: 1px;
+    padding: 12px;
+    border-radius: 8px;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn-secondary {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 1px;
     padding: 12px;
     border-radius: 8px;
     color: var(--text-muted);
