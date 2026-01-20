@@ -14,14 +14,15 @@ export const IncidentDetailsPage = () => {
 
     const evetnts = [
         {time: '10:42:32', title: 'Initial Access', desc: 'Brute force attempt detected on SSH port', type: 'critical'},
-        
-    ]
+        { time: '10:47:05', title: 'Lateral Movement', desc: 'User "admin" accessed internal database server', type: 'warning' },
+        { time: '10:52:00', title: 'Data Exfiltration', desc: 'Outbound traffic spike to unknown IP (8.8.4.4)', type: 'critical' },   
+    ];
 
     return(
-        <div className="space-y-6 max-w-5xl mx-auto">
+        <div className="dashboard-container">
             <button
-                onClick={() => navigate('/incidents')}
-                className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors"
+                onClick={() => navigate(-1)}
+                className="nav-link" style={{ marginBottom: '10px', width: 'fit-content' }}
             >
                 <ArrowLeft size={18} /> Back to Incidents
             </button>
