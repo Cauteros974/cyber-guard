@@ -32,6 +32,14 @@ export const Header = () => {
           <Bell size={18} />
           {hasCritical && <span className="notification-badge"></span>}
         </button>
+
+        <div className="user-profile">
+          <div className="user-text">
+            <span className="user-name">Admin_Analyst</span>
+            <span className="user-role">SOC level_3</span>
+          </div>
+          
+        </div>
       </div>
     </header>
   )
