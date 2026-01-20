@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Clock, Shield, Target, Terminal } from "lucide-react";
 import { useIncidentStore } from "../../store/useIncidentStore";
 import { SeverityBadge } from "./components/SeverityBadge";
-
+import './IncidentDetails.css';
 export const IncidentDetailsPage = () => {
     const { id } = useParams();
     const navigate = useNavigate();
@@ -11,6 +11,11 @@ export const IncidentDetailsPage = () => {
     const incident = incidents.find(inc => inc.id === id);
 
     if(!incident) return <div className="p-10">Incident not found</div>
+
+    const evetnts = [
+        {time: '10:42:32', title: 'Initial Access', desc: 'Brute force attempt detected on SSH port', type: 'critical'},
+        
+    ]
 
     return(
         <div className="space-y-6 max-w-5xl mx-auto">
