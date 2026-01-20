@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { ArrowLeft, Clock, Globe, Shield, Target, Terminal } from "lucide-react";
+import { ArrowLeft, Clock, Globe, Server, Shield, Target, Terminal } from "lucide-react";
 import { useIncidentStore } from "../../store/useIncidentStore";
 import { SeverityBadge } from "./components/SeverityBadge";
 import './IncidentDetails.css';
