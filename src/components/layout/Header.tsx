@@ -14,6 +14,16 @@ export const Header = () => {
             <span className="status-dot"></span>
             <span className="status-ping"></span>
           </div>
+          <span className="status-label">
+            {hasCritical ? 'System Under Attack' : 'System Secure'}
+          </span>
+        </div>
+      </div>
+
+      <div className="header-center">
+        <div className="search-wrapper">
+          <Search size={18} className="search-icon" />
+          <input type= "text" className="text_hold" placeholder="Search incidents, IPs or assets..." />
         </div>
       </div>
     </header>
