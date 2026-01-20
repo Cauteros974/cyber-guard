@@ -1,0 +1,25 @@
+/*Page Container*/
+.incidents-page {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+  
+/* Page header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.page-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+  
+.page-description {
+    font-size: 14px;
+    color: var(--text-muted);
+}
