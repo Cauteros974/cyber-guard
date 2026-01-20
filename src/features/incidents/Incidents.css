@@ -39,5 +39,20 @@
 
 .btn-primary:hover {
     background-color: #2563eb;
-    transform: translateY(-4px);
+    transform: translateY(-1px);
+}
+
+/* Tanle Container*/
+.table-container {
+    background-color: var(--pabel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.incidents-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
 }
