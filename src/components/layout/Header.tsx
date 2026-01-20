@@ -4,9 +4,8 @@ import { useStore } from '../../store/useStore';
 import './Layout.css';
 
 export const Header = () => {
-  const incidents = useIncidentStore((state) => state.incidents);
+  const incidents = useStore((state) => state.incidents);
   const activeCount = incidents.filter(i => i.status === 'open').length;
-
   const hasCritical = incidents.some(inc => inc.severity === 'critical' && inc.status === 'open');
 
 
