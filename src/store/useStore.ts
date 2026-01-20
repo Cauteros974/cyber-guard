@@ -17,3 +17,11 @@ interface Device {
     ip: string;
     status: 'online' | 'offline' | 'isolated';
 }
+
+interface SecurityStore {
+    incidents: Incedent[];
+    devices: Device[];
+    addIncident: (incident: Incedent) => void;
+    resolveIncident: (id: string) => void;
+    isolateDevice: (deviceId: string) => void;
+}
