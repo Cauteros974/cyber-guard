@@ -3,11 +3,11 @@ import { create } from "zustand";
 interface Incedent {
     id: string;
     title: string;
-    severity: 'critical' | 'medium' | 'low';
+    severity: 'critical' | 'high' | 'medium' | 'low';
     status: 'open' | 'resolved' | 'mitigated';
     timestamp: string;
     sourceIp: string;
-    targetDevie: string;
+    targetDevice: string;
     technique: string;
 }
 
