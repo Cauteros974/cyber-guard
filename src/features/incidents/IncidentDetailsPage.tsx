@@ -82,8 +82,6 @@ export const IncidentDetailsPage = () => {
                 </div>
             </div>
         </div>
-        
-        
     );
 };
 
