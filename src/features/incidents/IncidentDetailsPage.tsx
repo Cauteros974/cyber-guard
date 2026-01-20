@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { ArrowLeft, Clock, Shield, Target, Terminal } from "lucide-react";
+import { ArrowLeft, Clock, Globe, Shield, Target, Terminal } from "lucide-react";
 import { useIncidentStore } from "../../store/useIncidentStore";
 import { SeverityBadge } from "./components/SeverityBadge";
 import './IncidentDetails.css';
@@ -32,6 +32,13 @@ export const IncidentDetailsPage = () => {
                             <div>
                                 <span className="incident-id">{id || 'INC-2024-089'}</span>
                                 <h1 className="incident-title">Potencial Data Breach</h1>
+                            </div>
+                            <span className="badge badge-critical">Critical</span>
+                        </div>
+
+                        <div className="stats-grid">
+                            <div className="stat-card">
+                                <Globe size={20} color="var(--accent)" />
                             </div>
                         </div>
                     </div>
