@@ -74,7 +74,7 @@ export const IncidentDetailsPage = () => {
                                 <div className="timeline-time">{event.time}</div>
                                 <div className="timeline-content">
                                     <h4 style={{ fontSize: '10px'}}>{event.title}</h4>
-                                    <p style={{ fontSize: '12px'}}>{event.desc}</p>
+                                    <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '4px'}}>{event.desc}</p>
                                 </div>
                             </div>
                         ))}
