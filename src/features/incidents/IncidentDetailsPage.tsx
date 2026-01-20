@@ -43,7 +43,7 @@ export const IncidentDetailsPage = () => {
         className="nav-link"
         style={{ marginBottom: '20px', width: 'fit-content' }}
       >
-        <ArrowLeft size={16} /> Back to Incidents
+        <ArrowLeft size={1} /> Back to Incidents
       </button>
 
       {/* Header */}
