@@ -39,7 +39,7 @@ export const Header = () => {
             <span className="user-role">SOC level_3</span>
           </div>
           <div className="user_avatar">
-            <User size={10} />
+            <User size={20} />
           </div>
         </div>
       </div>
