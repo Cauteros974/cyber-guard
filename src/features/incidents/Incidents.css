@@ -59,5 +59,64 @@
 
 /*Table Heading*/
 .table-header-cell {
-    background-color: rgba(30, 41, 69, 0.5);
+    background-color: rgba(30, 41, 59, 0.5);
+    padding: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Rows and cells */
+.table-row {
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s ease;
+}
+  
+.table-row:last-child {
+    border-bottom: none;
+}
+  
+.table-row:hover {
+    background-color: rgba(30, 41, 59, 0.3);
+}
+  
+.table-cell {
+    padding: 16px;
+    font-size: 14px;
+    color: var(--text-main);
+}
+  
+/* Content styles inside cells */
+.id-text {
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+}
+  
+.incident-title-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--text-main);
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    transition: color 0.2s;
+}
+  
+.incident-title-link:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+  
+.status-text {
+    text-transform: capitalize;
+    color: var(--text-muted);
+}
+  
+.timestamp-text {
+    white-space: nowrap;
 }
