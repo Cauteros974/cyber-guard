@@ -1,0 +1,57 @@
+.actions-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+}
+  
+.btn-danger, .btn-warning, .btn-success, .btn-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+    transition: opacity 0.2s;
+}
+  
+.btn-danger { background: var(--critical); }
+.btn-warning { background: var(--high); }
+.btn-success { background: var(--low); }
+.btn-secondary { background: var(--panel-hover); border: 1px solid var(--border-color); }
+  
+/* MITRE Badge */
+.mitre-badge {
+    display: inline-flex;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    margin-top: 12px;
+}
+  
+.mitre-id {
+    background: var(--accent);
+    padding: 4px 8px;
+    font-weight: bold;
+}
+  
+.mitre-label {
+    padding: 4px 12px;
+}
+  
+@media print {
+    .sidebar, .nav-menu, .header-buttons, .actions-sidebar {
+      display: none !important;
+    }
+    .main-container {
+      width: 100%;
+      background: white !important;
+      color: black !important;
+    }
+    .detail-card {
+      border: 1px solid #ccc !important;
+      box-shadow: none !important;
+    }
+}

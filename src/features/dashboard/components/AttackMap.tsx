@@ -9,7 +9,13 @@ export const AttackMap = () => {
                 <circle cx="200" cy="150" r="5" fill="var(--critical)">
                     <animate attributeName="r" values="5;10;5" dur="2s" repeatCount="indefinite" />
                 </circle>
+
+                <path d="M200,150 L500,250" stroke="var(--critical)" strokeWidth="1" strokeDasharray="5,5">
+                    <animate attributeName="stroke-dashoffset" from="100" to="0" dur="3s" repeatCount="indefinite" />
+                </path>
+
+                <circle cx="500" cy="250" r="5" fill="var(--accent)" />
             </svg>
         </div>
-    )
-}
+    );
+};
