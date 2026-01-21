@@ -58,7 +58,7 @@ export const NewIncidentModal = ({isOpen, onClose} : {isOpen: boolean, onClose: 
                         </select>
                     </div>
 
-                    <button type="submit">
+                    <button type="submit" className="btn-primary" style={{ width: '100%', marginTop: '20px' }}>
                         Create Incident
                     </button>
                 </form>
