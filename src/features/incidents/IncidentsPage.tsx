@@ -22,7 +22,15 @@ export const IncidentsPage = () => {
     if (!searchQuery.trim()) return incidents;
 
     const q = searchQuery.toLocaleLowerCase();
-  })
+
+    return incidents.filter((inc) => 
+        inc.id.toLowerCase().includes(q) ||
+        inc.title.toLowerCase().includes(q) ||
+        inc.tactic.toLocaleLowerCase().includes(q) ||
+        inc.technique.toLocaleLowerCase().includes(q) ||
+        inc.source.toLocaleLowerCase().includes(q)
+    );
+  }, [incidents, searchQuery]);
 
   const columns = useMemo(() => [
     columnHelper.accessor('id', { header: 'ID' }),
