@@ -3,6 +3,11 @@ import { useIncidentStore } from "../../../store/useIncidentStore";
 import { X } from "lucide-react";
 import { type Severity } from "../../../types/incident";
 
+interface Props {
+    isOpen: string;
+    onClosed: () => void;
+}
+
 export const NewIncidentModal = ({isOpen, onClose} : {isOpen: boolean, onClose: () => void}) => {
     const addIncident = useIncidentStore(state => state.addIncident);
     const [title, setTitle] = useState('');
