@@ -266,3 +266,12 @@
     z-index: 1000;
     backdrop-filter: blur(4px);
 }
+
+.modal-content {
+    background: var(--panel-bg);
+    width: 400px;
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
