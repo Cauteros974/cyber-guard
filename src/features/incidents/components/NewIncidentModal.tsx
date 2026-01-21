@@ -12,14 +12,14 @@ export const NewIncidentModal = ({isOpen, onClose} : {isOpen: boolean, onClose: 
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        const newIncident = {
+        addIncident ({
             id: `INC-${Math.floor(Math.random() * 10000)}`,
             title,
             severity,
             status: 'open',
             timestamp: new Date().toISOString(),
             tactic: 'Initial Access',
-        };
+        });
         setTitle('');
         setSeverity('medium');
         onClose();
@@ -64,5 +64,5 @@ export const NewIncidentModal = ({isOpen, onClose} : {isOpen: boolean, onClose: 
                 </form>
             </div>
         </div>
-    )
-}
+    );
+};
