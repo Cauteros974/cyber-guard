@@ -244,3 +244,13 @@
     color: var(--accent);
     background: rgba(255, 255, 255, 0.03);
 }
+
+.btn-create-incident{
+    width: 100%;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: 10px 16px 10px 40px;
+    border-radius: 8px;
+    color: #fff;
+    outline: none;
+}
