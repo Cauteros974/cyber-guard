@@ -43,7 +43,7 @@ export const AttackMap = () => {
           ))}
         </svg>
       </div>
-      <div style={{ position: 'absolute', bottom: '16px', left: '24px', display: 'flex', gap: '16px', fontSize: '12px', color: 'var(--primary-color)' }}>
+      <div style={{ position: 'absolute', bottom: '16px', left: '24px', display: 'flex', gap: '16px', fontSize: '12px', color: 'var(--custom-prop)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><span style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--critical)' }}></span> Critical Vector</div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><span style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--accent)' }}></span> Protected Asset</div>
       </div>
