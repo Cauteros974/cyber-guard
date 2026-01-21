@@ -5,9 +5,11 @@ export interface Incident {
   id: string;
   title: string;
   severity: Severity;
-  status: Status;
+  status: 'open' | 'investigating' | 'resolved';
   tactic: string;
   technique: string;
   source: string;
   timestamp: string;
 }
+
+export type CreateIncidentDTO = Omit<Incident, 'technique' | 'source'>;
