@@ -6,6 +6,8 @@ interface IncidentState {
   incidents: Incident[];
   setIncidents: (incidents: Incident[]) => void;
   addIncident: (incident: Incident) => void;
+  searchQuery: string;
+  setSearchQuery: (query: string) => void;
 }
 
 export const useIncidentStore = create<IncidentState>((set) => ({
@@ -16,4 +18,9 @@ export const useIncidentStore = create<IncidentState>((set) => ({
     set((state) => ({
       incidents: [newIncident, ...state.incidents],
     })),
+  
+  searchQuery: '',
+  setSearchQuery: (query) => set({searchQuery: query}),
+  
+  
 }))
