@@ -1,6 +1,7 @@
 import { ShieldAlert, Zap, Monitor, ShieldCheck } from "lucide-react";
 import { StatCard } from "./components/StatCard";
 import { ActivityChart } from "./components/ActivityChart";
+import { AttackMap } from "./components/AttackMap";
 import './Dashboard.css';
 
 export const DashboardPage = () => {
@@ -17,6 +18,11 @@ export const DashboardPage = () => {
         <StatCard title="Critical Threats" value={3} icon={Zap} />
         <StatCard title="Devices Online" value="1,240" icon={Monitor} />
         <StatCard title="Policy Compliance" value="98.2%" icon={ShieldCheck} />
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginTop: '24px'}}>
+        <ActivityChart />
+        <AttackMap />
       </div>
 
       <div className="dashboard-bottom">
