@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ShieldCheck, Plus, Trash2, ToggleLeft as Toggle } from "lucide-react";
 import { toast } from "sonner";
+import './Policies.css';
 
 interface Policy {
     id: number;
@@ -30,7 +31,7 @@ export const PoliciesPage = () => {
                 </div>
                 <button
                     onClick={addPolicy}
-                    className="bg-accent hover:big-blue-600 text-white px-4 py-2 rounded-lg flex"
+                    className="create-policy"
                 >
                     <Plus size={18} /> Create Policy
                 </button>

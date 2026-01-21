@@ -40,5 +40,15 @@ export const MOCK_INCIDENTS: Incident[] = [
     technique: "T1136.001",
     source: "WS-HR-02",
     timestamp: "2024-05-19T16:45:00Z"
-  }
+  },
+  {
+    id: "INC-2025-001",
+    title: "Unusual PowerShell Script Execution",
+    severity: "medium",
+    status: "in-progress",
+    tactic: "Execution",
+    technique: "T1159.001",
+    source: "WS-DUV-01",
+    timestamp: "2025-05-20T11:20:00Z"
+  },
 ];

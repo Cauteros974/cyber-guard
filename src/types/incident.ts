@@ -5,7 +5,7 @@ export interface Incident {
   id: string;
   title: string;
   severity: Severity;
-  status: 'open' | 'investigating' | 'resolved';
+  status: 'open' | 'investigating' | 'resolved' | 'in-progress';
   tactic: string;
   technique: string;
   source: string;
