@@ -1,5 +1,5 @@
 import { Header } from "./Header";
-import { Sidebar } from "lucide-react";
+import { Sidebar } from "./Sidebar";
 import './Layout.css';
 
 interface Props {
