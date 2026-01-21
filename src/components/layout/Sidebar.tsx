@@ -1,8 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import { LayoutDashboard, ShieldAlert, Monitor, ShieldCheck, Settings, Shield, Plus } from 'lucide-react';
+import { NewIncidentModal } from '../../features/incidents/components/NewIncidentModal';
 import './Layout.css';
 
 export const Sidebar = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const menuItems = [
     { path: '/', icon: LayoutDashboard, label: 'Dashboard' },
     { path: '/incidents', icon: ShieldAlert, label: 'Incidents' },
@@ -12,13 +14,14 @@ export const Sidebar = () => {
   ];
 
   return (
+    <>
     <aside className="sidebar">
       <div className="sidebar-logo">
         <Shield size={28} color="var(--accent)" fill="rgba(59, 130, 246, 0.2)" />
         <span className="logo-text">CyberGuard</span>
       </div>
 
-      <button className="btn-create-incident">
+      <button className="btn-create-incident" onClick={() => setIsModalOpen(true)}>
         <Plus size={18} />
         <span>New Incident</span>
       </button>
@@ -40,5 +43,11 @@ export const Sidebar = () => {
         <div className="version-tag">v.2.4.0-stable</div>
       </div>
     </aside>
+
+    <NewIncidentModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen}
+    />
+  </>
   );
 };
