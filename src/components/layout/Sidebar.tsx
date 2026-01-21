@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, ShieldAlert, Monitor, ShieldCheck, Settings, Shield } from 'lucide-react';
+import { LayoutDashboard, ShieldAlert, Monitor, ShieldCheck, Settings, Shield, Plus } from 'lucide-react';
 import './Layout.css';
 
 export const Sidebar = () => {
@@ -17,6 +17,11 @@ export const Sidebar = () => {
         <Shield size={28} color="var(--accent)" fill="rgba(59, 130, 246, 0.2)" />
         <span className="logo-text">CyberGuard</span>
       </div>
+
+      <button className="btn-create-incident">
+        <Plus size={18} />
+        <span>New Incident</span>
+      </button>
       
       <nav className="sidebar-nav">
         {menuItems.map((item) => (
