@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { LayoutDashboard, ShieldAlert, Monitor, ShieldCheck, Settings, Shield, Plus } from 'lucide-react';
 import { NewIncidentModal } from '../../features/incidents/components/NewIncidentModal';
+import { useState } from 'react';
 import './Layout.css';
 
 export const Sidebar = () => {
