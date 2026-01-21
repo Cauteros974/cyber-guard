@@ -3,14 +3,14 @@ import { useReactTable, getCoreRowModel, flexRender, createColumnHelper } from '
 import { useIncidentStore } from "../../store/useIncidentStore";
 import { type Incident } from "../../types/incident";
 import { SeverityBadge } from "./components/SeverityBadge";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import './Incidents.css';
 
 const columnHelper = createColumnHelper<Incident>();
-const { incidents, searchQuery} = useIncidentStore();
+
 
 export const IncidentsPage = () => {
-    const { incidents } = useIncidentStore();
+    const { incidents, searchQuery} = useIncidentStore();
     const navigate = useNavigate();
 
     const columns = useMemo(() => [
