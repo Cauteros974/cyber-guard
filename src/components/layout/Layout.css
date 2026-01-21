@@ -242,5 +242,5 @@
 .icon-btn{
     width: 28px;
     color: var(--accent);
-    
+    background: rgba(255, 255, 255, 0.03);
 }
