@@ -4,11 +4,11 @@ import { X } from "lucide-react";
 import { type Severity } from "../../../types/incident";
 
 interface Props {
-    isOpen: string;
-    onClosed: () => void;
+    isOpen: boolean;
+    onClose: () => void;
 }
 
-export const NewIncidentModal = ({isOpen, onClose} : {isOpen: boolean, onClose: () => void}) => {
+export const NewIncidentModal = ({ isOpen, onClose }: Props) =>  {
     const addIncident = useIncidentStore(state => state.addIncident);
     const [title, setTitle] = useState('');
     const [severity, setSeverity] = useState<Severity>('medium');
