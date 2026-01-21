@@ -57,6 +57,10 @@ export const NewIncidentModal = ({isOpen, onClose} : {isOpen: boolean, onClose: 
                             <option value="high">High</option>
                         </select>
                     </div>
+
+                    <button type="submit">
+                        Create Incident
+                    </button>
                 </form>
             </div>
         </div>
