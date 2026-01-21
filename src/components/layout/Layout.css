@@ -238,3 +238,9 @@
     justify-content: center;
     border: 1px solid var(--border-color);
 }
+
+.icon-btn{
+    width: 28px;
+    color: var(--accent);
+    
+}
