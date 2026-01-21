@@ -13,11 +13,13 @@ export const NewIncidentModal = ({isOpen, onClose} : {isOpen: boolean, onClose: 
         e.preventDefault();
         const newIncident = {
             id: `INC-${Math.floor(Math.random() * 10000)}`,
-            title,
-            severity: severity as any,
-            status: 'open',
-            timestamp: new Date().toISOString(),
-            tactic: 'Initial Access'
+  title,
+  severity: severity as 'low' | 'medium' | 'high' | 'critical',
+  status: 'open',
+  timestamp: new Date().toISOString(),
+  tactic: 'Initial Access',
+  technique: 'T1078',
+  source: 'User Reported',
         };
         addIncident(newIncident);
         onClose();
