@@ -15,6 +15,9 @@ export const NewIncidentModal = ({isOpen, onClose} : {isOpen: boolean, onClose: 
             id: `INC-${Math.floor(Math.random() * 10000)}`,
             title,
             severity: severity as any,
+            status: 'open',
+            timestamp: new Date().toISOString(),
+            tactic: 'Initial Access'
         }
     }
 }
