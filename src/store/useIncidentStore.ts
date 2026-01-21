@@ -12,17 +12,15 @@ interface IncidentState {
 
 export const useIncidentStore = create<IncidentState>((set) => ({
   incidents: MOCK_INCIDENTS,
-  setIncidents: (incidents) => 
-    set({ incidents}),
-  addIncident: (newIncident) => 
-    set((state) => ({
-      incidents: [newIncident, ...state.incidents],
-    })),
-  
-  searchQuery: '',
-  setSearchQuery: (query) => set({searchQuery: query}),
 
-  addIncident: (incident) => set((state) => {
-    incidents: [incident, ...state.incidents]
-  })
-}))
+  setIncidents: (incidents) =>
+    set({ incidents }),
+  addIncident: (incident) =>
+    set((state) => ({
+      incidents: [incident, ...state.incidents],
+    })),
+
+  searchQuery: '',
+  setSearchQuery: (query) =>
+    set({ searchQuery: query }),
+}));
