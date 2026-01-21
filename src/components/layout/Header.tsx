@@ -29,7 +29,7 @@ export const Header = () => {
               type= "text" 
               placeholder="Search incidents, IPs or assets..." 
               value={searchQuery}
-              
+              onChange={(e) => setSearchQuery(e.target.value)}
           />
         </div>
       </div>
