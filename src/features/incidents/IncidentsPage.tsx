@@ -7,6 +7,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import './Incidents.css';
 
 const columnHelper = createColumnHelper<Incident>();
+const { incidents, searchQuery} = useIncidentStore();
 
 export const IncidentsPage = () => {
     const { incidents } = useIncidentStore();
@@ -48,6 +49,12 @@ export const IncidentsPage = () => {
         columns,
         getCoreRowModel: getCoreRowModel(),
     });
+
+    const filteredData = useMemo(() => {
+        return incidents.filter(
+
+        )
+    }, [incidents, searchQuery])
 
     return (
         <div className="incidents-page">
