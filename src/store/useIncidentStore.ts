@@ -21,6 +21,8 @@ export const useIncidentStore = create<IncidentState>((set) => ({
   
   searchQuery: '',
   setSearchQuery: (query) => set({searchQuery: query}),
-  
-  
+
+  addIncident: (incident) => set((state) => {
+    incidents: [incident, ...state.incidents]
+  })
 }))
