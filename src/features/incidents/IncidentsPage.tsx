@@ -18,6 +18,12 @@ export const IncidentsPage = () => {
     );
   }, [incidents, searchQuery]);
 
+  const filteredIncidents = useMemo(() => {
+    if (!searchQuery.trim()) return incidents;
+
+    const q = searchQuery.toLocaleLowerCase();
+  })
+
   const columns = useMemo(() => [
     columnHelper.accessor('id', { header: 'ID' }),
     columnHelper.accessor('severity', { header: 'Severity' }),

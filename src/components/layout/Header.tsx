@@ -1,12 +1,14 @@
 import { Search, Bell, User } from "lucide-react";
-import { useStore } from "../../store/useStore";
 import { useIncidentStore } from "../../store/useIncidentStore";
 import './Layout.css';
 
 export const Header = () => {
-  const incidents = useStore((state) => state.incidents);
-  const hasCritical = incidents.some(inc => inc.severity === 'critical' && inc.status === 'open');
-  const {searchQuery, setSearchQuery} = useIncidentStore();
+  const { incidents, searchQuery, setSearchQuery } = useIncidentStore();
+
+  const hasCritical = incidents.some(
+    inc => inc.severity === 'critical' && inc.status === 'open'
+  );
+
 
   return(
     <header className="header">
