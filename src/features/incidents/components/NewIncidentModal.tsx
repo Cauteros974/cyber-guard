@@ -8,4 +8,13 @@ export const NewIncidentModal = ({isOpen, onClose} : {isOpen: boolean, onClose: 
     const [severity, setSeverity] = useState('medium');
 
     if(!isOpen) return null;
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        const newIncident = {
+            id: `INC-${Math.floor(Math.random() * 10000)}`,
+            title,
+            severity: severity as any,
+        }
+    }
 }
