@@ -51,8 +51,9 @@ export const IncidentsPage = () => {
     });
 
     const filteredData = useMemo(() => {
-        return incidents.filter(
-
+        return incidents.filter( inc => 
+            inc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            inc.id.toLowerCase().includes(searchQuery.toLowerCase())
         )
     }, [incidents, searchQuery])
 
