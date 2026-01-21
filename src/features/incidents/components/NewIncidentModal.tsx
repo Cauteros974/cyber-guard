@@ -47,16 +47,15 @@ export const NewIncidentModal = ({isOpen, onClose} : {isOpen: boolean, onClose: 
                     </div>
 
                     <div className="form-group">
-                    <label>Severity</label>
-                    <select
-                        value={severity}
-                        onChange={(e) => setSeverity(e.target.value as Severity)}
-                    >
-                        <option value="low">Low</option>
-                        <option value="medium">Medium</option>
-                        <option value="high">High</option>
-                        
-                    </select>
+                        <label>Severity</label>
+                        <select
+                            value={severity}
+                            onChange={(e) => setSeverity(e.target.value as Severity)}
+                        >
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
                     </div>
                 </form>
             </div>
