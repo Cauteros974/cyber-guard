@@ -1,10 +1,12 @@
 import { Search, Bell, User } from "lucide-react";
 import { useStore } from "../../store/useStore";
+import { useIncidentStore } from "../../store/useIncidentStore";
 import './Layout.css';
 
 export const Header = () => {
   const incidents = useStore((state) => state.incidents);
   const hasCritical = incidents.some(inc => inc.severity === 'critical' && inc.status === 'open');
+  const {searchQuery, setSearchQuery} = useIncidentStore();
 
   return(
     <header className="header">
@@ -23,7 +25,12 @@ export const Header = () => {
       <div className="header-center">
         <div className="search-wrapper">
           <Search size={18} className="search-icon" />
-          <input type= "text" placeholder="Search incidents, IPs or assets..." />
+          <input 
+              type= "text" 
+              placeholder="Search incidents, IPs or assets..." 
+              value={searchQuery}
+              
+          />
         </div>
       </div>
 
