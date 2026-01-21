@@ -18,6 +18,9 @@ export const NewIncidentModal = ({isOpen, onClose} : {isOpen: boolean, onClose: 
             status: 'open',
             timestamp: new Date().toISOString(),
             tactic: 'Initial Access'
-        }
-    }
+        };
+        addIncident(newIncident);
+        onClose();
+        setTitle('');
+    };
 }
