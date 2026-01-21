@@ -24,4 +24,29 @@ export const NewIncidentModal = ({isOpen, onClose} : {isOpen: boolean, onClose: 
         setSeverity('medium');
         onClose();
     };
+
+    return(
+        <div  className="modal-overlay">
+            <div className="modal-content">
+                <div className="modal-header">
+                    <h2>Report New Incident</h2>
+                    <button onClick={onClose}>
+                        <X size={20} />
+                    </button>
+                </div>
+
+                <form onSubmit={handleSubmit}>
+                    <div className="form-group">
+                        <label>Incident Title</label>
+                        <input 
+                            value={title}
+                            onChange={(e) => setTitle(e.target.value)}
+                            placeholder="Brute force on DB"
+                            required
+                        />
+                    </div>
+                </form>
+            </div>
+        </div>
+    )
 }
