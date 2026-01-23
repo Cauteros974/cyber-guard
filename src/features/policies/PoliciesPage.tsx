@@ -58,8 +58,8 @@ export const PoliciesPage = () => {
                         <div className="flex items-center gap-6">
                             <div className="flex items-center gap-2">
                                 <span className="text-xs text-slate-500 uppercase font-bold tracking-widest">Status </span>
-                                <FaToggleOff />
-                                <FaToggleOn />
+                                <FaToggleOff size={22}/>
+                                <FaToggleOn  size={22}/>
                             </div>
                         </div>
                     </div>
