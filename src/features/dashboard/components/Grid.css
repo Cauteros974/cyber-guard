@@ -79,3 +79,7 @@
 
 .mini-table th { padding: 8px; text-align: left; color: var(--text-muted); border-bottom: 1px solid var(--border-color); }
 .mini-table td { padding: 10px 8px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+
+.bage{
+  background: rgba(59, 130, 246, 0.1);
+}
