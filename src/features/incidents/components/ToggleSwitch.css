@@ -27,5 +27,5 @@
 }
 
 .toggle--on .toggle-thumb{
-    transform: translateX(10px);
+    transform: translateX(20px);
 }
