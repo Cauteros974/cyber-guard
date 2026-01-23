@@ -65,7 +65,7 @@ export const Grid = () => {
                                     <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.3}/>
                                 </linearGradient>
                             </defs>
-                            <XAxis dataKey="day" stroke="475569"></XAxis>
+                            <XAxis dataKey="day" stroke="475569" />
                             <YAxis stroke="#475569"/>
                         </AreaChart>
                     </ResponsiveContainer>
