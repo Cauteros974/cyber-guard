@@ -17,7 +17,7 @@ export const DevicesPage = () => {
         </header>
   
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {devices.map((dev) => (
+          {devices.map((dev) => {
             const isOnline = dev.status === "online";
 
             return(
@@ -29,7 +29,7 @@ export const DevicesPage = () => {
                   <div className="icon-wrapper">
                     {dev.type === "server" ? (
                       <Server size={20} />
-                    ) ; (
+                    ) : (
                       <Laptop size={20} />
                     )}
                   </div>
@@ -40,15 +40,16 @@ export const DevicesPage = () => {
                   }`}
                   >
                     {isOnline ? (
-                      <CheckCircle size={20} />
+                      <CheckCircle size={14} />
                     ) : (
-                      <AlertCircle size={20} />
+                      <AlertCircle size={14} />
                     )}
+                    {dev.status}
                   </div>
                 </div>
               </div>
             )
-          ))}
+          })}
         </div>
       </div>
     );
