@@ -9,6 +9,7 @@ const pieData = [
 export const Grid = () => {
     return(
         <div className="enterprise-dashboard">
+            {/*KPI Block */}
             <div className="kpi-row">
                 <div className="kpi-card total">
                     <div className="kpi-content">
@@ -30,6 +31,12 @@ export const Grid = () => {
                         <span className="kpi-value">17 058</span>
                         <span className="kpi-sub text-danger">1066 live threats</span>
                     </div>
+                </div>
+            </div>
+            {/*Pie chart and large graph*/}
+            <div className="main-stat-grid">
+                <div className="chart-container pie-box">
+                    <h3>Unresolved Objects by Source</h3>
                 </div>
             </div>
         </div>
