@@ -51,7 +51,9 @@ export const DevicesPage = () => {
                 <h3 className="device-title">{dev.name}</h3>
                 <p className="device-id">{dev.id}</p>
 
+                 {/* Metrics */}
                 <div className="space-y-3 mt-4">
+                   {/* CPU */}
                   <div className="metric">
                     <div className="metric-header">
                       <span className="metric-labe">
@@ -66,6 +68,7 @@ export const DevicesPage = () => {
                     </div>
                   </div>
 
+                  {/* RAM */}
                   <div className="mertic">
                     <div className="metric-header">
                       <span className="metric-label">
