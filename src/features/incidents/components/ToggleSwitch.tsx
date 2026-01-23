@@ -8,7 +8,7 @@ interface ToggleSwitchProps {
 export const ToggleSwitch = ({ checked, onToggle }: ToggleSwitchProps) => {
     return(
         <button
-            className={`toggle ${checked ? 'toggle--on' : ''}`}
+            className={`toggle ${checked ? 'toggle--on' : 'toggle-off'}`}
             onClick = {onToggle}
             aria-pressed = {checked}
         >

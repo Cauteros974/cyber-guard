@@ -1,4 +1,5 @@
 import { Server, Monitor, Laptop, CheckCircle, AlertCircle } from "lucide-react";
+import './DevicesPage.css';
 
 const devices = [
     {id: 'SRV-01', name: 'Main DB Cluster', type: 'server', status: 'online', cpu: 45, ram: 62},
@@ -11,8 +12,8 @@ export const DevicesPage = () => {
     return (
       <div className="space-y-6">
         <header>
-          <h1 className="text-2xl font-bold">Assets Inventory</h1>
-          <p className="text-slate-400 text-sm">Monitoring {devices.length} active devices in the network.</p>
+          <h1 className="text-assets">Assets Inventory</h1>
+          <p className="text-monitoring">Monitoring {devices.length} active devices in the network.</p>
         </header>
   
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
