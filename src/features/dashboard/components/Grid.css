@@ -45,7 +45,14 @@
 /*Grid of graphs*/
 .main-stat-grid{
   display: grid;
-  grid-template-columns: 350px 1fr;
   gap: 20px;
 }
 
+.chart-container{
+  background: var(--panel-bg);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+/*Pie chart*/
