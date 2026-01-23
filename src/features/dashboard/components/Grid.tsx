@@ -109,5 +109,5 @@ export const Grid = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};

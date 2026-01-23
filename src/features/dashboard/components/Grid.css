@@ -1,0 +1,11 @@
+.enterprised-dashboard{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.kpi-row{
+  display: grid;
+  grid-template-columns:auto;
+  gap: 20px;
+}
