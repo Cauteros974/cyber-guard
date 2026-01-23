@@ -55,6 +55,14 @@ export const Grid = () => {
                         ))}
                     </div>
                 </div>
+
+                <div className="chart-container area-box">
+                    <h3>Detections by level (7 days)</h3>
+                    <ResponsiveContainer width="100%" height={250}>
+                        <AreaChart data={Array.from({length: 7})}>
+                        </AreaChart>
+                    </ResponsiveContainer>
+                </div>
             </div>
         </div>
     )
