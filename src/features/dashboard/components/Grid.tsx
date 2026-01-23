@@ -98,6 +98,13 @@ export const Grid = () => {
                         <thead>
                             <tr><th>#</th><th>Username</th><th>Risk Level</th></tr>
                         </thead>
+                        <tbody>
+                            {['NT AUTHORITY\\SYSTEM', 'ADM\\pysaniuk.o.v', 'admin'].map((name, i) => (
+                                <tr key={name}>
+                                    <td>{i+1}</td><td>{name}</td><td><div className="risk-bar" style={{width: `${90 - i*20}%`}}></div></td>
+                                </tr>
+                            ))}
+                        </tbody>
                     </table>
                 </div>
             </div>
