@@ -1,8 +1,11 @@
 .text-assets{
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .text-monitoring{
     text-align: center;
-    font-size: 20px;
+    font-size: 17px;
+    font-family: 'Courier New', Courier, monospace;
 }
+
