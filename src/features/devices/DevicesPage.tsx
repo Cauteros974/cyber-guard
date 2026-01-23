@@ -47,6 +47,19 @@ export const DevicesPage = () => {
                     {dev.status}
                   </div>
                 </div>
+
+                <h3 className="device-title">{dev.name}</h3>
+                <p className="device-id">{dev.id}</p>
+
+                <div className="space-y-3 mt-4">
+                  <div className="metric">
+                    <div className="metric-header">
+                      <span className="metric-labe">
+                        <Cpu size={15} /> CPU
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             )
           })}
