@@ -68,9 +68,21 @@ export const Grid = () => {
                             <XAxis dataKey="day" stroke="475569" />
                             <YAxis stroke="#475569"/>
                             <Tooltip />
-                            <Area type="monotone" stroke="#3b82f6" dataKey="val"/>
+                            <Area type="monotone" stroke="#3b82f6" dataKey="val" fillOpacity={1} fill="url(#colorVal)"/>
                         </AreaChart>
                     </ResponsiveContainer>
+                </div>
+            </div>
+
+            {/*Bottom row: Top 10 lists*/}
+            <div className="rankings-grid">
+                <div className="rank-box">
+                    <h3>Top Target Computers</h3>
+                    <table className="mini-table">
+                        <thead>
+                            <tr><th>#</th><th>Computer Name</th><th>Alerts</th></tr>
+                        </thead>
+                    </table>
                 </div>
             </div>
         </div>
