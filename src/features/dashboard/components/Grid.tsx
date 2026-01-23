@@ -91,6 +91,15 @@ export const Grid = () => {
                         </tbody>
                     </table>
                 </div>
+
+                <div className="rank-box">
+                    <h3>Top 10 Targeted Users</h3>
+                    <table className="mini-table">
+                        <thead>
+                            <tr><th>#</th><th>Username</th><th>Risk Level</th></tr>
+                        </thead>
+                    </table>
+                </div>
             </div>
         </div>
     )
