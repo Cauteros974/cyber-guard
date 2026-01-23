@@ -16,3 +16,24 @@
   border-radius: 10px;
   border-bottom: 4px solid transparent;
 }
+
+.kpi-card.total{
+  border-color: var(--accent);
+}
+.kpi-card.warning{
+  border-color: #f59e0b;
+}
+.kpi-card.critical{ 
+  border-color: var(--critical); 
+}
+
+.kpi-label{
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.kpi-value{
+  display: block; 
+  font-size: 30px; 
+  font-weight: 700;
+  margin: 8px 0;
+}
