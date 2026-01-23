@@ -1,5 +1,5 @@
 import { PieChart, Pie, Cell, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import './Dashboard.css';
+import './Grid.css';
 
 const pieData = [
     { name: 'Antivirus', value: 17056, color: '#a855f7' },
