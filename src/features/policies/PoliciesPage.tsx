@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { ShieldCheck, Plus, Trash2, ToggleLeft as Toggle } from "lucide-react";
 import { toast } from "sonner";
-import { FaToggleOff } from "react-icons/fa6";
-import { FaToggleOn } from "react-icons/fa6";
+import { ToggleSwitch } from "../incidents/components/ToggleSwitch";
 import './Policies.css';
 
 interface Policy {
@@ -10,14 +9,27 @@ interface Policy {
     name: string;
     description: string;
     status: 'active' | 'disable';
-    severity: string;
+    severity: 'low' | 'medium' | 'high' | 'critical';
 }
 
 export const PoliciesPage = () => {
     const [policies, setPolicies] = useState<Policy[]>([
         { id: 1, name: 'Block Ransomware Extensions', description: 'Prevent execution of .encrypted files', status: 'active', severity: 'high'},
-        { id: 1, name: 'SSH Brute Force Protection', description: 'Temporary ban IP after 5 failed attempts', status: 'active', severity: 'critical'},
+        { id: 2, name: 'SSH Brute Force Protection', description: 'Temporary ban IP after 5 failed attempts', status: 'active', severity: 'critical'},
     ]);
+
+    const togglePolicyStatus = (id: number) => {
+        setPolicies(prev =>
+            prev.map(policy => 
+                policy.id === id
+                ?{
+                    ...policy,
+
+                }
+                :policy
+            )
+        )
+    }
 
     const addPolicy = () => {
         toast.success('Policy configuration opened', {
@@ -55,12 +67,15 @@ export const PoliciesPage = () => {
                             </div>
                         </div>
 
-                        <div className="flex items-center gap-6">
-                            <div className="flex items-center gap-2">
-                                <span className="text-xs text-slate-500 uppercase font-bold tracking-widest">Status </span>
-                                <FaToggleOff size={22}/>
-                                <FaToggleOn  size={22}/>
-                            </div>
+                        <div className="flex items-center gap-3">
+                            <span className="text-xs text-slate-500 uppercase font-bold tracking-widest">
+                                Status
+                            </span>
+
+                            <ToggleSwitch 
+                                checked = {policy.status === 'active'}
+                                onToggle={() => togglePolicyStatus(policy.id)}
+                            />
                         </div>
                     </div>
                 ))}
