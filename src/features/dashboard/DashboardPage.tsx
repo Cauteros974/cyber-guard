@@ -4,6 +4,11 @@ import { ActivityChart } from "./components/ActivityChart";
 import { AttackMap } from "./components/AttackMap";
 import './Dashboard.css';
 
+const pieData = [
+  {name: 'Antivirus', value: 17056, color: '#a855f7'},
+  {name: 'Firewall', value: 3, color: '#06b6d4'},
+];
+
 export const DashboardPage = () => {
   return (
     <div className="dashboard-container">
