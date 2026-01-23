@@ -5,12 +5,14 @@ interface ToggleSwitchProps {
     onChange: () => void;
 }
 
-export const ToggleSwitch = () => ({cheked, onChange}: ToggleSwitchProps) => {
+export const ToggleSwitch = ({ checked, onChange }: ToggleSwitchProps) => {
     return(
         <button
-            className='toggle'
+            className = {`toggle ${checked ? 'toggle--on' : 'toggle--off'}`}
+            onClick = {onChange}
+            aria-pressed = {checked}
         >
             <span className="toggle-thumb" />
         </button>
-    )
-}
+    );
+};
