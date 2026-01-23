@@ -33,6 +33,18 @@ export const DevicesPage = () => {
                       <Laptop size={20} />
                     )}
                   </div>
+
+                  <div
+                  className={`status-badge ${
+                    isOnline ? "online" : "offline"
+                  }`}
+                  >
+                    {isOnline ? (
+                      <CheckCircle size={20} />
+                    ) : (
+                      <AlertCircle size={20} />
+                    )}
+                  </div>
                 </div>
               </div>
             )
