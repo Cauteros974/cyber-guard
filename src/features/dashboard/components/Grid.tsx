@@ -40,11 +40,19 @@ export const Grid = () => {
                     <div className="pie-wrapper">
                         <ResponsiveContainer width="50%" height={200}>
                             <PieChart>
-                                <Pie data={pieData} innerRadius={60} outerRadius={80}>
+                                <Pie data={pieData} innerRadius={60} outerRadius={80} paddingAngle={5} dataKey="value">
                                     {pieData.map((entry, index) => <Cell key={index} fill={entry.color} />)}
                                 </Pie>
                             </PieChart>
                         </ResponsiveContainer>
+                        <div className="pie-center-text">17056</div>
+                    </div>
+                    <div className="pie-legend">
+                        {pieData.map(item => (
+                            <div key={item.name} className="legend-item">
+                                <span style={{background: item.color}}></span> {item.name}: {item.value}
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
