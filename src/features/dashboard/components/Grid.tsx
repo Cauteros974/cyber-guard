@@ -83,9 +83,9 @@ export const Grid = () => {
                             <tr><th>#</th><th>Computer Name</th><th>Alerts</th></tr>
                         </thead>
                         <tbody>
-                            {['v4dr-2-senyshyn', 'desktop-b8ps5j2'].map((name, i) => (
+                            {['v4dr-2-senyshyn', 'desktop-b8ps5j2', 'WS-OFFICE-09'].map((name, i) => (
                                 <tr key={name}>
-                                    
+                                    <td>{i+1}</td><td>{name}</td><td><span className="badge-count">{5000 - i*1000}</span></td>
                                 </tr>
                             ))}
                         </tbody>
