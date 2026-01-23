@@ -37,3 +37,20 @@
     font-weight: 600;
     color: #e5e7eb;
 }
+
+.device-id{
+    font-size: 12px;
+    color: #64748b;
+    font-family: monospace;
+}
+
+.status-badge{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 999px;
+}
