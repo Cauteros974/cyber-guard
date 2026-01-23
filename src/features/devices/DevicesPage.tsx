@@ -57,6 +57,12 @@ export const DevicesPage = () => {
                       <span className="metric-labe">
                         <Cpu size={15} /> CPU
                       </span>
+                      <span>{dev.cpu}%</span>
+                    </div>
+                    <div className="metric-bar">
+                      <div className="metric-fill">
+                        
+                      </div>
                     </div>
                   </div>
                 </div>
