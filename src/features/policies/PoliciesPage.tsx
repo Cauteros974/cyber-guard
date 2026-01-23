@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { ShieldCheck, Plus, Trash2, ToggleLeft as Toggle } from "lucide-react";
 import { toast } from "sonner";
+import { FaToggleOff } from "react-icons/fa6";
+import { FaToggleOn } from "react-icons/fa6";
 import './Policies.css';
 
 interface Policy {
@@ -55,10 +57,9 @@ export const PoliciesPage = () => {
 
                         <div className="flex items-center gap-6">
                             <div className="flex items-center gap-2">
-                                <span className="text-xs text-slate-500 uppercase font-bold tracking-widest">Status</span>
-                                <button className="switch-btn">
-                                    <Toggle size={20} />
-                                </button>
+                                <span className="text-xs text-slate-500 uppercase font-bold tracking-widest">Status </span>
+                                <FaToggleOff />
+                                <FaToggleOn />
                             </div>
                         </div>
                     </div>
