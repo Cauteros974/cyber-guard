@@ -71,6 +71,13 @@ export const DevicesPage = () => {
                       <span className="metric-label">
                         <MemoryStick size={12}/> RAM
                       </span>
+                      <span>{dev.ram}</span>
+                    </div>
+                    <div className="metric-bar">
+                      <div
+                        className="metric-fill ram"
+                        style={{ width: isOnline ? `${dev.ram}%` : "0%"}}
+                      />
                     </div>
                   </div>
                 </div>
