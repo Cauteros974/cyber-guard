@@ -67,6 +67,8 @@ export const Grid = () => {
                             </defs>
                             <XAxis dataKey="day" stroke="475569" />
                             <YAxis stroke="#475569"/>
+                            <Tooltip />
+                            <Area type="monotone" stroke="#3b82f6" dataKey="val"/>
                         </AreaChart>
                     </ResponsiveContainer>
                 </div>
