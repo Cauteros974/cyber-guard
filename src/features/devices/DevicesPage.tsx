@@ -57,9 +57,9 @@ export const DevicesPage = () => {
                   <div className="metric">
                     <div className="metric-header">
                       <span className="metric-labe">
-                        <Cpu size={15} /> CPU
+                        <Cpu size={14} /> CPU
                       </span>
-                      <span>{dev.cpu}%</span>
+                      <span className="metric-cpu">{dev.cpu}%</span>
                     </div>
                     <div className="metric-bar">
                       <div className="metric-fill"
@@ -72,9 +72,9 @@ export const DevicesPage = () => {
                   <div className="mertic">
                     <div className="metric-header">
                       <span className="metric-label">
-                        <MemoryStick size={12}/> RAM
+                        <MemoryStick size={14}/> RAM
                       </span>
-                      <span>{dev.ram}</span>
+                      <span className="metric-ram">{dev.ram}</span>
                     </div>
                     <div className="metric-bar">
                       <div

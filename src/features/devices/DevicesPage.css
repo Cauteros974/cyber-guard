@@ -79,6 +79,18 @@
     display: flex;
     align-items: center;
     gap: 4px;
+    font-size: 14px;
+}
+
+.metric-cpu{
+    font-size: 12px;
+    padding-left: 4px;
+}
+
+.metric-ram{
+    font-size: 12px;
+    padding-left: 4px;
+    padding-top: 2px;
 }
 
 .metric-bar{

@@ -35,7 +35,9 @@ export const NewIncidentModal = ({ isOpen, onClose }: Props) =>  {
             <div className="modal-content">
                 <div className="modal-header">
                     <h2>Report New Incident</h2>
-                    <X size={20} onClick={close}/>
+                    <button className="modal-close" onClick={onClose}>
+                    <X size={20}/>
+                    </button>
                 </div>
 
                 <form onSubmit={handleSubmit}>
