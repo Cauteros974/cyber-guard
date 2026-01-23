@@ -82,6 +82,13 @@ export const Grid = () => {
                         <thead>
                             <tr><th>#</th><th>Computer Name</th><th>Alerts</th></tr>
                         </thead>
+                        <tbody>
+                            {['v4dr-2-senyshyn', 'desktop-b8ps5j2'].map((name, i) => (
+                                <tr key={name}>
+                                    
+                                </tr>
+                            ))}
+                        </tbody>
                     </table>
                 </div>
             </div>
