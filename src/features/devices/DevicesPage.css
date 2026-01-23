@@ -94,5 +94,9 @@
 }
 
 .metric-fill.cpu{
-    background: linear-gradient(70deg, #38bdf8, #0ea5e9);
+    background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+}
+
+.metric-fill.ram {
+    background: linear-gradient(90deg, #c084fc, #9333ea);
 }
