@@ -1,6 +1,6 @@
 .create-policy{
     width: 30%;
-    background: var(--text-main);
+    background: var(--border-color);
     border: 1px solid var(--border-color);
     padding: 5px 6px 6px 0px;
     border-radius: 8px;
