@@ -20,3 +20,12 @@
     left: 1px;
     transition: transform 0.25s ease;
 }
+
+.toggle--on{
+    background: green;
+    border-color: green;
+}
+
+.toggle--on .toggle-thumb{
+    transform: translateX(10px);
+}
