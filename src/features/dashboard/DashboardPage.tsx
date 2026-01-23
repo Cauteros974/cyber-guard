@@ -2,6 +2,7 @@ import { ShieldAlert, Zap, Monitor, ShieldCheck } from "lucide-react";
 import { StatCard } from "./components/StatCard";
 import { ActivityChart } from "./components/ActivityChart";
 import { AttackMap } from "./components/AttackMap";
+import { Grid } from "./components/Grid";
 import './Dashboard.css';
 
 const pieData = [
@@ -28,6 +29,7 @@ export const DashboardPage = () => {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginTop: '24px'}}>
         <ActivityChart />
         <AttackMap />
+        <Grid />
       </div>
 
       <div className="dashboard-bottom">
