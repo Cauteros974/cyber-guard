@@ -17,6 +17,13 @@ export const Grid = () => {
                         <span className="kpi-sub">Last 7 days: 299 036</span>
                     </div>
                 </div>
+                <div className="kpi-card warning">
+                    <div className="kpi-content">
+                        <span className="kpi-label">Warnings</span>
+                        <span className="kpi-value">1</span>
+                        <span className="kpi-sub">Unresolved: 0</span>
+                    </div>
+                </div>
             </div>
         </div>
     )
