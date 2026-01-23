@@ -24,7 +24,7 @@ export const PoliciesPage = () => {
                 policy.id === id
                 ?{
                     ...policy,
-
+                    status: policy.status === 'active' ? 'disable' : 'active'
                 }
                 :policy
             )
