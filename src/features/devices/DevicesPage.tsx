@@ -65,6 +65,14 @@ export const DevicesPage = () => {
                       />
                     </div>
                   </div>
+
+                  <div className="mertic">
+                    <div className="metric-header">
+                      <span className="metric-label">
+                        <MemoryStick size={12}/> RAM
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             )
