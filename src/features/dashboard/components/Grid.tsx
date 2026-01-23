@@ -37,6 +37,15 @@ export const Grid = () => {
             <div className="main-stat-grid">
                 <div className="chart-container pie-box">
                     <h3>Unresolved Objects by Source</h3>
+                    <div className="pie-wrapper">
+                        <ResponsiveContainer width="50%" height={200}>
+                            <PieChart>
+                                <Pie data={pieData} innerRadius={60} outerRadius={80}>
+                                    {pieData.map((entry, index) => <Cell key={index} fill={entry.color} />)}
+                                </Pie>
+                            </PieChart>
+                        </ResponsiveContainer>
+                    </div>
                 </div>
             </div>
         </div>
