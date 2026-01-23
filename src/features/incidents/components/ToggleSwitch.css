@@ -16,5 +16,7 @@
     background: white;
     border-radius: 40%;
     position: absolute;
-    
+    top: 1px;
+    left: 1px;
+    transition: transform 0.25s ease;
 }
