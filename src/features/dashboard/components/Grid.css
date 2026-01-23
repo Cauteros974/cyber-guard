@@ -87,3 +87,9 @@
   border-radius: 4px;
   font-weight: 600;
 }
+
+.risk-bar{
+  height: 6px;
+  background: var(--critical);
+  border-radius: 3px;
+}
