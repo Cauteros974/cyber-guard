@@ -60,9 +60,9 @@ export const DevicesPage = () => {
                       <span>{dev.cpu}%</span>
                     </div>
                     <div className="metric-bar">
-                      <div className="metric-fill">
-                        
-                      </div>
+                      <div className="metric-fill"
+                        style={{ width: isOnline ? `${dev.cpu}%` : "0%"}}
+                      />
                     </div>
                   </div>
                 </div>
