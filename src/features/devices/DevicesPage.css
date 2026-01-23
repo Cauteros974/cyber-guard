@@ -9,3 +9,15 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+.device-card{
+    background: var(--panel);
+    border: 1px solid #1e293b;
+    border-radius: 14px;
+    padding: 18px;
+    transition: all 0.25s ease;
+}
+
+.device-card:hover{
+    border-color: #334155;
+    box-shadow: 0 0 0 1px rgba(56,189,248,.15);
+}

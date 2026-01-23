@@ -82,24 +82,9 @@ export const DevicesPage = () => {
                   </div>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>
     );
 };
-
-const MetricBar = ({ label, value, color}: { label: string, value: number, color: string}) => (
-    <div className="space-y-1">
-        <div className="flex justify-between text-[10px] font-bold uppercase text-state-500">
-            <span>{label}</span>
-            <span>{label}</span>
-        </div>
-        <div className="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
-            <div 
-                className={`h-full ${color} transition-all duration-500`}
-                style={{ width: `${value}%`}}
-            />
-        </div>
-    </div>
-);
