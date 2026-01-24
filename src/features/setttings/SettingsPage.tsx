@@ -73,6 +73,10 @@ export const SettingPage = () => {
                             </label>
                         </div>
                     </section>
+
+                    <div className="settings-actions">
+                        <button className="btn-save">Save Change</button>
+                    </div>
                 </div>
             </div>
         </div>
