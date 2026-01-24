@@ -14,6 +14,16 @@ export const SettingPage = () => {
                     <button className="nav-item"><Monitor size={18}/> Appearance</button>
                     <button className="nav-item"><Shield size={18}/> Security</button>
                 </div>
+
+                {/*Setting Content*/}
+                <div className="setting-content">
+                    <section className="settings-section">
+                        <h3>User Profile</h3>
+                        <div className="profile-edit">
+                            <div className="avatar-large">AD</div>
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
     )
