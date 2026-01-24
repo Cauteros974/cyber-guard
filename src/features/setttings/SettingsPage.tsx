@@ -43,9 +43,17 @@ export const SettingPage = () => {
                                 <p>Adjust the interface for low-light environments.</p>
                             </div>
                             <label className="switch">
-                                <input type="text" defaultChecked />
+                                <input type="checkbox" defaultChecked />
                                 <span className="slider"></span>
                             </label>
+                        </div>
+
+                        <div className="seeting-row">
+                            <div className="setting-info">
+                                <h4>Language</h4>
+                                <p>Choose your preferred interface language.</p>
+                            </div>
+                            
                         </div>
                     </section>
                 </div>
