@@ -80,5 +80,5 @@ export const SettingPage = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
