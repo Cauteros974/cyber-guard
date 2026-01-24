@@ -59,6 +59,16 @@ export const SettingPage = () => {
                             </select>
                         </div>
                     </section>
+
+                    <section className="settings-section">
+                        <h3>Alert Thresholds</h3>
+                        <div className="setting-row">
+                            <div className="setting-info">
+                                <h3>Critical Alert Notification</h3>
+                                <p>Receive immediate alerts for level 10 threats.</p>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
