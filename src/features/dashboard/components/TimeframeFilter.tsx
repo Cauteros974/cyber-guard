@@ -11,7 +11,11 @@ export const TimeframeFilter = () => {
 
     return(
         <div className="timeframe-filter">
-            
+            {options.map((options) => (
+                <button>
+                    {options.label}
+                </button>
+            ))}
         </div>
-    )
-}
+    );
+};
