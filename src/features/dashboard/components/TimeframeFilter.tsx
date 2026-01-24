@@ -11,13 +11,13 @@ export const TimeframeFilter = () => {
 
     return(
         <div className="timeframe-filter">
-            {options.map((options) => (
+            {options.map((option) => (
                 <button
-                    key={options.id}
-                    className={`filter-btn`}
-                    onClick={() => setTimeframe(option.id)}
+                    key={option.id}
+                    className={`filter-btn ${selectedTimeframe === option.id ? 'active' : ''}`}
+                    onClick={() => setTimeframe(option.id) }
                 >
-                    {options.label}
+                    {option.label}
                 </button>
             ))}
         </div>
