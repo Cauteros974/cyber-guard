@@ -35,4 +35,7 @@ export const useIncidentStore = create<IncidentState>((set) => ({
         ...state.incidents,
       ],
     })),
+
+    selectedTimeframe: '7d',
+    setTimeframe: (timeframe) => set({ selectedTimeframe: timeframe }),
 }));
