@@ -36,12 +36,16 @@ export const SettingPage = () => {
                     </section>
                     
                     <section className="setting-section">
-                        <h3>System</h3>
+                        <h3>System Preferences</h3>
                         <div className="setting-row">
                             <div className="setting-info">
                                 <h4>Dark Mode</h4>
                                 <p>Adjust the interface for low-light environments.</p>
                             </div>
+                            <label className="switch">
+                                <input type="text" defaultChecked />
+                                <span className="slider"></span>
+                            </label>
                         </div>
                     </section>
                 </div>
