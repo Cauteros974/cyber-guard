@@ -97,3 +97,10 @@
 
 input:checked + .slider { background-color: var(--accent); }
 input:checked + .slider:before { transform: translateX(22px); }
+
+.btn-save{
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 12px 14px;
+}
