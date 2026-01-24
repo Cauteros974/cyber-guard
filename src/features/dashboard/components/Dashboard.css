@@ -42,3 +42,34 @@
     font-weight: 400;
     padding: 10px;
 }
+
+.timeframe-filter {
+    display: flex;
+    background: var(--panel-bg);
+    padding: 4px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    width: fit-content;
+  }
+  
+  .filter-btn {
+    padding: 6px 16px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+  
+  .filter-btn:hover {
+    color: white;
+  }
+  
+  .filter-btn.active {
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }

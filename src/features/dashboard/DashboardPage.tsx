@@ -3,6 +3,7 @@ import { StatCard } from "./components/StatCard";
 import { ActivityChart } from "./components/ActivityChart";
 import { AttackMap } from "./components/AttackMap";
 import { Grid } from "./components/Grid";
+import { TimeframeFilter } from "./components/TimeframeFilter";
 import './Dashboard.css';
 
 const pieData = [
@@ -11,6 +12,7 @@ const pieData = [
 ];
 
 export const DashboardPage = () => {
+  const selectedTimeframe = useIncidentStore(state => state.selectedTimeframe);
   return (
     <div className="dashboard-container">
       <header className="dashboard-header">

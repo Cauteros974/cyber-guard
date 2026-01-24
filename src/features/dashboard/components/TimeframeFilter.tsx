@@ -1,5 +1,5 @@
 import { useIncidentStore } from "../../../store/useIncidentStore";
-
+import './Dashboard.css';
 export const TimeframeFilter = () => {
     const { selectedTimeframe, setTimeframe } = useIncidentStore();
 
