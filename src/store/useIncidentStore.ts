@@ -7,12 +7,13 @@ type Timeframe = 'today' | '7d' | '30d';
 interface IncidentState {
   incidents: Incident[];
   searchQuery: string;
-  selectedTimefree: Timeframe;
-  setTimeframe: (timeframe: Timeframe) => void;
 
   setSearchQuery: (query: string) => void;
   setIncidents: (incidents: Incident[]) => void;
   addIncident: (incident: CreateIncidentDTO) => void;
+
+  selectedTimeframe: '7d',
+  setTimeframe: (Timeframe) => set({ selectedTimeframe: timeframe}),
 }
 
 export const useIncidentStore = create<IncidentState>((set) => ({
