@@ -53,7 +53,10 @@ export const SettingPage = () => {
                                 <h4>Language</h4>
                                 <p>Choose your preferred interface language.</p>
                             </div>
-                            
+                            <select className="settings-select">
+                                <option>English (US)</option>
+                                <option>Ukranian</option>
+                            </select>
                         </div>
                     </section>
                 </div>
