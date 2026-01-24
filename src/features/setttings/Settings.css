@@ -94,3 +94,6 @@
     border-radius: 10px;
     transition: .4s;
 }
+
+input:checked + .slider { background-color: var(--accent); }
+input:checked + .slider:before { transform: translateX(22px); }
