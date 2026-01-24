@@ -12,8 +12,8 @@ interface IncidentState {
   setIncidents: (incidents: Incident[]) => void;
   addIncident: (incident: CreateIncidentDTO) => void;
 
-  selectedTimeframe: '7d',
-  setTimeframe: (Timeframe) => set({ selectedTimeframe: timeframe}),
+  selectedTimeframe: Timeframe;
+  setTimeframe: (timeframe: Timeframe) => void;
 }
 
 export const useIncidentStore = create<IncidentState>((set) => ({
