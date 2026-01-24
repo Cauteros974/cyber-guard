@@ -27,6 +27,15 @@ export const SettingPage = () => {
                             <input type="text" defaultValue="Senior SOC Analyst" disabled />
                         </div>
                     </section>
+                    
+                    <section className="setting-section">
+                        <h3>System</h3>
+                        <div className="setting-row">
+                            <div className="setting-info">
+                                <h4>Dark Mode</h4>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
