@@ -25,3 +25,8 @@
     font-weight: 500;
     transition: all 0.2s;
 }
+
+.nav-item:hover{
+    background: #1e293b;
+    color: var(--accent);
+}
