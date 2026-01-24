@@ -23,6 +23,12 @@ export const SettingPage = () => {
                         <div className="profile-edit">
                             <div className="avatar-large">AD</div>
                         </div>
+                        <div className="form-grid">
+                            <div className="form-group">
+                                <label>Full Name</label>
+                                <input type="text" defaultValue="Admin_Analyst" />
+                            </div>
+                        </div>
                         <div className="form-group">
                             <label>Role</label>
                             <input type="text" defaultValue="Senior SOC Analyst" disabled />
