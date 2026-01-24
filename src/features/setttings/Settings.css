@@ -30,3 +30,18 @@
     background: #1e293b;
     color: var(--accent);
 }
+
+.settings-section{
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.settings-section h3{
+    padding-left: 20px;
+    font-size: 18px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+}
