@@ -102,5 +102,8 @@ input:checked + .slider:before { transform: translateX(22px); }
     background: var(--accent);
     color: white;
     border: none;
-    padding: 12px 14px;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
 }
