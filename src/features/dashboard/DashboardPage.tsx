@@ -4,6 +4,7 @@ import { ActivityChart } from "./components/ActivityChart";
 import { AttackMap } from "./components/AttackMap";
 import { Grid } from "./components/Grid";
 import { TimeframeFilter } from "./components/TimeframeFilter";
+import { useIncidentStore } from "../../store/useIncidentStore";
 import './Dashboard.css';
 
 const pieData = [
@@ -14,7 +15,7 @@ const pieData = [
 export const DashboardPage = () => {
   const selectedTimeframe = useIncidentStore(state => state.selectedTimeframe);
   
-  const multiplier = selectedTimeframe === 'today' ? 0.5 : selectedTimeframe === '30d' ? 4 :1;
+  const multiplier = selectedTimeframe === 'today' ? 0.5 : selectedTimeframe === '30d' ? 4 : 1;
   const baseData = {
     total: Math.floor(17059 * multiplier),
     critical: Math.floor(17058 * multiplier),
@@ -23,10 +24,11 @@ export const DashboardPage = () => {
 
   return (
     <div className="dashboard-container">
+      {/*Header*/}
       <header className="dashboard-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div>
           <h1 className="page-title">Security Overview</h1>
-          <p className="page-description">Real-time threat monitoring and system health.</p>
+          <p className="page-description">Monitoring assets and threats in real-time.</p>
         </div>
         <TimeframeFilter />
       </header>
