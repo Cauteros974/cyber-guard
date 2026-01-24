@@ -7,10 +7,6 @@ import { TimeframeFilter } from "./components/TimeframeFilter";
 import { useIncidentStore } from "../../store/useIncidentStore";
 import './Dashboard.css';
 
-const pieData = [
-  {name: 'Antivirus', value: 17056, color: '#a855f7'},
-  {name: 'Firewall', value: 3, color: '#06b6d4'},
-];
 
 export const DashboardPage = () => {
   const selectedTimeframe = useIncidentStore(state => state.selectedTimeframe);
@@ -35,8 +31,8 @@ export const DashboardPage = () => {
 
       {/* Stats? cards */}
       <div className="stats-grid">
-        <StatCard title="Active Incidents" value={12} icon={ShieldAlert} />
-        <StatCard title="Critical Threats" value={3} icon={Zap} />
+        <StatCard title="Active Incidents" value={baseData.total.toLocaleString()} icon={ShieldAlert} />
+        <StatCard title="Critical Threats" value={baseData.critical.toLocaleString()} icon={Zap} />
         <StatCard title="Devices Online" value="1,240" icon={Monitor} />
         <StatCard title="Policy Compliance" value="98.2%" icon={ShieldCheck} />
       </div>
