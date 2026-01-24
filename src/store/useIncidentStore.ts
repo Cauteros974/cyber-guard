@@ -2,9 +2,13 @@ import { create } from 'zustand';
 import { type Incident, type CreateIncidentDTO } from '../types/incident';
 import { MOCK_INCIDENTS } from '../data/mockData';
 
+type Timeframe = 'today' | '7d' | '30d';
+
 interface IncidentState {
   incidents: Incident[];
   searchQuery: string;
+  selectedTimefree: Timeframe;
+  setTimeframe: (timeframe: Timeframe) => void;
 
   setSearchQuery: (query: string) => void;
   setIncidents: (incidents: Incident[]) => void;
