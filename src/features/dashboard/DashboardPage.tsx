@@ -23,9 +23,12 @@ export const DashboardPage = () => {
 
   return (
     <div className="dashboard-container">
-      <header className="dashboard-header">
-        <h1>Security Overview</h1>
-        <p>Real-time threat monitoring and system health.</p>
+      <header className="dashboard-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div>
+          <h1 className="page-title">Security Overview</h1>
+          <p className="page-description">Real-time threat monitoring and system health.</p>
+        </div>
+        <TimeframeFilter />
       </header>
 
       {/* Stats cards */}
