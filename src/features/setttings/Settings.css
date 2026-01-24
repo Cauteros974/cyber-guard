@@ -19,5 +19,9 @@
     background: transparent;
     border: none;
     color: var(--text-muted);
-    
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    font-weight: 500;
+    transition: all 0.2s;
 }
