@@ -67,6 +67,10 @@ export const SettingPage = () => {
                                 <h3>Critical Alert Notification</h3>
                                 <p>Receive immediate alerts for level 10 threats.</p>
                             </div>
+                            <label className="switch">
+                                <input type="checkbox" defaultChecked />
+                                <span className="slider"></span>
+                            </label>
                         </div>
                     </section>
                 </div>
