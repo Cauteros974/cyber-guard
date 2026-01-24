@@ -33,7 +33,7 @@ export const DashboardPage = () => {
         <TimeframeFilter />
       </header>
 
-      {/* Stats cards */}
+      {/* Stats? cards */}
       <div className="stats-grid">
         <StatCard title="Active Incidents" value={12} icon={ShieldAlert} />
         <StatCard title="Critical Threats" value={3} icon={Zap} />
@@ -58,13 +58,14 @@ export const DashboardPage = () => {
           <h3>Latest Events</h3>
 
           <div className="activity-list">
-            {[1, 2, 3, 4].map((i) => (
+            {[ 1, 2, 3, 4].map(i =>(
               <div key={i} className="activity-item">
-                <span className="activity-dot" />
-                <div>
-                  <p className="activity-title">System Update Applied</p>
-                  <p className="activity-meta">2 mins ago • WS-OFFICE-09</p>
-                </div>
+                <span className="activity-chart">
+                  <div>
+                    <p className="activity-title">System Update Applied</p>
+                    <p className="activity-meta">2 mins ago • WS-OFFICE-09</p>
+                  </div>
+                </span>
               </div>
             ))}
           </div>
