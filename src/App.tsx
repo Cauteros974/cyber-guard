@@ -7,6 +7,7 @@ import { IncidentDetailsPage } from './features/incidents/IncidentDetailsPage';
 import { DevicesPage } from './features/devices/DevicesPage';
 import { PoliciesPage } from './features/policies/PoliciesPage';
 import { useAttackSimulator } from './hooks/useAttackSimulator';
+import { SettingPage } from './features/setttings/SettingsPage';
 import './index.css';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/devices" element={<DevicesPage />} />
           <Route path="/policies" element={<PoliciesPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="/settings" element={<SettingPage />} />
         </Routes>
       </MainLayout>
     </>
