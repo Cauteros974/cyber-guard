@@ -15,11 +15,11 @@ export const DashboardPage = () => {
   const selectedTimeframe = useIncidentStore(state => state.selectedTimeframe);
   
   const multiplier = selectedTimeframe === 'today' ? 0.5 : selectedTimeframe === '30d' ? 4 :1;
-  const baseData = [
+  const baseData = {
     total: Math.floor(17059 * multiplier),
     critical: Math.floor(17058 * multiplier),
     warning: Math.floor(1 * multiplier)
-  ]
+  };
 
   return (
     <div className="dashboard-container">
