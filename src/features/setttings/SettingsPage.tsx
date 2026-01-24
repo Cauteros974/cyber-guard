@@ -13,6 +13,7 @@ export const SettingPage = () => {
                     <button className="nav-item active"><User size={18}/>Profile</button>
                     <button className="nav-item"><Monitor size={18}/> Appearance</button>
                     <button className="nav-item"><Shield size={18}/> Security</button>
+                    <button className="nav-item"><Bell size={18}/> Notifications</button>
                 </div>
 
                 {/*Setting Content*/}
@@ -33,6 +34,7 @@ export const SettingPage = () => {
                         <div className="setting-row">
                             <div className="setting-info">
                                 <h4>Dark Mode</h4>
+                                <p>Adjust the interface for low-light environments.</p>
                             </div>
                         </div>
                     </section>
