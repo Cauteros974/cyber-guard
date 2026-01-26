@@ -23,7 +23,7 @@ export const Header = ({ onMenuClick }: { onMenuClick: () => void }) => {
           </span>
         </div>
 
-        <button className="mobile-menu-btn" onClick={onMenuClick}>
+        <button className="mobile-menu-btn" onClick={onMenuClick} type="button">
           <Menu size={24} />
         </button>
       </div>
