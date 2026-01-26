@@ -1,18 +1,17 @@
-import { useState } from 'react';
-import { Sidebar } from './Sidebar';
-import { Header } from './Header';
+import { Header } from "./Header";
+import { Sidebar } from "./Sidebar";
+import './Layout.css';
 
-export const MainLayout = ({ children }: { children: React.ReactNode }) => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  
-  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+interface Props {
+    children: React.ReactNode;
+}
 
+export const MainLayout = ({ children }: {children: React.ReactNode}) =>{
   return (
-    <div className="app-layout">
-      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-      
-      <div className="main-viewport">
-        <Header onMenuClick={toggleSidebar} />
+    <div className="layout">
+      <Sidebar />
+      <div className="main-container">
+        <Header />
         <main className="content-area">
           {children}
         </main>

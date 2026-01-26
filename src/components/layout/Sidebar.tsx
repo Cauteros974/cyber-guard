@@ -4,11 +4,6 @@ import { NewIncidentModal } from '../../features/incidents/components/NewInciden
 import { useState } from 'react';
 import './Layout.css';
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
 export const Sidebar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const menuItems = [
