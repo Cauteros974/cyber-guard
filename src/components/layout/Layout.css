@@ -296,3 +296,11 @@
     border-radius: 8px;
     color: white;
 }
+
+@media (max-width: 1024px) {
+    .sidebar{
+        position: fixed;
+        left: -200px;
+        z-index: 1000;
+    }
+}
