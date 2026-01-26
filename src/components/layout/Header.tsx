@@ -1,8 +1,8 @@
-import { Search, Bell, User } from "lucide-react";
+import { Search, Bell, User, Menu } from "lucide-react";
 import { useIncidentStore } from "../../store/useIncidentStore";
 import './Layout.css';
 
-export const Header = () => {
+export const Header = ({ onMenuClick }: { onMenuClick: () => void }) => {
   const { incidents, searchQuery, setSearchQuery } = useIncidentStore();
 
   const hasCritical = incidents.some(
