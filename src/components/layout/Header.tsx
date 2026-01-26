@@ -22,6 +22,10 @@ export const Header = ({ onMenuClick }: { onMenuClick: () => void }) => {
             {hasCritical ? 'System Under Attack' : 'System Secure'}
           </span>
         </div>
+
+        <button className="mobile-menu-btn">
+          <Menu size={24} />
+        </button>
       </div>
 
       <div className="header-center">
