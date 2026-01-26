@@ -300,7 +300,9 @@
 @media (max-width: 1024px) {
     .sidebar{
         position: fixed;
-        left: -200px;
+        left: -250px;
         z-index: 1000;
+        transition: transform 0.3 ease;
+        box-shadow: 10px 0 10px rgba(0,0,0,0.5);
     }
 }
