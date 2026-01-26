@@ -4,7 +4,12 @@ import { NewIncidentModal } from '../../features/incidents/components/NewInciden
 import { useState } from 'react';
 import './Layout.css';
 
-export const Sidebar = () => {
+interface SidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const menuItems = [
     { path: '/', icon: LayoutDashboard, label: 'Dashboard' },
@@ -16,10 +21,11 @@ export const Sidebar = () => {
 
   return (
     <>
-    <aside className="sidebar">
+    <aside className={`sidebar ${isOpen ? 'mobile-open' : ''}`}>
       <div className="sidebar-logo">
         <Shield size={28} color="var(--accent)" fill="rgba(59, 130, 246, 0.2)" />
         <span className="logo-text">CyberGuard</span>
+        
       </div>
 
       <button className="btn-create-incident" onClick={() => setIsModalOpen(true)}>
