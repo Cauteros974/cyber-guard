@@ -310,3 +310,17 @@
         transform: translateX(260px);
     }
 }
+
+@media (max-width: 768px) {
+    .header{
+        padding: 0 24px;
+    }
+
+    .search-wrapper{
+        display: none;
+    }
+
+    .user-text{
+        display: none;
+    }
+}
