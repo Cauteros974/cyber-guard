@@ -53,7 +53,10 @@ export const SettingPage = () => {
                                     <h4>Interface Theme</h4>
                                     <p>Select between dark, light or system default theme.</p>
                                 </div>
-                                
+                                <div className="theme-toggle-group">
+                                    <button className="theme-btn active">Dark</button>
+                                    <button className="theme-btn">Light</button>
+                                </div>
                             </div>
                         </section>
                     )}
