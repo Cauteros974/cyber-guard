@@ -20,9 +20,14 @@ export const SettingPage = () => {
                 >
                     <Monitor size={18} /> Appearance
                 </button>
-                    <button className="nav-item"><Monitor size={18}/> Appearance</button>
-                    <button className="nav-item"><Shield size={18}/> Security</button>
-                    <button className="nav-item"><Bell size={18}/> Notifications</button>
+
+                <button 
+                    className={`nav-item ${activeTab === 'security' ? 'active' : ''}`}
+                    onClick={() => setActiveTab('security')}
+                >
+                    <Lock size={18} /> Security
+                </button>
+                    
                 </div>
 
                 {/*Setting Content*/}
