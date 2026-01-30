@@ -22,6 +22,11 @@ export const useIncidentStore = create<IncidentState>((set) => ({
 
   theme: (localStorage.getItem('theme') as Theme ) || 'dark',
 
+  setTheme: (theme) => {
+    localStorage.setItem('theme', theme);
+    document.getElementById.setAttribute('data-theme', theme);
+  }
+
   incidents: MOCK_INCIDENTS,
   searchQuery: '',
 
