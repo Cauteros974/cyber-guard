@@ -1,3 +1,10 @@
+.root{
+    /*Dark Theme (default)*/
+    --bg-color: #020617;
+    --panel-bg: #0b1120;
+    --text-main: #f8fafc;
+}
+
 .settings-grid {
     display: grid;
     grid-template-columns: 240px 1fr;
@@ -196,7 +203,10 @@ input:checked + .slider:before { transform: translateX(22px); }
     font-size: 14px;
     text-transform: uppercase;
     color: var(--accent);
+    letter-spacing: 1px;
 }
+
+
 
 @media (max-width: 850px) {
     .settings-grid{
