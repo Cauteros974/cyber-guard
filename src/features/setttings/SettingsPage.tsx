@@ -142,8 +142,14 @@ export const SettingPage = () => {
                             </div>
                         </section>
                     )}
+
+                    <div className="settins-footer">
+                        <button className="btn-save">
+                            <Save size={18} /> Save Change
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
