@@ -74,7 +74,27 @@ export const SettingPage = () => {
                     {activeTab === 'security' && (
                         <section className="settings-section animate-fade-in">
                             <div className="section-header">
-                                <h3><Lock size={15} />Security</h3>
+                                <h3><Lock size={20} /> Security</h3>
+                                <p>Protect your account with advanced authentication.</p>
+                            </div>
+
+                            <div className="setting-row">
+                                <div className="setting-info">
+                                    <h4>Two-Factor Authentication</h4>
+                                    <p>Add an extra layer of security using an auth app.</p>
+                                </div>
+                                <label className="switch">
+                                    <input type="checkbox" />
+                                    <span className="slider" />
+                                </label>
+                            </div>
+
+                            <div className="setting-row">
+                                <div className="setting-info">
+                                    <h4>Change Password</h4>
+                                    <p>Last changed 3 months ago.</p>
+                                </div>
+                                <button className="btn-secondary">Update Password</button>
                             </div>
                         </section>
                     )}
