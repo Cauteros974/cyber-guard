@@ -9,9 +9,15 @@ import { PoliciesPage } from './features/policies/PoliciesPage';
 import { useAttackSimulator } from './hooks/useAttackSimulator';
 import { SettingPage } from './features/setttings/SettingsPage';
 import './index.css';
+import { useEffect } from 'react';
 
 function App() {
   useAttackSimulator();
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  }, []);
 
   return (
     <>
