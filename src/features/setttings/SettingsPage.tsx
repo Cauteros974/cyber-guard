@@ -111,6 +111,17 @@ export const SettingPage = () => {
                                 <h3><Bell size={13} /> Notifications</h3>
                                 <p>Configure how you want to be alerted about threats.</p>
                             </div>
+
+                            <div className="notification-group">
+                                <h4>Incident Alerts</h4>
+                                <div className="setting-row">
+                                    <span>Email notifications for Critical events</span>
+                                    <label className="switch">
+                                        <input type="checkbox" />
+                                        <span className="slider" />
+                                    </label>
+                                </div>
+                            </div>
                         </section>
                     )}
                 </div>
