@@ -58,6 +58,17 @@ export const SettingPage = () => {
                                     <button className="theme-btn">Light</button>
                                 </div>
                             </div>
+
+                            <div className="setting-row">
+                                <div className="setting-info">
+                                    <h4>Language</h4>
+                                    <p>Set your preferred language for the dashboard.</p>
+                                </div>
+                                <select className="setting-select">
+                                    <option>English</option>
+                                    <option>Ukraine</option>
+                                </select>
+                            </div>
                         </section>
                     )}
                 </div>
