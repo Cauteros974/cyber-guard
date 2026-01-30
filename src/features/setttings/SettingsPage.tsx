@@ -96,6 +96,11 @@ export const SettingPage = () => {
                                 </div>
                                 <button className="btn-secondary">Update Password</button>
                             </div>
+
+                            <div className="security-status-box">
+                                <ShieldCheck size={18} color="var(--accent)"/>
+                                <span className='secur-acc'>Your account meets the enterprise security standards</span>
+                            </div>
                         </section>
                     )}
                 </div>
