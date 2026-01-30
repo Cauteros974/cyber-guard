@@ -107,7 +107,15 @@
     border: 1px solid var(--border-color);
 }
 
-
+.theme-btn {
+    padding: 6px 10px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 6px;
+}
 
 /* Toggle Switch Styles */
 .switch {
