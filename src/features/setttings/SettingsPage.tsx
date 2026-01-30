@@ -129,6 +129,17 @@ export const SettingPage = () => {
                                     </label>
                                 </div>
                             </div>
+
+                            <div className="notification-group">
+                                <h4>System Reports</h4>
+                                <div className="settin-row">
+                                    <span>Weekly security summary PDF</span>
+                                    <label className="switch">
+                                        <input type="checkbox" />
+                                        <span className="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
                         </section>
                     )}
                 </div>
