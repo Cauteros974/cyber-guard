@@ -99,7 +99,7 @@ export const SettingPage = () => {
 
                             <div className="security-status-box">
                                 <ShieldCheck size={18} color="var(--accent)"/>
-                                <span className='secur-acc'>Your account meets the enterprise security standards</span>
+                                <span>Your account meets the enterprise security standards</span>
                             </div>
                         </section>
                     )}
