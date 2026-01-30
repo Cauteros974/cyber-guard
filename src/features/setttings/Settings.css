@@ -98,7 +98,17 @@
     transition: all 0.2s;
     font-size: 14px;
 }
-  
+
+.theme-toggle-group{
+    display: flex;
+    background: #0f172a;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+
+
 /* Toggle Switch Styles */
 .switch {
     position: relative;
