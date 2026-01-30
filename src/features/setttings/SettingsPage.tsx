@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Monitor, Lock, Bell, Eye, Save, ShieldCheck, Globe } from 'lucide-react';
+import { useIncidentStore } from '../../store/useIncidentStore';
 import './Settings.css';
 
 export const SettingPage = () => {
+
+    const {theme, setTheme} = useIncidentStore();
 
     const [activeTab, setActiveTab] = useState('appearance');
 
@@ -54,8 +57,7 @@ export const SettingPage = () => {
                                     <p>Select between dark, light or system default theme.</p>
                                 </div>
                                 <div className="theme-toggle-group">
-                                    <button className="theme-btn active">Dark</button>
-                                    <button className="theme-btn">Light</button>
+                                    
                                 </div>
                             </div>
 

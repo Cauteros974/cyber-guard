@@ -29,7 +29,7 @@ export const useIncidentStore = create<IncidentState>((set) => ({
     localStorage.setItem('theme', theme);
     set({theme});
     document.documentElement.setAttribute('data-theme', theme);
-  }
+  },
 
   incidents: MOCK_INCIDENTS,
   searchQuery: '',
