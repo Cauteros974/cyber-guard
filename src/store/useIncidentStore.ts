@@ -20,8 +20,7 @@ interface IncidentState {
 
 export const useIncidentStore = create<IncidentState>((set) => ({
 
-  theme: (localStorage.getItem('theme' as Theme ) || 'dark',
-)
+  theme: (localStorage.getItem('theme') as Theme ) || 'dark',
 
   incidents: MOCK_INCIDENTS,
   searchQuery: '',
