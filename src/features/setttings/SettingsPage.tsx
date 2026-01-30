@@ -117,7 +117,7 @@ export const SettingPage = () => {
                                 <div className="setting-row">
                                     <span>Email notifications for Critical events</span>
                                     <label className="switch">
-                                        <input type="checkbox" />
+                                        <input type="checkbox" defaultChecked/>
                                         <span className="slider" />
                                     </label>
                                 </div>
