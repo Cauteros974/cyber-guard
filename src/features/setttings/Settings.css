@@ -35,9 +35,15 @@
     transition: all 0.2s;
 }
   
-.nav-item:hover, .nav-item.active {
+.nav-item:hover {
     background: #1e293b;
     color: var(--accent);
+}
+
+.nav-item.active{
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
 }
   
 .settings-section {
