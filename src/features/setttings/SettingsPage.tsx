@@ -6,7 +6,10 @@ export const SettingPage = () => {
     const [activeTab, setActiveTab] = useState('appearance');
     return(
         <div className="setting-container">
-            <h1 className="page-title">Settings</h1>
+            <header className="settings-header">
+                <h1 className="page-title">Account Settings</h1>
+                <p className="page-description">Manage your workspace preferences and security credentials.</p>
+            </header>
 
             <div className="settings-grid">
                 {/*Setting Navigation*/}
