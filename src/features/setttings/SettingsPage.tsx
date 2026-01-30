@@ -105,10 +105,11 @@ export const SettingPage = () => {
                     )}
 
                     {/* Section: Notifications */}
-                    {activeTab === 'notivications' && (
+                    {activeTab === 'notifications' && (
                         <section className="settings-section animate-fade-in">
                             <div className="section-header">
                                 <h3><Bell size={13} /> Notifications</h3>
+                                <p>Configure how you want to be alerted about threats.</p>
                             </div>
                         </section>
                     )}
