@@ -121,6 +121,13 @@ export const SettingPage = () => {
                                         <span className="slider" />
                                     </label>
                                 </div>
+                                <div className="setting-row">
+                                    <span>Browser push notifications</span>
+                                    <label className="switch">
+                                        <input type="checkbox" defaultChecked />
+                                        <span className="slider"></span>
+                                    </label>
+                                </div>
                             </div>
                         </section>
                     )}
