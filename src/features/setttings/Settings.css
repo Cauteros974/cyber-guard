@@ -131,6 +131,14 @@
     outline: none;
 }
 
+.security-status-box{
+    margin-top: 20px;
+    padding: 16px;
+    background: rgba(59, 130, 246, 0.05);
+    border: 1px dashed var(--accent);
+    border-radius: 12px;
+}
+
 /* Toggle Switch Styles */
 .switch {
     position: relative;
