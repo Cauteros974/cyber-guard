@@ -126,6 +126,9 @@
     background: #0f172a;
     border: 1px solid var(--border-color);
     color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    outline: none;
 }
 
 /* Toggle Switch Styles */
