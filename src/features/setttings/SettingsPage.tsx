@@ -71,6 +71,13 @@ export const SettingPage = () => {
                             </div>
                         </section>
                     )}
+                    {activeTab === 'security' && (
+                        <section className="settings-section animate-fade-in">
+                            <div className="section-header">
+                                <h3><Lock size={15} />Security</h3>
+                            </div>
+                        </section>
+                    )}
                 </div>
             </div>
         </div>
