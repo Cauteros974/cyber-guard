@@ -14,7 +14,12 @@ export const SettingPage = () => {
             <div className="settings-grid">
                 {/*Setting Navigation*/}
                 <div className="setting-nav">
-                    <button className="nav-item active"><User size={18}/>Profile</button>
+                <button 
+                    className={`nav-item ${activeTab === 'appearance' ? 'active' : ''}`}
+                    onClick={() => setActiveTab('appearance')}
+                >
+                    <Monitor size={18} /> Appearance
+                </button>
                     <button className="nav-item"><Monitor size={18}/> Appearance</button>
                     <button className="nav-item"><Shield size={18}/> Security</button>
                     <button className="nav-item"><Bell size={18}/> Notifications</button>
