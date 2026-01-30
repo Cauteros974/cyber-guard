@@ -64,7 +64,7 @@ export const SettingPage = () => {
                                     <h4>Language</h4>
                                     <p>Set your preferred language for the dashboard.</p>
                                 </div>
-                                <select className="setting-select">
+                                <select className="settings-select">
                                     <option>English</option>
                                     <option>Ukraine</option>
                                 </select>
