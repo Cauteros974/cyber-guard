@@ -1,8 +1,9 @@
-import React from "react";
-import { User, Shield, Bell, Monitor, Globe, Lock } from 'lucide-react';
+import React, { useState } from "react";
+import { User, Shield, Bell, Monitor, Globe, Lock, Save, ShieldCheck } from 'lucide-react';
 import './Settings.css';
 
 export const SettingPage = () => {
+    const [activeTab, setActiveTab] = useState('appearance');
     return(
         <div className="setting-container">
             <h1 className="page-title">Settings</h1>
