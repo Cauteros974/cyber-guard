@@ -57,7 +57,18 @@ export const SettingPage = () => {
                                     <p>Select between dark, light or system default theme.</p>
                                 </div>
                                 <div className="theme-toggle-group">
-                                    
+                                    <button
+                                        className={`theme-btn ${theme === 'dark' ? 'active' : ''}`}
+                                        onClick={() => setTheme('dark')}
+                                    >
+                                        Dark
+                                    </button>
+                                    <button
+                                        className={`theme-btn ${theme === 'dark' ? 'active' : ''}`}
+                                        onClick={() => setTheme('dark')}
+                                    >
+                                        Light
+                                    </button>
                                 </div>
                             </div>
 
