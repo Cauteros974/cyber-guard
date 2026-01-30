@@ -137,6 +137,11 @@
     background: rgba(59, 130, 246, 0.05);
     border: 1px dashed var(--accent);
     border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-muted);
 }
 
 /* Toggle Switch Styles */
