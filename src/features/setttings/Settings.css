@@ -185,3 +185,8 @@ input:checked + .slider:before { transform: translateX(22px); }
     font-weight: 600;
     cursor: pointer;
 }
+
+.btn-save:hover{
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
