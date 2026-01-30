@@ -27,7 +27,13 @@ export const SettingPage = () => {
                 >
                     <Lock size={18} /> Security
                 </button>
-                    
+                
+                <button 
+                    className={`nav-item ${activeTab === 'notifications' ? 'active' : ''}`}
+                    onClick={() => setActiveTab('notifications')}
+                >
+                    <Bell size={18} /> Notifications
+                </button>
                 </div>
 
                 {/*Setting Content*/}
