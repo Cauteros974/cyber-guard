@@ -14,9 +14,15 @@ interface IncidentState {
 
   selectedTimeframe: Timeframe;
   setTimeframe: (timeframe: Timeframe) => void;
+
+  theme: Theme;
 }
 
 export const useIncidentStore = create<IncidentState>((set) => ({
+
+  theme: (localStorage.getItem('theme' as Theme ) || 'dark',
+)
+
   incidents: MOCK_INCIDENTS,
   searchQuery: '',
 
