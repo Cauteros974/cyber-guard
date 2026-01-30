@@ -4,6 +4,8 @@ import { MOCK_INCIDENTS } from '../data/mockData';
 
 type Timeframe = 'today' | '7d' | '30d';
 
+type Theme = 'dark' | 'light';
+
 interface IncidentState {
   incidents: Incident[];
   searchQuery: string;
@@ -16,6 +18,7 @@ interface IncidentState {
   setTimeframe: (timeframe: Timeframe) => void;
 
   theme: Theme;
+  setTheme: (theme: Theme) => void;
 }
 
 export const useIncidentStore = create<IncidentState>((set) => ({
@@ -24,7 +27,8 @@ export const useIncidentStore = create<IncidentState>((set) => ({
 
   setTheme: (theme) => {
     localStorage.setItem('theme', theme);
-    document.getElementById.setAttribute('data-theme', theme);
+    set({theme});
+    document.documentElement.setAttribute('data-theme', theme);
   }
 
   incidents: MOCK_INCIDENTS,
