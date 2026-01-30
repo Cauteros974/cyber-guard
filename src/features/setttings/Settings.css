@@ -197,3 +197,9 @@ input:checked + .slider:before { transform: translateX(22px); }
     text-transform: uppercase;
     color: var(--accent);
 }
+
+@media (max-width: 850px) {
+    .settings-grid{
+        grid-template-columns: 1fr;
+    }
+}
