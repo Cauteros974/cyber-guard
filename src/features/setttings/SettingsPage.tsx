@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Monitor, Lock, Bell, Eye, Save, ShieldCheck, Globe } from 'lucide-react';
+import { Monitor, Lock, Bell, Eye, Save, ShieldCheck, Globe, Loader2 } from 'lucide-react';
 import { useIncidentStore } from '../../store/useIncidentStore';
+import toast from 'react-hot-toast';
 import './Settings.css';
 
 export const SettingPage = () => {
@@ -8,6 +9,12 @@ export const SettingPage = () => {
     const {theme, setTheme} = useIncidentStore();
 
     const [activeTab, setActiveTab] = useState('appearance');
+
+    const [isSaving, setIsSaving] = useState(false);
+
+    const handleSave = () => {
+        setIsSaving(true);
+    }
 
     return(
         <div className="settings-container">
