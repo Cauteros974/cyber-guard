@@ -22,7 +22,7 @@ export const SettingPage = () => {
                 duration: 2000,
             })
         }, 1500);
-    }
+    };
     
     return(
         <div className="settings-container">
@@ -172,12 +172,25 @@ export const SettingPage = () => {
                     )}
 
                     <div className="settins-footer">
-                        <button className="btn-save">
-                            <Save size={18} /> Save Change
+                        <button
+                            className={`btn-save ${isSaving ? 'loading' : ''}`}
+                            onClick={handleSave}
+                            disabled={isSaving}
+                        >
+                            {isSaving ? (
+                                <>
+                                    <Loader2 className="spinner" size={10} />
+                                </>
+                            ) : (
+                                <>
+                                    <Save size={18} />
+                                </>
+                            )}
                         </button>
                     </div>
                 </div>
             </div>
+            
         </div>
     );
 };

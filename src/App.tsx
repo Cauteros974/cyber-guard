@@ -30,7 +30,7 @@ function App() {
           border: '1px solid var(--border-color)',
         },
       }} />
-      <RouterProvider router={router} />
+      
 
       <MainLayout>
         <Routes>
