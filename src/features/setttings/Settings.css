@@ -214,6 +214,9 @@ input:checked + .slider:before { transform: translateX(22px); }
     border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .btn-save:hover{
@@ -237,6 +240,8 @@ input:checked + .slider:before { transform: translateX(22px); }
 .spinner{
     animation: spin 1s linear infinite;
 }
+
+
 
 @media (max-width: 850px) {
     .settings-grid{
