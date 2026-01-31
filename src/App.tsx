@@ -41,6 +41,7 @@ if(appLoading){
       <div className="initial-loader">
         <div className="loader-content">
           <h2>CyberGuard <span>_</span></h2>
+          <p>Initializing security modules...</p>
         </div>
       </div>
       
