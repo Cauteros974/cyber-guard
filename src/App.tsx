@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'sonner';
+import toast from 'react-hot-toast';
 import { MainLayout } from './components/layout/MainLayout';
 import { DashboardPage } from './features/dashboard/DashboardPage';
 import { IncidentsPage } from './features/incidents/IncidentsPage';
@@ -22,6 +23,12 @@ function App() {
   return (
     <>
       <Toaster theme="dark" position="top-right" richColors closeButton />
+      <Toaster position="top-right" toastOptions={{
+        style: {
+          background: 'var(--panel-bg)',
+          color: 'var(--text-main)',
+        }
+      }}
 
       <MainLayout>
         <Routes>
