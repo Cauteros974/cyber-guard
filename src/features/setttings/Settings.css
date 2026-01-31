@@ -220,6 +220,12 @@ input:checked + .slider:before { transform: translateX(22px); }
     transition: all 0.2s ease;
 }
 
+.btn-save.loading {
+    opacity: 0.2;
+    cursor: pointer;
+    background: var(--text-muted);
+}
+
 .btn-save:hover{
     transform: translateY(-2px);
     filter: brightness(1.1);
