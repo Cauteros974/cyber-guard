@@ -27,8 +27,10 @@ function App() {
         style: {
           background: 'var(--panel-bg)',
           color: 'var(--text-main)',
-        }
-      }}
+          border: '1px solid var(--border-color)',
+        },
+      }} />
+      
 
       <MainLayout>
         <Routes>
