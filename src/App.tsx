@@ -24,6 +24,8 @@ function App() {
     setTimeout(() => setAppLoading(false), 2000);
   }, []);
   
+if(appLoading){
+
 
   return (
     <>
@@ -35,6 +37,12 @@ function App() {
           border: '1px solid var(--border-color)',
         },
       }} />
+      
+      <div className="initial-loader">
+        <div className="loader-content">
+          <h2>CyberGuard <span>_</span></h2>
+        </div>
+      </div>
       
 
       <MainLayout>
@@ -50,6 +58,7 @@ function App() {
       </MainLayout>
     </>
   );
+}
 }
 
 export default App;
