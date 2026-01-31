@@ -26,3 +26,21 @@ body, html {
 #root {
   height: 100vh;
 }
+
+.initial-loader {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #020617;
+  color: white;
+  text-align: center;
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}

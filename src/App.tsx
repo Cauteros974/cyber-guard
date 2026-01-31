@@ -40,7 +40,7 @@ if(appLoading){
       
       <div className="initial-loader">
         <div className="loader-content">
-          <h2>CyberGuard <span className="blink">_</span></h2>
+          <h2>CyberGuard <span className="blink">...</span></h2>
           <p>Initializing security modules...</p>
         </div>
       </div>
