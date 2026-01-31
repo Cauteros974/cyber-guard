@@ -226,6 +226,11 @@ input:checked + .slider:before { transform: translateX(22px); }
     background: var(--text-muted);
 }
 
+.hot-toast-custom{
+    border-radius: 12px inherit;
+    font-family: 'Inter', sans-serif !important;
+}
+
 .btn-save:hover{
     transform: translateY(-2px);
     filter: brightness(1.1);
