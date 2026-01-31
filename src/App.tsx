@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate, RouterProvider } from 'react-router-dom';
 import { Toaster } from 'sonner';
 import toast from 'react-hot-toast';
+import { useState } from 'react';
 import { MainLayout } from './components/layout/MainLayout';
 import { DashboardPage } from './features/dashboard/DashboardPage';
 import { IncidentsPage } from './features/incidents/IncidentsPage';
@@ -15,10 +16,14 @@ import { useEffect } from 'react';
 function App() {
   useAttackSimulator();
 
+  const [appLoading, setAppLoading] = useState(true);
+
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
+    setTimeout(() => setAppLoading(false), 2000);
   }, []);
+  
 
   return (
     <>

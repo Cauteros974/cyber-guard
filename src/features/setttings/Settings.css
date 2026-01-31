@@ -227,7 +227,7 @@ input:checked + .slider:before { transform: translateX(22px); }
 }
 
 .hot-toast-custom{
-    border-radius: 12px inherit;
+    border-radius: 12px !important;
     font-family: 'Inter', sans-serif !important;
 }
 
