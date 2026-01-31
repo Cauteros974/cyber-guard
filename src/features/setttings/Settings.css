@@ -234,6 +234,10 @@ input:checked + .slider:before { transform: translateX(22px); }
     to {transform: rotate(360deg);}
 }
 
+.spinner{
+    animation: spin 1s linear infinite;
+}
+
 @media (max-width: 850px) {
     .settings-grid{
         grid-template-columns: 1fr;
