@@ -180,10 +180,12 @@ export const SettingPage = () => {
                             {isSaving ? (
                                 <>
                                     <Loader2 className="spinner" size={10} />
+                                    Saving...
                                 </>
                             ) : (
                                 <>
-                                    <Save size={18} />
+                                    <Save size={16} />
+                                    Save Changes
                                 </>
                             )}
                         </button>
