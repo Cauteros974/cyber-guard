@@ -14,8 +14,16 @@ export const SettingPage = () => {
 
     const handleSave = () => {
         setIsSaving(true);
-    }
 
+        setTimeout(() => {
+            setIsSaving(false);
+            toast.success('Settings saved successfully!', {
+                icon: '🛡️',
+                duration: 2000,
+            })
+        }, 1500);
+    }
+    
     return(
         <div className="settings-container">
             <header className="setting-header">
