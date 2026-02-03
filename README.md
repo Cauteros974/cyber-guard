@@ -1,9 +1,3 @@
-<!-- Statistics: Programming languages -->
-<picture>
-  <source srcset="https://raw.githubusercontent.com/Cauteros974/cyber-guard/main/output/stats_langs.svg#gh-dark-mode-only"  media="(prefers-color-scheme: dark)">
-  <img src="https://raw.githubusercontent.com/Cauteros974/cyber-guard/main/output/stats_langs.svg">
-</picture>
-
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
