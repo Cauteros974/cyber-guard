@@ -23,7 +23,10 @@ interface IncidentState {
   setTheme: (theme: Theme) => void;
 }
 
-export const useIncidentStore = create<IncidentState>((set) => ({
+export const useIncidentStore = create<IncidentState>((set, get) => ({
+
+  incident: [],
+  isLoading: false,
 
   theme: (localStorage.getItem('theme') as Theme ) || 'dark',
 
