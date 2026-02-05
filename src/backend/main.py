@@ -45,6 +45,8 @@ async def create_incident(incident: Incident):
 
 @app.get("/system-health")
 async def get_health():
-    return(
+    return{
         "status": "healthy",
-    )
+        "active_scanners": 4,
+        "risk_level": random.randint(10, 30),
+    }
