@@ -35,6 +35,8 @@ export const useIncidentStore = create<IncidentState>((set, get) => ({
       const response = await fetch(`${API_URL}/incidents`);
       const data = await response.json();
       set({ incidents: data, isLoading: false });
+    } catch (error) {
+      console.error("Failed to fetch incidents", error);
     }
   },
 
