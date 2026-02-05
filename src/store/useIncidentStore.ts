@@ -25,7 +25,7 @@ interface IncidentState {
 
 export const useIncidentStore = create<IncidentState>((set, get) => ({
 
-  incident: [],
+  incidents: [],
   isLoading: false,
 
   //Downloading data from Python 
@@ -37,6 +37,7 @@ export const useIncidentStore = create<IncidentState>((set, get) => ({
       set({ incidents: data, isLoading: false });
     } catch (error) {
       console.error("Failed to fetch incidents", error);
+      set({ isLoading: false });
     }
   },
 
