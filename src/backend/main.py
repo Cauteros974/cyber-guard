@@ -42,3 +42,9 @@ async def get_incident():
 async def create_incident(incident: Incident):
     db_incidents.insert(0, incident.dict())
     return {"status": "success", "data": incident}
+
+@app.get("/system-health")
+async def get_health():
+    return(
+        "status": "healthy",
+    )
