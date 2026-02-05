@@ -23,7 +23,7 @@ class Incident(BaseModel):
     severity: str
     timestamp: str
 
-dn_incidents = [
+db_incidents = [
     {
         "id": "INC-8821",
         "title": "Brute Force on SSH",
