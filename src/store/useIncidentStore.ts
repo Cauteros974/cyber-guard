@@ -33,6 +33,8 @@ export const useIncidentStore = create<IncidentState>((set, get) => ({
     set({ isLoading: true });
     try{
       const response = await fetch(`${API_URL}/incidents`);
+      const data = await response.json();
+      set({ incidents: data, isLoading: false });
     }
   },
 
