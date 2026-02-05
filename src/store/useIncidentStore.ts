@@ -28,6 +28,14 @@ export const useIncidentStore = create<IncidentState>((set, get) => ({
   incident: [],
   isLoading: false,
 
+  //Downloading data from Python 
+  fetchIncidents: async () => {
+    set({ isLoading: true });
+    try{
+      const response = await fetch(`${API_URL}/incidents`);
+    }
+  },
+
   theme: (localStorage.getItem('theme') as Theme ) || 'dark',
 
   setTheme: (theme) => {
