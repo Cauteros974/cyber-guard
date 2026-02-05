@@ -39,5 +39,6 @@ async def get_incident():
     return db_incidents
 
 @app.post("/incidents")
-async def create_incident(incidetn: Incident):
+async def create_incident(incident: Incident):
     db_incidents.insert(0, incident.dict())
+    return {"status": "success", "data": incident}
