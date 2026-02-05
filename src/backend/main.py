@@ -14,6 +14,7 @@ app.add_middleware (
     allow_headers=["*"],
 )
 
+#Data model
 class Incident(BaseModel):
     id: str
     title: str
@@ -28,3 +29,7 @@ dn_incidents = [
         "status": "open"
     }
 ]
+
+@app.get("incident", response_model=List[Incident])
+async def get_incident():
+    return db_incidents
