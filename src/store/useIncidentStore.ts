@@ -6,6 +6,8 @@ type Timeframe = 'today' | '7d' | '30d';
 
 type Theme = 'dark' | 'light';
 
+const API_URL = 'http://localhost:8000'
+
 interface IncidentState {
   incidents: Incident[];
   searchQuery: string;
