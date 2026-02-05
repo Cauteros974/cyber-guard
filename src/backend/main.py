@@ -20,13 +20,17 @@ class Incident(BaseModel):
     title: str
     tactic: str
     status: str
+    severity: str
+    timestamp: str
 
 dn_incidents = [
     {
         "id": "INC-8821",
         "title": "Brute Force on SSH",
         "tactic": "Credential Access",
-        "status": "open"
+        "status": "open",
+        "severity": "high",
+        "timestamp": "2026-02-05T14:30:00Z",
     }
 ]
 
