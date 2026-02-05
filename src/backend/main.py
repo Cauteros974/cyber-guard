@@ -34,6 +34,8 @@ db_incidents = [
     }
 ]
 
-@app.get("incident", response_model=List[Incident])
+@app.get("/incidents", response_model=List[Incident])
 async def get_incident():
     return db_incidents
+
+@app.post("/incidents", response_model=List[Incident])
