@@ -38,4 +38,6 @@ db_incidents = [
 async def get_incident():
     return db_incidents
 
-@app.post("/incidents", response_model=List[Incident])
+@app.post("/incidents")
+async def create_incident(incidetn: Incident):
+    db_incidents.insert(0, incident.dict())
