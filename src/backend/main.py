@@ -55,5 +55,5 @@ async def get_health():
 async def calculate_risk():
     return{
         "score": min(100)
-        weights = {"critical": 10, "high": 5, "medium": 2, "low": 1}
+        weights = {"critical": 20, "high": 5, "medium": 2, "low": 1}
     }
