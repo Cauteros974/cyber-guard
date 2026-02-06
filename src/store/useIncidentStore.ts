@@ -26,7 +26,10 @@ interface IncidentState {
 
 export const useIncidentStore = create<IncidentState>((set, get) => ({
 
-  
+  incidents: MOCK_INCIDENTS,
+  isLoading: false,
+  searchQuery: '',
+  selectedTimeframe: '7d',
 
   //Downloading data from Python 
   fetchIncidents: async () => {
