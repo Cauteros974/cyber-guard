@@ -50,3 +50,9 @@ async def get_health():
         "active_scanners": 4,
         "risk_level": random.randint(10, 30),
     }
+    
+@app.get("/risk-score")
+async def calculate_risk():
+    return{
+        "score": min(100)
+    }
