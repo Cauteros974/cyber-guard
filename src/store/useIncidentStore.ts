@@ -22,6 +22,8 @@ interface IncidentState {
 
   theme: Theme;
   setTheme: (theme: Theme) => void;
+
+  fetchIncident: () => Promise<void>;
 }
 
 export const useIncidentStore = create<IncidentState>((set, get) => ({
@@ -31,7 +33,7 @@ export const useIncidentStore = create<IncidentState>((set, get) => ({
   searchQuery: '',
   selectedTimeframe: '7d',
 
-  theme: (localStorage.getItem('theme') as Theme),
+  theme: (localStorage.getItem('theme') as Theme) || 'dark'
 
   //Downloading data from Python 
   fetchIncidents: async () => {
