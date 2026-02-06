@@ -11,6 +11,7 @@ const API_URL = 'http://localhost:8000'
 interface IncidentState {
   incidents: Incident[];
   searchQuery: string;
+  isLoading: boolean;
 
   setSearchQuery: (query: string) => void;
   setIncidents: (incidents: Incident[]) => void;
@@ -25,8 +26,7 @@ interface IncidentState {
 
 export const useIncidentStore = create<IncidentState>((set, get) => ({
 
-  incidents: [],
-  isLoading: false,
+  
 
   //Downloading data from Python 
   fetchIncidents: async () => {
