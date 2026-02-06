@@ -41,6 +41,21 @@ export const useIncidentStore = create<IncidentState>((set, get) => ({
     }
   },
 
+  addIncident: async (newIncident) => {
+    try {
+      const response = await fetch(`${API_URL}/incidents`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newIncident)
+      });
+      if (response.ok) {
+        set((state) => ({ incidents: [newIncident, ...state.incidents] }));
+      }
+    } catch (error) {
+      console.error("Failed to save incident", error);
+    }
+  },
+
   theme: (localStorage.getItem('theme') as Theme ) || 'dark',
 
   setTheme: (theme) => {
