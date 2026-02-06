@@ -31,6 +31,8 @@ export const useIncidentStore = create<IncidentState>((set, get) => ({
   searchQuery: '',
   selectedTimeframe: '7d',
 
+  theme: (localStorage.getItem('theme') as Theme),
+
   //Downloading data from Python 
   fetchIncidents: async () => {
     set({ isLoading: true });
