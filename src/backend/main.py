@@ -51,6 +51,10 @@ def load_db():
             return json.load(f)
         except json.JSONDecodeError:
             return[]
+        
+def save_db(data):
+    with open(DB_FILE, 'w', encoding='utf-8') as f:
+        json.dump(data, f)
 
 @app.get("/incidents", response_model=List[Incident])
 async def get_incident():
