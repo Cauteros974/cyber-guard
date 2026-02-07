@@ -86,4 +86,8 @@ async def calculate_risk():
         total_score = sum(weights.get(inc ["severity"].lower(), 0) for inc in db)
         normalized_score = min(total_score, 100)
         return {"score": normalized_score}
+    
+if __name__  == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=1000)
         
