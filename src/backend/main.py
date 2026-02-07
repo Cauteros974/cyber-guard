@@ -81,5 +81,7 @@ async def get_health():
     
 @app.get("/risk-score")
 async def calculate_risk():
-        
+        db = load_db()
+        weights = {"critical": 10, "high": 5, "medium": 2, "low": 1}
+        total_score = sum(weights.get(["severity"].lower(), 0) for inc in db)
         
