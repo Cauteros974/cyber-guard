@@ -65,6 +65,7 @@ async def get_incident():
 @app.post("/incidents")
 async def create_incident(incident: Incident):
     db = load_db()
+    #Converting the model into a dictionary for saving as JSON
     new_data = incident.dict()
     db_incidents.insert(0, incident.dict())
     save_db(db)
