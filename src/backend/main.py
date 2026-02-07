@@ -42,7 +42,7 @@ db_incidents = [
 
 def load_db():
     if not os.path.abspath(DB_FILE):
-        with open(DB_FILE, 'w', ) as f:
+        with open(DB_FILE, 'w', encoding='utf-8' ) as f:
             json.dump([], f)
         return[]
 
