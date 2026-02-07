@@ -16,7 +16,7 @@ app.add_middleware (
     allow_headers=["*"],
 )
 
-DB_FILES = "incidents.json"
+DB_FILE = "incidents.json"
 
 #Data model
 class Incident(BaseModel):
@@ -37,6 +37,13 @@ db_incidents = [
         "timestamp": "2026-02-05T14:30:00Z",
     }
 ]
+
+# --- Functions for working with JSON ---
+
+def load_db():
+    if not os.path.abspath(DB_FILE):
+        with open(DB_FILE, 'w', ) as f:
+            
 
 @app.get("/incidents", response_model=List[Incident])
 async def get_incident():
