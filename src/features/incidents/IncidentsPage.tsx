@@ -21,6 +21,7 @@ export const IncidentsPage = () => {
   useEffect(() => {
     fetchIncidents();
   }, [])
+  
 
   if(isLoading) return <div>Loading from Python...</div>;
 
