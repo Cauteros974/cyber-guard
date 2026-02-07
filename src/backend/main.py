@@ -64,7 +64,10 @@ async def get_incident():
 
 @app.post("/incidents")
 async def create_incident(incident: Incident):
+    db = load_db()
+    new_data = incident.dict()
     db_incidents.insert(0, incident.dict())
+    save_db(db)
     return {"status": "success", "data": incident}
 
 @app.get("/system-health")
