@@ -56,10 +56,11 @@ def save_db(data):
     #Saves data to a file with nice indents
     with open(DB_FILE, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
-
+        
+# --- Endpoints ---
 @app.get("/incidents", response_model=List[Incident])
 async def get_incident():
-    return db_incidents
+    return load_db()
 
 @app.post("/incidents")
 async def create_incident(incident: Incident):
