@@ -30,7 +30,7 @@ def save_db(data):
 
 def load_db():
     if not os.path.exists(DB_FILE):
-        print(f"--- Создаю новый файл базы данных: {DB_FILE} ---")
+        print(f"--- Creating a new database file: {DB_FILE} ---")
         save_db([]) # We immediately create an empty list in the file
         return []
     with open(DB_FILE, 'r', encoding='utf-8') as f:
