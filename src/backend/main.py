@@ -4,6 +4,8 @@ import random
 from pydantic import BaseModel
 from typing import List
 import datetime
+import json
+import os
 
 app = FastAPI()
 
@@ -13,6 +15,8 @@ app.add_middleware (
     allow_methods = ["*"],
     allow_headers=["*"],
 )
+
+DB_FILES = "incidents.json"
 
 #Data model
 class Incident(BaseModel):
