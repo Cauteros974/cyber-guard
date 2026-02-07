@@ -55,6 +55,5 @@ async def get_health():
 async def calculate_risk():
         weights = {"critical": 10, "high": 5, "medium": 2, "low": 1}
         score = sum(weights.get(inc["severity"], 0) for inc in db_incidents)
-        return{
-            {"score": min(score, 100)}
-        }
+        return {"score": min(score, 100)}
+        
