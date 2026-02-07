@@ -43,7 +43,8 @@ db_incidents = [
 def load_db():
     if not os.path.abspath(DB_FILE):
         with open(DB_FILE, 'w', ) as f:
-            
+            json.dump([], f)
+        return[]
 
 @app.get("/incidents", response_model=List[Incident])
 async def get_incident():
