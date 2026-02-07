@@ -18,6 +18,10 @@ export const IncidentsPage = () => {
     );
   }, [incidents, searchQuery]);
 
+  useEffect(() => {
+    fetchIncidents();
+  }, [])
+
   const filteredIncidents = useMemo(() => {
     if (!searchQuery.trim()) return incidents;
 
