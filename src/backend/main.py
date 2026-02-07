@@ -69,7 +69,7 @@ async def create_incident(incident: Incident):
     new_data = incident.dict()
     db_incidents.insert(0, incident.dict())
     save_db(db)
-    return {"status": "success", "data": incident}
+    return {"status": "success", "data": new_data}
 
 @app.get("/system-health")
 async def get_health():
