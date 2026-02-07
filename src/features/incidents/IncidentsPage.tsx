@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useReactTable, getCoreRowModel, flexRender, createColumnHelper } from '@tanstack/react-table';
 import { useIncidentStore } from '../../store/useIncidentStore';
@@ -8,7 +8,7 @@ import './Incidents.css';
 const columnHelper = createColumnHelper<Incident>();
 
 export const IncidentsPage = () => {
-  const { incidents, searchQuery } = useIncidentStore();
+  const { incidents, searchQuery, fetchIncidents, isLoading } = useIncidentStore();
   const navigate = useNavigate();
 
   const filteredData = useMemo(() => {
