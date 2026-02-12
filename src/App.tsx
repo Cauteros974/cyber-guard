@@ -12,7 +12,7 @@ import { SettingPage } from './features/setttings/SettingsPage';
 import './index.css';
 
 function App() {
-
+  useAttackSimulator();
   const [appLoading, setAppLoading] = useState(true);
 
   useEffect(() => {
@@ -23,7 +23,6 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
   
-  useAttackSimulator();
 
   if (appLoading) {
     return (
@@ -35,13 +34,14 @@ function App() {
           </div>
         </div>
       </>
+      
     );
   }
   
   return (
+    
     <>
       <Toaster theme="dark" position="top-right" richColors closeButton />
-
       <MainLayout>
         <Routes>
           <Route path="/" element={<DashboardPage />} />
