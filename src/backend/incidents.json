@@ -1,5 +1,13 @@
 [
     {
+        "id": "INC-7077",
+        "title": "Unauthorized Access Attempt",
+        "severity": "medium",
+        "status": "open",
+        "timestamp": "2026-02-12T18:35:30.661Z",
+        "tactic": "Initial Access"
+    },
+    {
         "id": "INC-2274",
         "title": "Unauthorized Access Attempt",
         "severity": "low",
