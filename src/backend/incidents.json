@@ -1,5 +1,37 @@
 [
     {
+        "id": "INC-6721",
+        "title": "Mass File Deletion",
+        "severity": "critical",
+        "status": "open",
+        "timestamp": "2026-02-12T18:43:36.842Z",
+        "tactic": "Initial Access"
+    },
+    {
+        "id": "INC-2955",
+        "title": "h",
+        "severity": "medium",
+        "status": "open",
+        "timestamp": "2026-02-12T18:43:25.449Z",
+        "tactic": "Initial Access"
+    },
+    {
+        "id": "INC-9568",
+        "title": "SQL Injection Detected",
+        "severity": "low",
+        "status": "open",
+        "timestamp": "2026-02-12T18:43:06.304Z",
+        "tactic": "Initial Access"
+    },
+    {
+        "id": "INC-1585",
+        "title": "Mass File Deletion",
+        "severity": "high",
+        "status": "open",
+        "timestamp": "2026-02-12T18:42:06.305Z",
+        "tactic": "Initial Access"
+    },
+    {
         "id": "INC-7232",
         "title": "Mass File Deletion",
         "severity": "high",
