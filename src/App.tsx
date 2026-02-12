@@ -12,7 +12,6 @@ import { SettingPage } from './features/setttings/SettingsPage';
 import './index.css';
 
 function App() {
-  useAttackSimulator();
 
   const [appLoading, setAppLoading] = useState(true);
 
@@ -24,6 +23,8 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
   
+  useAttackSimulator();
+
   if (appLoading) {
     return (
       <>
