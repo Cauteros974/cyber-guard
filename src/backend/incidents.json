@@ -1,5 +1,29 @@
 [
     {
+        "id": "INC-7232",
+        "title": "Mass File Deletion",
+        "severity": "high",
+        "status": "open",
+        "timestamp": "2026-02-12T18:41:56.304Z",
+        "tactic": "Initial Access"
+    },
+    {
+        "id": "INC-7891",
+        "title": "Malware DNS Beaconing",
+        "severity": "high",
+        "status": "open",
+        "timestamp": "2026-02-12T18:41:46.305Z",
+        "tactic": "Initial Access"
+    },
+    {
+        "id": "INC-748",
+        "title": "Malware DNS Beaconing",
+        "severity": "medium",
+        "status": "open",
+        "timestamp": "2026-02-12T18:41:16.305Z",
+        "tactic": "Initial Access"
+    },
+    {
         "id": "INC-1418",
         "title": "Unauthorized Access Attempt",
         "severity": "high",
