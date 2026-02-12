@@ -12,7 +12,11 @@ export const useAttackSimulator = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+
+    let mounted = true;
+
     const interval = setInterval(() => {
+      if(!mounted) return;
       // attack chance (20% once per interval)
       if (Math.random() > 0.8) {
         const newIncident: Incident = {
