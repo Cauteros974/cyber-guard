@@ -23,7 +23,7 @@ export const IncidentsPage = () => {
   }, [])
   
 
-  if(isLoading) return <div>Loading from Python...</div>;
+  if(isLoading) return <p>Loading from Python...</p>;
 
   const filteredIncidents = useMemo(() => {
     if (!searchQuery.trim()) return incidents;
