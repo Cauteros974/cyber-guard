@@ -20,10 +20,7 @@ export const IncidentsPage = () => {
 
   useEffect(() => {
     fetchIncidents();
-  }, [fetchIncidents]);
-  
-  
-  
+  }, []);
 
   const filteredIncidents = useMemo(() => {
     if (!searchQuery.trim()) return incidents;

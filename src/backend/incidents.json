@@ -1,5 +1,45 @@
 [
     {
+        "id": "INC-1418",
+        "title": "Unauthorized Access Attempt",
+        "severity": "high",
+        "status": "open",
+        "timestamp": "2026-02-12T18:40:36.305Z",
+        "tactic": "Initial Access"
+    },
+    {
+        "id": "INC-5984",
+        "title": "INC-4444",
+        "severity": "medium",
+        "status": "open",
+        "timestamp": "2026-02-12T18:40:34.881Z",
+        "tactic": "Initial Access"
+    },
+    {
+        "id": "INC-4358",
+        "title": "Mass File Deletion",
+        "severity": "high",
+        "status": "open",
+        "timestamp": "2026-02-12T18:40:06.305Z",
+        "tactic": "Initial Access"
+    },
+    {
+        "id": "INC-6185",
+        "title": "wnwnnwnw",
+        "severity": "medium",
+        "status": "open",
+        "timestamp": "2026-02-12T18:40:04.903Z",
+        "tactic": "Initial Access"
+    },
+    {
+        "id": "INC-6521",
+        "title": "fnfnfn",
+        "severity": "medium",
+        "status": "open",
+        "timestamp": "2026-02-12T18:37:29.334Z",
+        "tactic": "Initial Access"
+    },
+    {
         "id": "INC-7077",
         "title": "Unauthorized Access Attempt",
         "severity": "medium",
