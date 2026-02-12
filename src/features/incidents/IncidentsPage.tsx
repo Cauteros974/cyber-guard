@@ -22,11 +22,11 @@ export const IncidentsPage = () => {
     fetchIncidents();
   }, [fetchIncidents]);
   
-
+  
   if (isLoading) {
     return (
       <div className="loading-state">
-        <p>Синхронизация с Python бэкендом...</p>
+        <p>Loading from Python...</p>
       </div>
     );
   }
