@@ -45,6 +45,9 @@ export const useAttackSimulator = () => {
       }
     }, 10000);
 
-    return () => clearInterval(interval);
+    return () =>{
+      mounted = false;
+      clearInterval(interval);
+    } 
   }, [addIncident, navigate]);
 };
