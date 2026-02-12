@@ -20,10 +20,16 @@ export const IncidentsPage = () => {
 
   useEffect(() => {
     fetchIncidents();
-  }, [])
+  }, [fetchIncidents]);
   
 
-  if(isLoading) return <p>Loading from Python...</p>;
+  if (isLoading) {
+    return (
+      <div className="loading-state">
+        <p>Синхронизация с Python бэкендом...</p>
+      </div>
+    );
+  }
 
   const filteredIncidents = useMemo(() => {
     if (!searchQuery.trim()) return incidents;
