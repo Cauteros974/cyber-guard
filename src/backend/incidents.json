@@ -1,1 +1,18 @@
-[]
+[
+    {
+        "id": "INC-2274",
+        "title": "Unauthorized Access Attempt",
+        "severity": "low",
+        "status": "open",
+        "timestamp": "2026-02-12T18:35:00.662Z",
+        "tactic": "Initial Access"
+    },
+    {
+        "id": "INC-8499",
+        "title": "SQL Injection Detected",
+        "severity": "high",
+        "status": "open",
+        "timestamp": "2026-02-12T18:34:50.661Z",
+        "tactic": "Initial Access"
+    }
+]
