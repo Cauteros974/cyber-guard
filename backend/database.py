@@ -1,8 +1,12 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, declarative_base
 
 engine = create_engine
 
 Sessionmaker = sessionmaker (
-    autocommit=False,
+    autocommit = False,
+    autoflush = False,
+    bind = engine
 )
+
+Base = declarative_base()
