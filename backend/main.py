@@ -54,3 +54,9 @@ async def create_incident(incident: Incident):
     db.insert(0, incident.dict())
     save_db(db)
     return {"status": "success"}
+
+@app.get("/")
+async def root():
+    return{
+        "message": "CyberGuard API is Online"
+    }

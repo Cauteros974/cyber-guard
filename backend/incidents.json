@@ -1,5 +1,13 @@
 [
     {
+        "id": "INC-6425",
+        "title": "Mass File Deletion",
+        "severity": "critical",
+        "status": "open",
+        "timestamp": "2026-02-13T16:46:56.234Z",
+        "tactic": "Initial Access"
+    },
+    {
         "id": "INC-3177",
         "title": "Mass File Deletion",
         "severity": "low",
