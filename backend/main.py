@@ -58,5 +58,7 @@ async def create_incident(incident: Incident):
 @app.get("/")
 async def root():
     return{
-        "message": "CyberGuard API is Online"
+        "message": "CyberGuard API is Online",
+        "status": "active",
+        "version": "1.0.0"
     }

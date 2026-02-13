@@ -1,5 +1,21 @@
 [
     {
+        "id": "INC-6387",
+        "title": "test-123",
+        "severity": "medium",
+        "status": "open",
+        "timestamp": "2026-02-13T16:49:40.999Z",
+        "tactic": "Initial Access"
+    },
+    {
+        "id": "INC-3898",
+        "title": "INC-3355",
+        "severity": "medium",
+        "status": "open",
+        "timestamp": "2026-02-13T16:48:43.202Z",
+        "tactic": "Initial Access"
+    },
+    {
         "id": "INC-6425",
         "title": "Mass File Deletion",
         "severity": "critical",
