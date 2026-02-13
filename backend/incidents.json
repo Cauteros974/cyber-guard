@@ -1,0 +1,18 @@
+[
+    {
+        "id": "INC-3177",
+        "title": "Mass File Deletion",
+        "severity": "low",
+        "status": "open",
+        "timestamp": "2026-02-13T16:45:36.167Z",
+        "tactic": "Initial Access"
+    },
+    {
+        "id": "INC-8470",
+        "title": "SQL Injection Detected",
+        "severity": "low",
+        "status": "open",
+        "timestamp": "2026-02-13T16:45:06.228Z",
+        "tactic": "Initial Access"
+    }
+]
