@@ -1,37 +1,5 @@
 [
     {
-        "id": "INC-9229",
-        "title": "Unauthorized Access Attempt",
-        "severity": "low",
-        "status": "open",
-        "timestamp": "2026-02-13T16:54:41.194Z",
-        "tactic": "Initial Access"
-    },
-    {
-        "id": "INC-3360",
-        "title": "Unauthorized Access Attempt",
-        "severity": "high",
-        "status": "open",
-        "timestamp": "2026-02-13T16:52:18.194Z",
-        "tactic": "Initial Access"
-    },
-    {
-        "id": "INC-1313",
-        "title": "Mass File Deletion",
-        "severity": "critical",
-        "status": "open",
-        "timestamp": "2026-02-13T16:52:01.193Z",
-        "tactic": "Initial Access"
-    },
-    {
-        "id": "INC-7121",
-        "title": "Mass File Deletion",
-        "severity": "critical",
-        "status": "open",
-        "timestamp": "2026-02-13T16:51:21.193Z",
-        "tactic": "Initial Access"
-    },
-    {
         "id": "INC-8071",
         "title": "INC-111",
         "severity": "low",
