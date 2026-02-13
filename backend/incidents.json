@@ -1,5 +1,37 @@
 [
     {
+        "id": "INC-9132",
+        "title": "SQL Injection Detected",
+        "severity": "low",
+        "status": "open",
+        "timestamp": "2026-02-13T17:20:50.162Z",
+        "tactic": "Initial Access"
+    },
+    {
+        "id": "INC-7371",
+        "title": "Malware DNS Beaconing",
+        "severity": "high",
+        "status": "open",
+        "timestamp": "2026-02-13T17:20:40.176Z",
+        "tactic": "Initial Access"
+    },
+    {
+        "id": "INC-5711",
+        "title": "Mass File Deletion",
+        "severity": "high",
+        "status": "open",
+        "timestamp": "2026-02-13T17:20:30.175Z",
+        "tactic": "Initial Access"
+    },
+    {
+        "id": "INC-2070",
+        "title": "Mass File Deletion",
+        "severity": "high",
+        "status": "open",
+        "timestamp": "2026-02-13T17:20:20.186Z",
+        "tactic": "Initial Access"
+    },
+    {
         "id": "INC-5245",
         "title": "Mass File Deletion",
         "severity": "critical",
