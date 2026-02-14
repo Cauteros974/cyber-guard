@@ -6,6 +6,10 @@ from pydantic import BaseModel
 from typing import List
 from database import engine
 from models import Base
+from sqlalchemy.orm import DeclarativeBase
+
+class Base(DeclarativeBase):
+    pass
 
 Base.metadata.create_all(bind=engine)
 
