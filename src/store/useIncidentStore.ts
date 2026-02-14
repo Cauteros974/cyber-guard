@@ -5,7 +5,7 @@ import { MOCK_INCIDENTS } from '../data/mockData';
 type Timeframe = 'today' | '7d' | '30d';
 type Theme = 'dark' | 'light';
 
-const API_URL = 'http://127.0.0.1:8000';
+const API_URL = 'http://127.0.0.1:8005';
 
 interface IncidentState {
   incidents: Incident[];
