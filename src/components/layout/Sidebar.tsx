@@ -52,7 +52,7 @@ export const Sidebar = ({ isOpen }: SidebarProps) => {
 
     <NewIncidentModal 
         isOpen={isModalOpen}
-        onClose={() => setIsModalOpen}
+        onClose={() => setIsModalOpen(false)}
     />
   </>
   );
