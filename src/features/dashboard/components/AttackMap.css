@@ -88,7 +88,7 @@
 }
 
 @media (max-width: 491px) {
-  .chart-card .map-card{
-    display: none;
+  .chart-card .map-card.map-containe .world-map{
+    width: 1px;
   }
 }
