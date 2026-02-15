@@ -6,12 +6,10 @@ import './Layout.css';
 
 interface SidebarProps {
   isOpen: boolean;
-  onClose: () => void;
 }
 
-export const Sidebar = () => {
+export const Sidebar = ({ isOpen }: SidebarProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
   const menuItems = [
     { path: '/', icon: LayoutDashboard, label: 'Dashboard' },
     { path: '/incidents', icon: ShieldAlert, label: 'Incidents' },
