@@ -11,3 +11,5 @@ class Incindents(Base):
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     title = Column(String, nullable=False)
     severity = Column(String, nullable=False)
+    status = Column(String, default="open")
+    source = Column(String)
