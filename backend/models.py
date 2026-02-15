@@ -15,3 +15,5 @@ class Incindents(Base):
     source = Column(String)
     technique = Column(String)
     tactic = Column(String)
+    
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
