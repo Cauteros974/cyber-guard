@@ -13,3 +13,5 @@ class Incindents(Base):
     severity = Column(String, nullable=False)
     status = Column(String, default="open")
     source = Column(String)
+    technique = Column(String)
+    tactic = Column(String)
