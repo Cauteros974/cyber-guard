@@ -19,7 +19,7 @@ class IncidentUpdate(BaseModel):
     
 class IncidentOut(IncidentBase):
     id: UUID
-    
+    created_at: datetime
     class Config:
         from_attributes = True
     
