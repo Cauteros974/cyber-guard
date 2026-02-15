@@ -11,6 +11,7 @@ class IncidentCreate(IncidentBase):
     pass
 
 class IncidentUpdate(IncidentBase):
-    title: str
-    severity: str
+    title: str | None = None
+    severity: str | None = None
+    status: str | None = None
     
