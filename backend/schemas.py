@@ -4,13 +4,15 @@ from uuid import UUID
 class IncidentBase(BaseModel):
     title: str
     status: str
-    source: str
-    tactic: str
+    severity: str
+    source: str | None = None
+    tactic: str | None = None
+    technique: str | None = None
     
 class IncidentCreate(IncidentBase):
     pass
 
-class IncidentUpdate(IncidentBase):
+class IncidentUpdate(BaseModel):
     title: str | None = None
     severity: str | None = None
     status: str | None = None
