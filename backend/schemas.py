@@ -17,3 +17,9 @@ class IncidentUpdate(BaseModel):
     severity: str | None = None
     status: str | None = None
     
+class IncidentOut(IncidentBase):
+    id: UUID
+    
+    class Config:
+        from_attributes = True
+    
