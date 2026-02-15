@@ -2,7 +2,7 @@ import json
 import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .database import Base, engine
+from database import Base, engine
 from pydantic import BaseModel
 from typing import List
 from database import engine
