@@ -9,3 +9,8 @@ class IncidentBase(BaseModel):
     
 class IncidentCreate(IncidentBase):
     pass
+
+class IncidentUpdate(IncidentBase):
+    title: str
+    severity: str
+    
