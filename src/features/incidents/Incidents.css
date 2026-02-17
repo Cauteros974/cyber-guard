@@ -92,9 +92,11 @@
   
 /* Content styles inside cells */
 .id-text {
-    background: rgba(148, 163, 124, 0.1);
+    background: rgba(148, 163, 184, 0.1);
     font-family: 'JetBrains Mono', monospace;
     font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
 }
   
 .incident-title-link {
