@@ -62,6 +62,10 @@
     background-color: rgba(30, 41, 59, 0.6);
     padding: 14px 18px;
     font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: unset;
+    
 }
 
 /* Rows and cells */
