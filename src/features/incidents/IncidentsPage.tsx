@@ -89,9 +89,9 @@ export const IncidentsPage = () => {
           </thead>
           <tbody>
             {table.getRowModel().rows.map((row) => (
-              <tr key={row.id}>
+              <tr key={row.id} className="table-row">
                 {row.getVisibleCells().map((cell) => (
-                  <td key={cell.id}>
+                  <td key={cell.id} className="table-cell">
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </td>
                 ))}
