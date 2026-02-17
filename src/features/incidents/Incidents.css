@@ -84,8 +84,8 @@
 }
   
 .table-cell {
-    padding: 16px;
-    font-size: 14px;
+    padding: 16px 18px;
+    font-size: 18px;
     color: var(--text-main);
 }
   
