@@ -55,6 +55,8 @@
     width: 100%;
     border-collapse: collapse;
     text-align: left;
+    font-size: 15px;
+    font-weight: 200;
 }
 
 /*Table Heading*/
@@ -119,4 +121,9 @@
   
 .timestamp-text {
     white-space: nowrap;
+}
+
+.incident-title-link{
+    font-size: 18px;
+    padding: 0 5px 10px;
 }
