@@ -85,15 +85,16 @@
   
 .table-cell {
     padding: 16px 18px;
-    font-size: 18px;
+    font-size: 14px;
     color: var(--text-main);
+    vertical-align: middle;
 }
   
 /* Content styles inside cells */
 .id-text {
-    color: var(--text-muted);
+    background: rgba(148, 163, 124, 0.1);
     font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
+    font-size: 12px;
 }
   
 .incident-title-link {
