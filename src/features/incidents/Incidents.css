@@ -64,8 +64,9 @@
     font-size: 14px;
     font-weight: 600;
     color: var(--text-muted);
-    text-transform: unset;
-    
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 1px solid var(--border-color);
 }
 
 /* Rows and cells */
