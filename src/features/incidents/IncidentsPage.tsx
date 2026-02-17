@@ -51,7 +51,14 @@ export const IncidentsPage = () => {
         </button>
       ),
     }),
-    columnHelper.accessor('status', { header: 'Status' }),
+    columnHelper.accessor('status', {
+      header: 'Status',
+      cell: (info) => (
+        <span className="status-chip">
+          {info.getValue()}
+        </span>
+      ),
+    }),
     columnHelper.accessor('timestamp', {
       header: 'Detected',
       cell: (info) => new Date(info.getValue()).toLocaleString(),
