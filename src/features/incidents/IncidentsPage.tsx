@@ -23,7 +23,15 @@ export const IncidentsPage = () => {
   }, []);
 
   const columns = useMemo(() => [
-    columnHelper.accessor('id', { header: 'ID' }),
+    columnHelper.accessor('id', 
+      { 
+        header: 'ID',
+        cell: (info) => (
+          <span className="id-text">
+            {info.getValue()}
+          </span>
+        )
+      }),
     columnHelper.accessor('severity', { header: 'Severity' }),
     columnHelper.accessor('title', {
       header: 'Title',
