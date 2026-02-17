@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useReactTable, getCoreRowModel, flexRender, createColumnHelper } from '@tanstack/react-table';
 import { useIncidentStore } from '../../store/useIncidentStore';
 import { type Incident } from '../../types/incident';
-import './Incidents.css';
+import './Incidents.css'
 
 const columnHelper = createColumnHelper<Incident>();
 
