@@ -72,7 +72,7 @@
 /* Rows and cells */
 .table-row {
     border-bottom: 1px solid var(--border-color);
-    transition: background-color 0.2s ease;
+    transition: all 0.2s ease;
 }
   
 .table-row:last-child {
@@ -80,7 +80,7 @@
 }
   
 .table-row:hover {
-    background-color: rgba(30, 41, 59, 0.3);
+    background-color: rgba(59, 130, 246, 0.08);
 }
   
 .table-cell {
