@@ -82,7 +82,7 @@ export const IncidentsPage = () => {
             {row.getVisibleCells().map((cell) => (
               <td key={cell.id}>
                 {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                {incidents.map(inc => <div key={inc.id}>{inc.title}</div>)}
+                
               </td>
             ))}
           </tr>
