@@ -44,35 +44,35 @@
 
 /* Table Container*/
 .table-container {
-    background-color: var(--pabel-bg);
+    background-color: var(--panel-bg);
     border: 1px solid var(--border-color);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    overflow-x: auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 .incidents-table {
     width: 100%;
     border-collapse: collapse;
-    text-align: left;
+    min-width: 900px;
 }
 
 /*Table Heading*/
 .table-header-cell {
-    background-color: rgba(30, 41, 59, 0.5);
-    padding: 16px;
-    font-size: 12px;
+    background-color: rgba(30, 41, 59, 0.6);
+    padding: 14px 18px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--text-muted);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     border-bottom: 1px solid var(--border-color);
 }
 
 /* Rows and cells */
 .table-row {
     border-bottom: 1px solid var(--border-color);
-    transition: background-color 0.2s ease;
+    transition: all 0.2s ease;
 }
   
 .table-row:last-child {
@@ -80,20 +80,23 @@
 }
   
 .table-row:hover {
-    background-color: rgba(30, 41, 59, 0.3);
+    background-color: rgba(59, 130, 246, 0.08);
 }
   
 .table-cell {
-    padding: 16px;
+    padding: 16px 18px;
     font-size: 14px;
     color: var(--text-main);
+    vertical-align: middle;
 }
   
 /* Content styles inside cells */
 .id-text {
-    color: var(--text-muted);
+    background: rgba(148, 163, 184, 0.1);
     font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
 }
   
 .incident-title-link {
@@ -119,4 +122,9 @@
   
 .timestamp-text {
     white-space: nowrap;
+}
+
+.incident-title-link{
+    font-size: 18px;
+    padding: 0 5px 10px;
 }

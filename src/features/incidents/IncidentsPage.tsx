@@ -22,23 +22,24 @@ export const IncidentsPage = () => {
     fetchIncidents();
   }, []);
 
-  const filteredIncidents = useMemo(() => {
-    if (!searchQuery.trim()) return incidents;
-
-    const q = searchQuery.toLocaleLowerCase();
-
-    return incidents.filter((inc) => 
-        inc.id.toLowerCase().includes(q) ||
-        inc.title.toLowerCase().includes(q) ||
-        inc.tactic.toLocaleLowerCase().includes(q) ||
-        inc.technique.toLocaleLowerCase().includes(q) ||
-        inc.source.toLocaleLowerCase().includes(q)
-    );
-  }, [incidents, searchQuery]);
-
   const columns = useMemo(() => [
-    columnHelper.accessor('id', { header: 'ID' }),
-    columnHelper.accessor('severity', { header: 'Severity' }),
+    columnHelper.accessor('id', 
+      { 
+        header: 'ID',
+        cell: (info) => (
+          <span className="id-text">
+            {info.getValue()}
+          </span>
+        )
+      }),
+    columnHelper.accessor('severity', { 
+      header: 'Severity',
+      cell: (info) => (
+        <span className={`severity-badge severity-${info.getValue()}`}>
+        {info.getValue()}
+        </span>
+      )
+    }),
     columnHelper.accessor('title', {
       header: 'Title',
       cell: (info) => (
@@ -82,7 +83,7 @@ export const IncidentsPage = () => {
             {row.getVisibleCells().map((cell) => (
               <td key={cell.id}>
                 {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                {incidents.map(inc => <div key={inc.id}>{inc.title}</div>)}
+                
               </td>
             ))}
           </tr>
