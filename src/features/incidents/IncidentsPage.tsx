@@ -61,7 +61,8 @@ export const IncidentsPage = () => {
     }),
     columnHelper.accessor('timestamp', {
       header: 'Detected',
-      cell: (info) => new Date(info.getValue()).toLocaleString(),
+      cell: (info) =>
+        new Date(info.getValue()).toLocaleString(),
     }),
   ], [navigate]);
 
