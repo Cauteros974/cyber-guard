@@ -32,7 +32,14 @@ export const IncidentsPage = () => {
           </span>
         )
       }),
-    columnHelper.accessor('severity', { header: 'Severity' }),
+    columnHelper.accessor('severity', { 
+      header: 'Severity',
+      cell: (info) => (
+        <span className={`severity-badge severity-${info.getValue()}`}>
+        {info.getValue()}
+        </span>
+      )
+    }),
     columnHelper.accessor('title', {
       header: 'Title',
       cell: (info) => (
