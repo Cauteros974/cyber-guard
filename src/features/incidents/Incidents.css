@@ -54,12 +54,9 @@
 .incidents-table {
     width: 100%;
     border-collapse: collapse;
-<<<<<<< Updated upstream
     min-width: 900px;
-=======
     text-align: left;
     padding-left: 40px;
->>>>>>> Stashed changes
 }
 
 /*Table Heading*/
