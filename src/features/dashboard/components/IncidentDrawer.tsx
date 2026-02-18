@@ -1,7 +1,7 @@
+import { useState } from "react";
 import { Clock, X, Globe, ShieldAlert, Terminal } from "lucide-react";
 import { useIncidentStore } from "../../../store/useIncidentStore";
 import './IncidentDrawer.css';
-import { useState } from "react";
 
 export default IncidentDrawer = () => {
     const { selectedIncident, setSelectedIncident } = useIncidentStore();
@@ -18,6 +18,13 @@ export default IncidentDrawer = () => {
                 <button onClick={() => setSelectedIncident(null)} className="close-btn">
                     <X size={20} />
                 </button>
+            </div>
+
+            <div className="drawer-content">
+                <div className="detail-group">
+                    <label> Detected At</label>
+                    <p>{new Date(selectedIncident.timestamp).toLocaleString()}</p>
+                </div>
             </div>
         </div>
     )

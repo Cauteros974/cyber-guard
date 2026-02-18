@@ -9,6 +9,7 @@ import { DevicesPage } from './features/devices/DevicesPage';
 import { PoliciesPage } from './features/policies/PoliciesPage';
 import { useAttackSimulator } from './hooks/useAttackSimulator';
 import { SettingPage } from './features/setttings/SettingsPage';
+import IncidentDrawer from './features/dashboard/components/IncidentDrawer';
 import './index.css';
 
 function App() {
