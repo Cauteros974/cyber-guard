@@ -9,33 +9,26 @@ const API_URL = 'http://127.0.0.1:8000';
 
 interface IncidentState {
   incidents: Incident[];
+  selectedIncident: Incident | null;
   isLoading: boolean;
   searchQuery: string;
-
   selectedTimeframe: Timeframe;
   theme: Theme;
 
   fetchIncidents: () => Promise<void>;
   addIncident: (incident: CreateIncidentDTO) => Promise<void>;
-
+  setSelectedIncident: (incident: Incident | null) => void;
   setSearchQuery: (query: string) => void;
   setTimeframe: (timeframe: Timeframe) => void;
   setTheme: (theme: Theme) => void;
 }
 
-interface IncidentStore {
-  incident: Incident[];
-  selectedIncident: Incident | null;
-  setSelectedIncident: (incident: Incident) => void;
-}
-
 export const useIncidentStore = create<IncidentState>((set) => ({
   incidents: MOCK_INCIDENTS,
+  selectedIncident: null,
   isLoading: false,
   searchQuery: '',
   selectedTimeframe: '7d',
-  selectedIncident: null,
-
   theme: (localStorage.getItem('theme') as Theme) || 'dark',
 
   fetchIncidents: async () => {
@@ -58,25 +51,20 @@ export const useIncidentStore = create<IncidentState>((set) => ({
         body: JSON.stringify(incident),
       });
 
-      if (res.ok) {
-        set((state) => ({
-          incidents: [
-            {
-              ...incident,
-              technique: 'T1078',
-              source: 'Manual Report',
-            },
-            ...state.incidents,
-          ],
-        }));
-      }
+      if (!res.ok) throw new Error('Failed to create incident');
+
+      const created = await res.json();
+
+      set((state) => ({
+        incidents: [created, ...state.incidents],
+      }));
     } catch (error) {
       console.error('Failed to save incident', error);
     }
   },
 
+  setSelectedIncident: (incident) => set({ selectedIncident: incident }),
   setSearchQuery: (query) => set({ searchQuery: query }),
-
   setTimeframe: (timeframe) => set({ selectedTimeframe: timeframe }),
 
   setTheme: (theme) => {
