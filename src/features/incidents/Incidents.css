@@ -130,3 +130,11 @@
     font-size: 18px;
     padding: 0 5px 10px;
 }
+
+.incident-drawer{
+    position: fixed;
+    right: -450px;
+    top: 0;
+    width: 450px;
+    height: 100vh;
+}
