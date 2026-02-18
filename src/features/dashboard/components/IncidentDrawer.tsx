@@ -22,7 +22,7 @@ export const IncidentDrawer = () => {
 
             <div className="drawer-content">
                 <div className="detail-group">
-                    <label> Detected At</label>
+                    <label> <Clock size={14} />Detected At</label>
                     <p>{new Date(selectedIncident.timestamp).toLocaleString()}</p>
                 </div>
 
