@@ -3,7 +3,7 @@ import { Clock, X, Globe, ShieldAlert, Terminal } from "lucide-react";
 import { useIncidentStore } from "../../../store/useIncidentStore";
 import './IncidentDrawer.css';
 
-export default IncidentDrawer = () => {
+export const IncidentDrawer = () => {
     const { selectedIncident, setSelectedIncident } = useIncidentStore();
 
     if(!selectedIncident) return null;
