@@ -15,7 +15,7 @@ export default IncidentDrawer = () => {
                     <ShieldAlert size={20} className={selectedIncident.severity} />
                     <span>Incident Details: {selectedIncident.id}</span>
                 </div>
-                <button onClick={() => setSelectedIncident(null)}>
+                <button onClick={() => setSelectedIncident(null)} className="close-btn">
                     <X size={20} />
                 </button>
             </div>
