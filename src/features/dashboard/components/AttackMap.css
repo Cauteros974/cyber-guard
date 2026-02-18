@@ -87,8 +87,16 @@
   100% { r: 25; opacity: 0; stroke-width: 0.5; }
 }
 
-@media (max-width: 491px) {
+@media (max-width: 600px) {
   .chart-card .map-card.map-containe .world-map{
     width: 1px;
+  }
+
+  .chart-title{
+    display: none;
+  }
+
+  .map-container{
+    
   }
 }
