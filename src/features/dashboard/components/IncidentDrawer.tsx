@@ -27,8 +27,17 @@ export default IncidentDrawer = () => {
                 </div>
 
                 <div className="detail-group">
-                    <label> Source IP</label>
+                    <label> <Globe size={14} /> Source IP</label>
                     <code className="ip-address">192.168.1.105 </code>
+                </div>
+
+                <div className="detail-group terminal-view">
+                    <label><Terminal size={14} /> Raw Logs</label>
+                    <pre>
+                    {`[RECON] Potential directory traversal attempt detected...
+                    [FILTER] Matched rule ID: 4002
+                    [ACTION] Connection logged and flagged.`}
+                    </pre>
                 </div>
             </div>
         </div>
