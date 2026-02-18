@@ -23,6 +23,12 @@ interface IncidentState {
   setTheme: (theme: Theme) => void;
 }
 
+interface IncidentStore {
+  incident: Incident[];
+  selectedIncident: Incident[];
+  setSelectedIncident: (incident: Incident) => void;
+}
+
 export const useIncidentStore = create<IncidentState>((set) => ({
   incidents: MOCK_INCIDENTS,
   isLoading: false,
