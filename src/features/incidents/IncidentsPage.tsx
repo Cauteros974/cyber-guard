@@ -8,7 +8,7 @@ import './Incidents.css'
 const columnHelper = createColumnHelper<Incident>();
 
 export const IncidentsPage = () => {
-  const { incidents, searchQuery, fetchIncidents, isLoading } = useIncidentStore();
+  const { incidents, searchQuery, fetchIncidents, isLoading, selectedIncident, setSelectedIncident } = useIncidentStore();
   const navigate = useNavigate();
 
   const filteredData = useMemo(() => {
@@ -75,20 +75,31 @@ export const IncidentsPage = () => {
               </th>
             ))}
           </tr>
+          
         ))}
       </thead>
       <tbody>
-        {table.getRowModel().rows.map((row) => (
-          <tr key={row.id}>
+        {table.getRowModel().rows.map((row) => {
+          const incident = row.original;
+          
+          return (
+          <tr
+            key={row.id}
+            onClick={() => setSelectedIncident(incident)}
+            className={`incident-row ${
+              selectedIncident?.id === incident.id ? 'is-selected' : ''
+            }`}
+          >
             {row.getVisibleCells().map((cell) => (
-              <td key={cell.id}>
+              <td key={cell.id} className="table-cell">
                 {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                
               </td>
             ))}
           </tr>
-        ))}
+          );
+        })}
       </tbody>
+
     </table>
   );
 };
