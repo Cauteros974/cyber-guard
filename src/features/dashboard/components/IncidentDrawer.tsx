@@ -39,6 +39,11 @@ export default IncidentDrawer = () => {
                     [ACTION] Connection logged and flagged.`}
                     </pre>
                 </div>
+
+                <div className="drawer-actions">
+                    <button>Block Source</button>
+                    <button>Mark as Resolved</button>
+                </div>
             </div>
         </div>
     )
