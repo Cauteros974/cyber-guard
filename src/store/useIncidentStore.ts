@@ -25,7 +25,7 @@ interface IncidentState {
 
 interface IncidentStore {
   incident: Incident[];
-  selectedIncident: Incident[];
+  selectedIncident: Incident | null;
   setSelectedIncident: (incident: Incident) => void;
 }
 
@@ -34,6 +34,7 @@ export const useIncidentStore = create<IncidentState>((set) => ({
   isLoading: false,
   searchQuery: '',
   selectedTimeframe: '7d',
+  selectedIncident: null,
 
   theme: (localStorage.getItem('theme') as Theme) || 'dark',
 
