@@ -145,3 +145,6 @@
     padding: 24px;
 }
 
+.incident-drawer .is-open{
+    right: 0
+}
