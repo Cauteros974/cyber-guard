@@ -148,3 +148,10 @@
 .incident-drawer .is-open{
     right: 0
 }
+
+.terminal-view pre{
+    background: #000;
+    color: #00ff00;
+    padding: 10px;
+    
+}
