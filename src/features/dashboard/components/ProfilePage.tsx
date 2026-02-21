@@ -4,19 +4,8 @@ import { useUserStore } from "../../../store/useUserStore";
 import './ProfilePage.css';
 
 export const ProfilePage = () => {
-<<<<<<< Updated upstream
-    const { user, fetchUser } = useUserStore();
-=======
-    const {user, fetchUser} = useUserStore();
 
-    
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+    const { user, fetchUser } = useUserStore();
 
     useEffect(() => {
         fetchUser();
