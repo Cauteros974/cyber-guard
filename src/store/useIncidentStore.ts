@@ -68,7 +68,6 @@ export const useIncidentStore = create<IncidentState>((set) => ({
         console.log('Failed to save incident', error);
       }
     },
-
     setSelectedIncident: (incident) =>
       set({ selectedIncident: (incident)}),
 
@@ -80,7 +79,8 @@ export const useIncidentStore = create<IncidentState>((set) => ({
 
     setTheme: (theme) => {
       localStorage.setItem('theme', theme);
-      document.getElementById[Symbol]
+      document.documentElement.setAttribute('data-theme', theme);
+      set({theme});
     }
-  }
-}))
+  },
+}));
