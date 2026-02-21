@@ -75,6 +75,7 @@ export const useIncidentStore = create<IncidentState>((set) => ({
     setSearchQuery: (query) => 
       set({setSearchQuery: (query)}),
 
-    
+    setTimeframe: (timeframe) =>
+      set({ selectedTimeframe: timeframe }),
   }
 }))
