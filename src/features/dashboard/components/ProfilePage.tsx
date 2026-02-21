@@ -4,7 +4,7 @@ import { useUserStore } from "../../../store/useUserStore";
 import './ProfilePage.css';
 
 export const ProfilePage = () => {
-    const {user} = useUserStore();
+    const {user, fetchUser} = useUserStore();
 
     if(!user) return <div>Loading access credentials...</div>;
 
