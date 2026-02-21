@@ -28,6 +28,13 @@ export const ProfilePage = () => {
                         <span className="stat-label">Access Level</span>
                     </div>
                 </div>
+
+                <div className="system-logs-mini">
+                    <h3>Recent Activity</h3>
+                    <ul>
+                        <li><Clock size={12} /> Logged in from 192.168.1.1</li>
+                    </ul>
+                </div>
             </div>
         </div>
     )
