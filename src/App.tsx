@@ -52,7 +52,7 @@ function App() {
           <Route path="/policies" element={<PoliciesPage />} />
           <Route path="/settings" element={<SettingPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
-          <Route path="profile" element={<ProfilePage />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Routes>
       </MainLayout>
     </>
