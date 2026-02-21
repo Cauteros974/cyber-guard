@@ -33,6 +33,7 @@ export const ProfilePage = () => {
                     <h3>Recent Activity</h3>
                     <ul>
                         <li><Clock size={12} /> Logged in from 192.168.1.1</li>
+                        <li><Clock size={12} /> Closed Incident #INC-4402</li>
                     </ul>
                 </div>
             </div>
