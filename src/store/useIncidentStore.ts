@@ -52,6 +52,17 @@ export const useIncidentStore = create<IncidentState>((set) => ({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(incident),
       });
+
+      if (res.ok) {
+        set((state) => ({
+          incidents: [
+            ...incident,
+            technique: 'T1078',
+            source: 'Manual Report',
+          ],
+          ...state.incidents,
+        }))
+      }
     }
   }
 }))
