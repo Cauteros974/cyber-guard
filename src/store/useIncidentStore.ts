@@ -34,19 +34,19 @@ export const useIncidentStore = create<IncidentState>((set) => ({
   theme: (localStorage.getItem('theme') as Theme) || 'dark',
 
   fetchIncidents: async () => {
-    set({ isLoading: true});
-    try{
+    set({ isLoading: true });
+    try {
       const res = await fetch(`${API_URL}/incidents`);
       const data = await res.json();
-      set({ incidents: data, isLoading: false});
-    } catch(error) {
-      console.log("Failed to fetch incidents", error);
-      set({ incidents: MOCK_INCIDENTS, isLoading: false});
+      set({ incidents: data, isLoading: false });
+    } catch (error) {
+      console.error('Failed to fetch incidents', error);
+      set({ incidents: MOCK_INCIDENTS, isLoading: false });
     }
   },
 
   addIncident: async (incident) => {
-    try{
+    try {
       const res = await fetch(`${API_URL}/incidents`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -64,23 +64,25 @@ export const useIncidentStore = create<IncidentState>((set) => ({
             ...state.incidents,
           ],
         }));
-      } catch(error) {
-        console.log('Failed to save incident', error);
       }
-    },
-    setSelectedIncident: (incident) =>
-      set({ selectedIncident: (incident)}),
-
-    setSearchQuery: (query) => 
-      set({setSearchQuery: (query)}),
-
-    setTimeframe: (timeframe) =>
-      set({ selectedTimeframe: timeframe }),
-
-    setTheme: (theme) => {
-      localStorage.setItem('theme', theme);
-      document.documentElement.setAttribute('data-theme', theme);
-      set({theme});
+    } catch (error) {
+      console.error('Failed to save incident', error);
     }
   },
+
+  setSelectedIncident: (incident) =>
+    set({ selectedIncident: incident }),
+
+  setSearchQuery: (query) =>
+    set({ searchQuery: query }),
+
+  setTimeframe: (timeframe) =>
+    set({ selectedTimeframe: timeframe }),
+
+  setTheme: (theme) => {
+    localStorage.setItem('theme', theme);
+    document.documentElement.setAttribute('data-theme', theme);
+    set({ theme });
+  },
 }));
+
