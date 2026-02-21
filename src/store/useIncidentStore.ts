@@ -67,6 +67,8 @@ export const useIncidentStore = create<IncidentState>((set) => ({
       } catch(error) {
         console.log('Failed to save incident', error);
       }
-    }
+    },
+
+    set 
   }
 }))
