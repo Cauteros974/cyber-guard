@@ -4,7 +4,7 @@ interface UserProfile{
     username: string;
     role: string;
     clearance: string;
-    stat: {
+    stats: {
         resolved_incidents: number;
         active_investigations: number;
     };

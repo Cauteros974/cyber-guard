@@ -1,5 +1,6 @@
 import { ShieldCheck, Target, Award, Clock } from "lucide-react";
 import { useUserStore } from "../../../store/useUserStore";
+import './ProfilePage.css';
 
 export const ProfilePage = () => {
     const {user} = useUserStore();
@@ -18,6 +19,13 @@ export const ProfilePage = () => {
                 <div className="stats-grid">
                     <div className="stat-item">
                         <Target size={18} />
+                        <span className="stat-value">{user.stats.resolved_incidents}</span>
+                        <span className="stat-label">Resolved</span>
+                    </div>
+                    <div className="stat-item">
+                        <ShieldCheck size={20} />
+                        <span className="stat-value">{user.role}</span>
+                        <span className="stat-label">Access Level</span>
                     </div>
                 </div>
             </div>
