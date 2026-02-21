@@ -41,7 +41,6 @@ function App() {
   
   return (
     <Router>
-    <>
       <Toaster theme="dark" position="top-right" richColors closeButton />
       <MainLayout>
         <Routes>
@@ -55,7 +54,6 @@ function App() {
           <Route path="/profile" element={<ProfilePage />} />
         </Routes>
       </MainLayout>
-    </>
     </Router>
   );
 }
