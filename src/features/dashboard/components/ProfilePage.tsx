@@ -1,4 +1,5 @@
 import { ShieldCheck, Target, Award, Clock } from "lucide-react";
+import { useEffect } from "react";
 import { useUserStore } from "../../../store/useUserStore";
 import './ProfilePage.css';
 
@@ -6,6 +7,12 @@ export const ProfilePage = () => {
     const {user} = useUserStore();
 
     if(!user) return <div>Loading access credentials...</div>;
+
+    useEffect(() => {
+        fetchUser();
+    }, [fetchUser]);
+
+    if (!user) return <div className="loading">Loading access credentials...</div>;
 
     return(
         <div className="profile-container">
