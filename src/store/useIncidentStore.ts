@@ -56,12 +56,16 @@ export const useIncidentStore = create<IncidentState>((set) => ({
       if (res.ok) {
         set((state) => ({
           incidents: [
-            ...incident,
-            technique: 'T1078',
-            source: 'Manual Report',
+            {
+              ...incident,
+              technique: 'T1078',
+              source: 'Manual Report',
+            },
+            ...state.incidents,
           ],
-          ...state.incidents,
-        }))
+        }));
+      } catch(error) {
+        console.log('Failed to save incident', error);
       }
     }
   }
