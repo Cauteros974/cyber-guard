@@ -37,10 +37,11 @@ export const useIncidentStore = creater<IncidentState>((set) => ({
     set({ isLoading: true});
     try{
       const res = await fetch(`${API_URL}/incidents`);
-      const data = await res.json;
+      const data = await res.json();
       set({ incidents: data, isLoading: false});
     } catch(error) {
       console.log("Failed to fetch incidents", error);
+      set({ incidents: MOCK_INCIDENTS, isLoading: false});
     }
   },
 }))
