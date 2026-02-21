@@ -14,6 +14,12 @@ export const ProfilePage = () => {
                         <h1>{user.username}</h1>
                     </div>
                 </div>
+
+                <div className="stats-grid">
+                    <div className="stat-item">
+                        <Target size={18} />
+                    </div>
+                </div>
             </div>
         </div>
     )

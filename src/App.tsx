@@ -9,6 +9,7 @@ import { DevicesPage } from './features/devices/DevicesPage';
 import { PoliciesPage } from './features/policies/PoliciesPage';
 import { useAttackSimulator } from './hooks/useAttackSimulator';
 import { SettingPage } from './features/setttings/SettingsPage';
+import { ProfilePage } from './features/dashboard/components/ProfilePage';
 import './index.css';
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
           <Route path="/policies" element={<PoliciesPage />} />
           <Route path="/settings" element={<SettingPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="profile" element={<ProfilePage />} />
         </Routes>
       </MainLayout>
     </>
