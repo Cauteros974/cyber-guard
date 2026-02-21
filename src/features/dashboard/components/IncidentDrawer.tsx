@@ -5,8 +5,6 @@ import './IncidentDrawer.css';
 export const IncidentDrawer = () => {
   const { selectedIncident, setSelectedIncident } = useIncidentStore();
 
-  
-
   return (
     <div className={`incident-drawer ${selectedIncident ? 'is-open' : ''}`}>
       {selectedIncident && (
@@ -48,7 +46,6 @@ export const IncidentDrawer = () => {
       </div>
         </>
       )}
-      
       
     </div>
   );
