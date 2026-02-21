@@ -33,5 +33,12 @@ export const useIncidentStore = creater<IncidentState>((set) => ({
   selectedTimeframe: '7d',
   theme: (localStorage.getItem('theme') as Theme) || 'dark',
 
-  
+  fetchIncidents: async () => {
+    set({ isLoading: true});
+    try{
+      const res = await fetch(`${API_URL}/incidents`);
+      const data = await res.json;
+      set({ incidents: data, isLoading: false});
+    }
+  }
 }))
