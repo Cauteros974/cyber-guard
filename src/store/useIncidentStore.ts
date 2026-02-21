@@ -25,7 +25,7 @@ interface IncidentState {
 
 
 
-export const useIncidentStore = creater<IncidentState>((set) => ({
+export const useIncidentStore = create<IncidentState>((set) => ({
   incidents: MOCK_INCIDENTS,
   selectedIncident: null,
   isLoading: false,
@@ -44,4 +44,14 @@ export const useIncidentStore = creater<IncidentState>((set) => ({
       set({ incidents: MOCK_INCIDENTS, isLoading: false});
     }
   },
+
+  addIncident: async (incident) => {
+    try{
+      const res = await fetch(`${API_URL}/incidents`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(incident),
+      });
+    }
+  }
 }))
