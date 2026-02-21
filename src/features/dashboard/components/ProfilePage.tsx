@@ -10,6 +10,9 @@ export const ProfilePage = () => {
     const {user, fetchUser} = useUserStore();
 
     
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
     useEffect(() => {
