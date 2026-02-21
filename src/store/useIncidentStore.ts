@@ -77,5 +77,10 @@ export const useIncidentStore = create<IncidentState>((set) => ({
 
     setTimeframe: (timeframe) =>
       set({ selectedTimeframe: timeframe }),
+
+    setTheme: (theme) => {
+      localStorage.setItem('theme', theme);
+      document.getElementById[Symbol]
+    }
   }
 }))
