@@ -4,7 +4,13 @@ import { useUserStore } from "../../../store/useUserStore";
 import './ProfilePage.css';
 
 export const ProfilePage = () => {
+<<<<<<< Updated upstream
     const { user, fetchUser } = useUserStore();
+=======
+    const {user, fetchUser} = useUserStore();
+
+    
+>>>>>>> Stashed changes
 
     useEffect(() => {
         fetchUser();
