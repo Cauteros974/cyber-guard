@@ -5,21 +5,23 @@ import './IncidentDrawer.css';
 export const IncidentDrawer = () => {
   const { selectedIncident, setSelectedIncident } = useIncidentStore();
 
-  if (!selectedIncident) return null;
+  
 
   return (
     <div className={`incident-drawer ${selectedIncident ? 'is-open' : ''}`}>
-      <div className="drawer-header">
-        <div className="drawer-title">
-          <ShieldAlert size={20} className={selectedIncident.severity} />
-          <span>Incident Details: {selectedIncident.id}</span>
+      {selectedIncident && (
+        <>
+        <div className="drawer-header">
+          <div className="drawer-title">
+            <ShieldAlert size={20} className={selectedIncident.severity} />
+            <span>Incident Details: {selectedIncident.id}</span>
+          </div>
+          <button onClick={() => setSelectedIncident(null)} className="close-btn">
+            <X size={24} />
+          </button>
         </div>
-        <button onClick={() => setSelectedIncident(null)} className="close-btn">
-          <X size={24} />
-        </button>
-      </div>
 
-      <div className="drawer-content">
+        <div className="drawer-content">
         <div className="detail-group">
           <label><Clock size={14} /> Detected At</label>
           <p>{new Date(selectedIncident.timestamp).toLocaleString()}</p>
@@ -44,6 +46,10 @@ export const IncidentDrawer = () => {
           <button className="btn-resolve">Mark as Resolved</button>
         </div>
       </div>
+        </>
+      )}
+      
+      
     </div>
   );
 };
