@@ -86,3 +86,9 @@
   0% { r: 2; opacity: 1; stroke-width: 2; }
   100% { r: 25; opacity: 0; stroke-width: 0.5; }
 }
+
+@media (max-width: 491px) {
+  .chart-card .map-card{
+    display: none;
+  }
+}
