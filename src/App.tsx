@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, BrowserRouter as Router } from 'react-router-dom';
 import { Toaster } from 'sonner';
 import { useState, useEffect } from 'react';
 import { MainLayout } from './components/layout/MainLayout';
@@ -40,7 +40,7 @@ function App() {
   }
   
   return (
-    
+    <Route>
     <>
       <Toaster theme="dark" position="top-right" richColors closeButton />
       <MainLayout>
@@ -56,6 +56,7 @@ function App() {
         </Routes>
       </MainLayout>
     </>
+    </Route>
   );
 }
 
