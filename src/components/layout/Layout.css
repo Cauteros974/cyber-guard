@@ -344,3 +344,10 @@
   }
 }
 
+.user-avatar{
+    transition: transform 0.2s ease;
+}
+
+.user-profile-link:hover .user_avatar {
+    transform: scale(1.1);
+}

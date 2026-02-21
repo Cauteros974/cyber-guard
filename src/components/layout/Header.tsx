@@ -1,5 +1,6 @@
 import { Search, Bell, User, Menu } from "lucide-react";
 import { useIncidentStore } from "../../store/useIncidentStore";
+import { Link } from "react-router-dom";
 import './Layout.css';
 
 export const Header = ({ onMenuClick }: { onMenuClick: () => void }) => {
@@ -46,15 +47,17 @@ export const Header = ({ onMenuClick }: { onMenuClick: () => void }) => {
           {hasCritical && <span className="notification-badge"></span>}
         </button>
 
-        <div className="user-profile">
-          <div className="user-text">
-            <span className="user-name">Admin_Analyst</span>
-            <span className="user-role">SOC level_3</span>
+        <Link to="/profile" className="user-profile-link">
+          <div className="user-profile">
+            <div className="user-text">
+              <span className="user-name">Admin_Analyst</span>
+              <span className="user-role">SOC level_3</span>
+            </div>
+            <div className="user_avatar">
+              <User size={20} />
+            </div>
           </div>
-          <div className="user_avatar">
-            <User size={20} />
-          </div>
-        </div>
+        </Link>
       </div>
     </header>
   );

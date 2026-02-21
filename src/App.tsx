@@ -40,7 +40,7 @@ function App() {
   }
   
   return (
-    <Route>
+    <Router>
     <>
       <Toaster theme="dark" position="top-right" richColors closeButton />
       <MainLayout>
@@ -56,7 +56,7 @@ function App() {
         </Routes>
       </MainLayout>
     </>
-    </Route>
+    </Router>
   );
 }
 
