@@ -28,6 +28,13 @@ class Incident(BaseModel):
     timestamp: str
     tactic: str
 
+@app.get("/user/me")
+async def get_user_me():
+    return{
+        "username": "Admin_Analyst",
+        "role": "SOC Level 3",
+    }
+
 def save_db(data):
     with open(DB_FILE, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
