@@ -36,6 +36,7 @@ async def get_user_me():
         "clearance": "Top_Secret",
         "stats": {
             "resolved_incidents": 142,
+            "active_investigations": 3
         }
     }
 
