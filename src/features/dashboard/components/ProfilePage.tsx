@@ -1,6 +1,6 @@
 import { ShieldCheck, Target, Award, Clock } from "lucide-react";
 import { useEffect } from "react";
-import { useUserStore } from "../../../store/useUserStore";
+import { useUserStore } from "../../../store/useUseStore";
 import './ProfilePage.css';
 
 export const ProfilePage = () => {
