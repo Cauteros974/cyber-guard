@@ -33,6 +33,10 @@ async def get_user_me():
     return{
         "username": "Admin_Analyst",
         "role": "SOC Level 3",
+        "clearance": "Top_Secret",
+        "stats": {
+            "resolved_incidents": 142,
+        }
     }
 
 def save_db(data):
