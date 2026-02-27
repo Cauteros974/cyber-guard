@@ -8,7 +8,7 @@ from typing import List
 from database import engine
 from models import Base
 from sqlalchemy.orm import DeclarativeBase
-from datatime import datatime, timedata
+from datatime import datatime, timedelta
 
 class Base(DeclarativeBase):
     pass
@@ -74,7 +74,9 @@ async def root():
         "version": "1.0.0"
     }
     
-@app.get("/incidents/data")
-async def get_data():
-    data = []
+@app.get("/incidents/stats")
+async def get_stats():
+    stats = []
     now = datatime.now()
+    for i in range(5, 1):
+        time_label = (now - timedelta(hours = 1))
