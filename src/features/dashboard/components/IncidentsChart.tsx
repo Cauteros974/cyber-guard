@@ -28,8 +28,14 @@ export const IncidentsChart = () => {
                         itemStyle={{ color: '#ef4444'}}
                         contentStyle={{backgroundColor: '#0f172a', border: '1px solid #1e293b', borderRadius: '8px'}}
                     />
+                    <Area 
+                        type="monotone"
+                        stroke="#ef4444"
+                        fillOpacity={1}
+                        
+                    />
                 </AreaChart>
             </ResponsiveContainer>
         </div>
-    )
-}
+    );
+};
