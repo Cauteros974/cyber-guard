@@ -9,10 +9,8 @@ interface UserProfile{
 interface UserStore{
     user: UserProfile | null;
     fetchUser: () => Promise<void>
-<<<<<<< Updated upstream
 }
-=======
-}
+
 
 export const useUserStore = create<UserStore>((set)=> ({
     user: null,
@@ -22,4 +20,3 @@ export const useUserStore = create<UserStore>((set)=> ({
         set({ user: data});
     }
 }));
->>>>>>> Stashed changes
