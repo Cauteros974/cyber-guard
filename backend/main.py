@@ -8,6 +8,7 @@ from typing import List
 from database import engine
 from models import Base
 from sqlalchemy.orm import DeclarativeBase
+from datatime import datatime, timedata
 
 class Base(DeclarativeBase):
     pass
@@ -72,3 +73,8 @@ async def root():
         "status": "active",
         "version": "1.0.0"
     }
+    
+@app.get("/incidents/data")
+async def get_data():
+    data = []
+    now = datatime.now()
