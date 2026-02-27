@@ -32,7 +32,9 @@ export const IncidentsChart = () => {
                         type="monotone"
                         stroke="#ef4444"
                         fillOpacity={1}
-                        
+                        dataKey="count"
+                        fill="url(#colorCount)"
+                        strokeLinecap="square"
                     />
                 </AreaChart>
             </ResponsiveContainer>
