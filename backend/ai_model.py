@@ -29,3 +29,8 @@ model_severity = Pipeline([
 #Training
 model_type.fit(texts, types)
 model_severity.fit(texts, severities)
+
+def predict_incident(description: str):
+    itype = model_type.predict([description])[0]
+    severity = model_severity.predict([description])[0]
+    return {"predicted_type": itype, "predicted_severity": severity}
