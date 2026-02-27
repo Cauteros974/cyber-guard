@@ -20,6 +20,7 @@ export const ProfilePage = () => {
                 <div className="profile-haeder">
                     <div className="header-info">
                         <h1>{user.username}</h1>
+                        <span className="badge-clearance">{user.clearance}</span>
                     </div>
                 </div>
 
