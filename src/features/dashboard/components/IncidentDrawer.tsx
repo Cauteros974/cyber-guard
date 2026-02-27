@@ -8,25 +8,27 @@ export const IncidentDrawer = () => {
 
     const AIInsight = ({ description }) => {
         const [analysis, setAnalysis] = useState(null);
-
+      
         useEffect(() => {
-            fetch('http://127.0.0.1:8002/analyze-threat', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ description })
-            })
-            .then(res => res.json())
-            .then(data => setAnalysis(data.analysis));
+          fetch('http://127.0.0.1:8002/analyze-threat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ description })
+          })
+          .then(res => res.json())
+          .then(data => setAnalysis(data.analysis));
         }, [description]);
-
-        if(!analysis) return <span>AI is thinking...</span>;
-        return(
-            <div>
-                <Bot size={16} />
-            </div>
-        )
-    }
-
+      
+        if (!analysis) return <span>AI is thinking...</span>;
+      
+        return (
+          <div className="ai-badge">
+            <Bot size={16} />
+            <span>AI Predicts: <b>{analysis.predicted_type}</b> ({analysis.predicted_severity})</span>
+          </div>
+        );
+      };
+      
     if(!selectedIncident) return null;
 
     return(
