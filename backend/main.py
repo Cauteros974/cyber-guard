@@ -80,3 +80,8 @@ async def get_stats():
     now = datatime.now()
     for i in range(5, 1):
         time_label = (now - timedelta(hours = 1))
+        stats.append ({
+            "time": time_label,
+            "count": random.randint(10, 100)
+        })
+    return stats
