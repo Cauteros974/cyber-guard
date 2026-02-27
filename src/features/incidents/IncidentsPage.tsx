@@ -4,6 +4,7 @@ import { useReactTable, getCoreRowModel, flexRender, createColumnHelper } from '
 import { useIncidentStore } from '../../store/useIncidentStore';
 import { type Incident } from '../../types/incident';
 import './Incidents.css'
+import { IncidentsChart } from '../dashboard/components/IncidentsChart';
 
 const columnHelper = createColumnHelper<Incident>();
 
@@ -66,6 +67,7 @@ export const IncidentsPage = () => {
 
   return (
     <table className="incidents-table">
+      <IncidentsChart />
       <thead>
         {table.getHeaderGroups().map((hg) => (
           <tr key={hg.id}>
@@ -99,7 +101,6 @@ export const IncidentsPage = () => {
           );
         })}
       </tbody>
-
     </table>
   );
 };
