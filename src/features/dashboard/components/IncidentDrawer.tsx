@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Clock, X, Globe, ShieldAlert, Terminal } from "lucide-react";
+import { Clock, X, Globe, ShieldAlert, Terminal, Bot } from "lucide-react";
 import { useIncidentStore } from "../../../store/useIncidentStore";
 import './IncidentDrawer.css';
 
@@ -20,6 +20,11 @@ export const IncidentDrawer = () => {
         }, [description]);
 
         if(!analysis) return <span>AI is thinking...</span>;
+        return(
+            <div>
+                <Bot size={16} />
+            </div>
+        )
     }
 
     if(!selectedIncident) return null;
