@@ -15,7 +15,13 @@ data = [
 
 texts, types, severities = zip(data)
 
-model_type = Pipeline[
+#Create a pipeline: Text > Vector > Classifier
+model_type = Pipeline([
     ('tfidf', TfidfVectorizer()),
     ('clf', RandomForestClassifier())
-]
+])
+
+model_severity = Pipeline([
+    ('tfidf', TfidfVectorizer()),
+    ('clf', RandomForestClassifier())
+])
