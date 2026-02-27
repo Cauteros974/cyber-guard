@@ -17,7 +17,9 @@ export const IncidentDrawer = () => {
             })
             .then(res => res.json())
             .then(data => setAnalysis(data.analysis));
-        })
+        }, [description]);
+
+        if(!analysis) return <span>AI is thinking...</span>;
     }
 
     if(!selectedIncident) return null;
