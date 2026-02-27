@@ -1,10 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Clock, X, Globe, ShieldAlert, Terminal } from "lucide-react";
 import { useIncidentStore } from "../../../store/useIncidentStore";
 import './IncidentDrawer.css';
 
 export const IncidentDrawer = () => {
     const { selectedIncident, setSelectedIncident } = useIncidentStore();
+
+    const AIInsight = ({ description }) => {
+        const [analysis, setAnalysis] = useState(null);
+
+        useEffect(() => {
+            fetch('http://127.0.0.1:8002/analyze-threat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ description })
+            })
+        })
+    }
 
     if(!selectedIncident) return null;
 
