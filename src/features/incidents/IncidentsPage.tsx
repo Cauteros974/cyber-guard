@@ -67,7 +67,7 @@ export const IncidentsPage = () => {
 
   return (
     <table className="incidents-table">
-      <IncidentsChart />
+      
       <thead>
         {table.getHeaderGroups().map((hg) => (
           <tr key={hg.id}>
@@ -101,6 +101,7 @@ export const IncidentsPage = () => {
           );
         })}
       </tbody>
+      <IncidentsChart />
     </table>
   );
 };
