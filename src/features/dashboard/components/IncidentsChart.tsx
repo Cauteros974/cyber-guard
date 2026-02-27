@@ -6,7 +6,7 @@ export const IncidentsChart = () => {
 
     useEffect(() => {
         fetch('http://127.0.0.1:8000/incidents/stats')
-        .then(res => res.json)
+        .then(res => res.json())
         .then(json => setData(json));
     }, []);
 
