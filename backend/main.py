@@ -81,3 +81,15 @@ async def root():
         "status": "active",
         "version": "1.0.0"
     }
+@app.get("/incidents/stats")
+async def get_stats():
+    # Simulate data for the last 7 hours
+    stats = []
+    now = datetime.now()
+    for i in range(6, -1, -1):
+        time_label = (now - timedelta(hours=i)).strftime("%H:00")
+        stats.append({
+            "time": time_label,
+            "count": random.randint(10, 100)
+        })
+    return stats
