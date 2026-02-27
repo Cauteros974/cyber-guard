@@ -34,7 +34,7 @@ export const IncidentsChart = () => {
                         fillOpacity={1}
                         dataKey="count"
                         fill="url(#colorCount)"
-                        strokeLinecap="square"
+                        strokeWidth={2}
                     />
                 </AreaChart>
             </ResponsiveContainer>
