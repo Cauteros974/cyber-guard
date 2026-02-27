@@ -17,10 +17,13 @@ export const IncidentsChart = () => {
                 <AreaChart>
                     <defs>
                         <linearGradient>
-                            <stop offset="10%" stopColor="#ef4444"/>
-                            <stop offset="95%" stopColor="#ef4444"/>
+                            <stop offset="10%" stopColor="#ef4444" stopOpacity={0.3}/>
+                            <stop offset="95%" stopColor="#ef4444" stopOpacity={0}/>
                         </linearGradient>
                     </defs>
+                    <CartesianGrid strokeDasharray="3" stroke="#1e293b"/>
+                    <XAxis dataKey="time" stroke="#64748b" fontSize={14} tickLine={false} />
+                    <YAxis />
                 </AreaChart>
             </ResponsiveContainer>
         </div>
