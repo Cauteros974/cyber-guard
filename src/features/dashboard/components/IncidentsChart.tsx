@@ -21,7 +21,7 @@ export const IncidentsChart = () => {
                             <stop offset="95%" stopColor="#ef4444" stopOpacity={0}/>
                         </linearGradient>
                     </defs>
-                    <CartesianGrid strokeDasharray="3" stroke="#1e293b"/>
+                    <CartesianGrid strokeDasharray="3" stroke="#1e293b" vertical={false}/>
                     <XAxis dataKey="time" stroke="#64748b" fontSize={12} tickLine={false} axisLine={false}/>
                     <YAxis stroke="#64748b" fontSize={12} tickLine={false} axisLine={false}/>
                     <Tooltip 
