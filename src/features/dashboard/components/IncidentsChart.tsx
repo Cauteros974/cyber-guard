@@ -26,6 +26,7 @@ export const IncidentsChart = () => {
                     <YAxis stroke="#64748b" fontSize={12} tickLine={false} axisLine={false}/>
                     <Tooltip 
                         itemStyle={{ color: '#ef4444'}}
+                        contentStyle={{backgroundColor: '#0f172a', border: '1px solid #1e293b', borderRadius: '8px'}}
                     />
                 </AreaChart>
             </ResponsiveContainer>
