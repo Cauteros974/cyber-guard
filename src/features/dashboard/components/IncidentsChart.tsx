@@ -22,8 +22,11 @@ export const IncidentsChart = () => {
                         </linearGradient>
                     </defs>
                     <CartesianGrid strokeDasharray="3" stroke="#1e293b"/>
-                    <XAxis dataKey="time" stroke="#64748b" fontSize={14} tickLine={false} />
-                    <YAxis />
+                    <XAxis dataKey="time" stroke="#64748b" fontSize={12} tickLine={false} axisLine={false}/>
+                    <YAxis stroke="#64748b" fontSize={12} tickLine={false} axisLine={false}/>
+                    <Tooltip 
+                        itemStyle={{ color: '#ef4444'}}
+                    />
                 </AreaChart>
             </ResponsiveContainer>
         </div>
