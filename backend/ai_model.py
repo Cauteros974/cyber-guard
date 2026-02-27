@@ -25,3 +25,7 @@ model_severity = Pipeline([
     ('tfidf', TfidfVectorizer()),
     ('clf', RandomForestClassifier())
 ])
+
+#Training
+model_type.fit(texts, types)
+model_severity.fit(texts, severities)
