@@ -2,16 +2,12 @@ import json
 import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from database import Base, engine
 from pydantic import BaseModel
 from typing import List
 from database import engine
 from models import Base
-from sqlalchemy.orm import DeclarativeBase
-from datatime import datatime, timedelta
-
-class Base(DeclarativeBase):
-    pass
+from datetime import datetime, timedelta
+import random
 
 Base.metadata.create_all(bind=engine)
 
@@ -19,7 +15,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  #Allow all
+    allow_origins=["*"], 
     allow_methods=["*"],
     allow_headers=["*"],
     allow_credentials=True,
@@ -34,6 +30,18 @@ class Incident(BaseModel):
     status: str
     timestamp: str
     tactic: str
+
+@app.get("/user/me")
+async def get_user_me():
+    return{
+        "username": "Admin_Analyst",
+        "role": "SOC Level 3",
+        "clearance": "Top_Secret",
+        "stats": {
+            "resolved_incidents": 142,
+            "active_investigations": 3
+        }
+    }
 
 def save_db(data):
     with open(DB_FILE, 'w', encoding='utf-8') as f:
@@ -76,11 +84,12 @@ async def root():
     
 @app.get("/incidents/stats")
 async def get_stats():
+    #Simulate data for the last 7 hours
     stats = []
-    now = datatime.now()
-    for i in range(5, 1):
-        time_label = (now - timedelta(hours = 1))
-        stats.append ({
+    now = datetime.now()
+    for i in range(6, -1, 1):
+        time_label = (now - timedelta(hours=i)).strftime("%H:00")
+        stats.append({
             "time": time_label,
             "count": random.randint(10, 100)
         })
