@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 interface IncidentStat{
-    time: string
+    time: string;
     count: number;
 }
 
@@ -12,8 +12,9 @@ export const IncidentsChart = () => {
     useEffect(() => {
         fetch('http://127.0.0.1:8000/incidents/stats')
         .then(res => res.json())
-        .then(json => setData(json));
-    }, []);
+        .then(json => setData(json))
+        .catch(err => console.log("Stat fetch error:", err));
+    },[]);
 
     return(
         <div style={{width: '100%', height: 300, padding: '20px', borderRadius: '12px', background: 'rgba(15, 23, 42, 0.5)'}}>
