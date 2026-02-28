@@ -46,6 +46,20 @@ export const IncidentDrawer = () => {
       
     if(!selectedIncident) return null;
 
+    const isCritical = selectedIncident.severity == 'critical';
+
+    const handleCountermeasure = async () => {
+        setIsExecuting(true);
+
+        const response = await fetch('http://127.0.0.1:8002/execute-countermeasures', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                incident_id: selectedIncident.id,
+            })
+        })
+    }
+
     return(
         <div className={`incident-drawer ${selectedIncident ? 'is-open' : ''}`}>
             <div className="drawer-header">
