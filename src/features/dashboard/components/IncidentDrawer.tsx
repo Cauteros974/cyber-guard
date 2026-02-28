@@ -29,6 +29,7 @@ export const IncidentDrawer = () => {
             return res.json();
           })
           .then(data => setAnalysis(data.analysis))
+          .catch(err => console.error("AI error:", err));
         }, [description]);
       
         if (!analysis) return <span>AI is thinking...</span>;
