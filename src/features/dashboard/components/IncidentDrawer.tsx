@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Clock, X, Globe, ShieldAlert, Terminal, Bot } from "lucide-react";
+import { Clock, X, Globe, ShieldAlert, Terminal, Bot, Zap } from "lucide-react";
 import { useIncidentStore } from "../../../store/useIncidentStore";
 import './IncidentDrawer.css';
 
@@ -63,9 +63,9 @@ export const IncidentDrawer = () => {
             setTimeout(() => {
                 setIsExecuting(false);
                 setIsDone(true);
-            })
+            }, 1500);
         }
-    }
+    };
 
     return(
         <div className={`incident-drawer ${selectedIncident ? 'is-open' : ''}`}>
@@ -77,6 +77,15 @@ export const IncidentDrawer = () => {
                 <button onClick={() => setSelectedIncident(null)} className="close-btn">
                     <X size={20} />
                 </button>
+            </div>
+
+            <div className="countermeasures-section">
+                {isCritical && !isDone && (
+                    <button>
+                        <Zap size={18} />
+                        {isExecuting ? 'EXECUTING...' : 'EXECUTE COUNTERMEASURES'}
+                    </button>
+                )}
             </div>
 
             <div className="drawer-content">
