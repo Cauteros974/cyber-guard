@@ -37,8 +37,12 @@ export const useIncidentStore = create<IncidentState>((set, get) => ({
 
     let penalty = 0;
     openIncidents.forEach(inc => {
-      if(inc.severity === 'critical') penalty += 15;
+      if (inc.severity === 'critical') penalty += 15;
+      if (inc.severity === 'high') penalty += 5;
+      if (inc.severity === 'medium') penalty += 2;
     });
+
+    
   }
 
   fetchIncidents: async () => {
