@@ -3,7 +3,7 @@ import { create } from "zustand";
 interface UserProfile{
     username: string;
     role: string;
-    classname: string;
+    clearance: string;
     stats: {
         resolved_incidents: number;
         active_investigations: number;
@@ -16,5 +16,14 @@ interface UseStore{
 }
 
 export const useUserStore = create <UseStore>((set) => ({
-    
-}))
+    user: {
+        username: "Admin_Analyst",
+        role: "SOC Level 3 / Lead Hunter",
+        clearance: "TOP_SECRET",
+        stats: {
+            resolved_incidents: 1452,
+            active_investigations: 4,
+            security_score: 98,
+        }
+    },
+}));
