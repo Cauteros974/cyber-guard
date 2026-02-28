@@ -46,4 +46,12 @@
     letter-spacing: 1px;
     border-radius: 3px;
     background: linear-gradient(90deg, #7c3aed, #2563eb);
+    color: white;
+    text-transform: uppercase;
+}
+
+.stats-grid{
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
