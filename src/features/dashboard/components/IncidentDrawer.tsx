@@ -94,6 +94,7 @@ export const IncidentDrawer = () => {
                 {isDone && (
                     <div className="success-badge">
                         <ShieldAlert size={18} />
+                        THREAT NEUTRALIZED: IP BLOCKED
                     </div>
                 )}
             </div>
