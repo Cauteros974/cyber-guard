@@ -14,7 +14,7 @@ export const IncidentDrawer = () => {
     const [analysis, setAnalysis] = useState<{
         predicted_type: string;
         predicted_severity: string;
-    } | null >
+    } | null>(null);
     const AIInsightProps: React.FC<AIInsightProps> = ({description }) => {
         const [analysis, setAnalysis] = useState(null);
       
