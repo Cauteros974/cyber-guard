@@ -57,7 +57,14 @@ export const IncidentDrawer = () => {
             body: JSON.stringify({
                 incident_id: selectedIncident.id,
             })
-        })
+        });
+
+        if(response.ok){
+            setTimeout(() => {
+                setIsExecuting(false);
+                setIsDone(true);
+            })
+        }
     }
 
     return(
