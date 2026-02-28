@@ -107,6 +107,11 @@ export const IncidentDrawer = () => {
                         </div>
                     )}
                 </div>
+
+                <div className="detail-group">
+                    <label>Detected At</label>
+                    <p>{new Date(selectedIncident.timestamp).toLocaleString()}</p>
+                </div>
             </div>
         </div>
     )
