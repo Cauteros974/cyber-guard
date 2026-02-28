@@ -29,6 +29,16 @@ const AIInsight: React.FC<AIInsightProps> = ({ description }) => {
             .catch(err => {
                 console.error("AI error:", err);
                 setLoading(false);
-            })
-    })
+            });
+    }, [description]);
+
+    if (loading) return <div className="ai-loading"> <Bot size={16} className="spin" /> AI is analyzing...</div>;
+    if (!analysis) return null;
+
+    return(
+        <div className={`ai-badge ${analysis.predicted_severity}`}>
+            <Bot size={16} />
+            <span>AI Predicted: <b>{analysis.predicted_type}</b> ({analysis.predicted_severity})</span>
+        </div>
+    )
 }
