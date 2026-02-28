@@ -109,8 +109,13 @@ export const IncidentDrawer = () => {
                 </div>
 
                 <div className="detail-group">
-                    <label>Detected At</label>
+                    <label><Clock size={14} />Detected At</label>
                     <p>{new Date(selectedIncident.timestamp).toLocaleString()}</p>
+                </div>
+
+                <div className="detail-group">
+                    <label><Globe size={14} />Source IP</label>
+                    <code className="ip-address">192.168.1.105 </code>
                 </div>
             </div>
         </div>
