@@ -113,11 +113,12 @@ async def execute_countermeasures(playload: dict):
     incident_ip = playload.get("incident_id")
     target_ip = playload.get("ip", "127.0.0.1") #Example IP
     
-    with ip(BLOCKLIST_FILE) as f:
-        f.write(f"BLOCK{target_ip}")
+    with open(BLOCKLIST_FILE) as f:
+        f.write(f"BLOCK {target_ip} # Incident {incident_id}\n")
         
     return{
         "status": "success",
         "firewall_rule": f"deny from {target_ip} to any",
-        "message": f"Countermeasures executed successfully for incident {incident_id}"
+        "message": f"Countermeasures executed successfully for incident {incident_id}",
+        "action_taken": "IP_BLOCKED",
     }
