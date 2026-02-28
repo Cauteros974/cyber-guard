@@ -44,7 +44,7 @@ const AIInsight: React.FC<AIInsightProps> = ({ description }) => {
 };
 
 export const IncidentDrawer = () => {
-    const {selectedIncident, setselectedIncident} = useIncidentStore();
+    const {selectedIncident, setSelectedIncident} = useIncidentStore();
     const [isExecuting, setIsExecuting] = useState(false);
     const [isDone, setIsDone] = useState(false);
 
@@ -61,12 +61,28 @@ export const IncidentDrawer = () => {
                 body: JSON.stringify({ incident_id: selectedIncident.id })
             });
 
-            if(response) {
+            if(response.ok) {
                 setTimeout(() => {
                     setIsExecuting(false);
                     setIsDone(true);
                 }, 1500);
             }
+        } catch(error) {
+            console.log("Action failed", error);
+            setIsExecuting(false);
         }
-    }
+    };
+
+    return(
+        <div className={`incident-drawer ${selectedIncident ? 'is-open' : ''}`}>
+            <div className="drawer-heder">
+                <div className="drawer-title">
+                    <span>Incident Details: {selectedIncident.id}</span>
+                </div>
+                <button onClick={() => setSelectedIncident(null)} className="close-btn">
+                    <X size={20} />
+                </button>
+            </div>
+        </div>
+    )
 }
