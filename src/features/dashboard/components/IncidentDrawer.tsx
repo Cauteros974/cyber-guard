@@ -11,7 +11,10 @@ interface AIInsightProps{
 
 export const IncidentDrawer = () => {
     const { selectedIncident, setSelectedIncident } = useIncidentStore();
-
+    const [analysis, setAnalysis] = useState<{
+        predicted_type: string;
+        predicted_severity: string;
+    } | null >
     const AIInsightProps: React.FC<AIInsightProps> = ({description }) => {
         const [analysis, setAnalysis] = useState(null);
       
