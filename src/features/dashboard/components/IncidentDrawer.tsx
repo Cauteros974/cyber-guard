@@ -90,6 +90,12 @@ export const IncidentDrawer = () => {
                         {isExecuting ? 'EXECUTING...' : 'EXECUTE COUNTERMEASURES'}
                     </button>
                 )}
+
+                {isDone && (
+                    <div className="success-badge">
+                        <ShieldAlert size={18} />
+                    </div>
+                )}
             </div>
 
             <div className="drawer-content">
