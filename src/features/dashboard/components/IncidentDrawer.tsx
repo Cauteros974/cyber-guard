@@ -81,7 +81,11 @@ export const IncidentDrawer = () => {
 
             <div className="countermeasures-section">
                 {isCritical && !isDone && (
-                    <button>
+                    <button
+                        className={`panic-button ${isExecuting ? 'executing' : ''}`}
+                        onClick={handleCountermeasure}
+                        disabled={isExecuting}
+                    >
                         <Zap size={18} />
                         {isExecuting ? 'EXECUTING...' : 'EXECUTE COUNTERMEASURES'}
                     </button>
