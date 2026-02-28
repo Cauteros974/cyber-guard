@@ -31,20 +31,6 @@ export const useIncidentStore = create<IncidentState>((set, get) => ({
   selectedTimeframe: '7d',
   theme: (localStorage.getItem('theme') as Theme) || 'dark',
 
-  getSecurityScore: () => {
-    const incidents = get().incidents;
-    const openIncidents = incidents.filter(inc => inc.status === 'open')
-
-    let penalty = 0;
-    openIncidents.forEach(inc => {
-      if (inc.severity === 'critical') penalty += 15;
-      if (inc.severity === 'high') penalty += 5;
-      if (inc.severity === 'medium') penalty += 2;
-    });
-
-    
-  }
-
   fetchIncidents: async () => {
     set({ isLoading: true });
     try {
@@ -86,4 +72,19 @@ export const useIncidentStore = create<IncidentState>((set, get) => ({
     document.documentElement.setAttribute('data-theme', theme);
     set({ theme });
   },
+
+  getSecurityScore: () => {
+    const incidents = get().incidents;
+    const openIncidents = incidents.filter(inc => inc.status === 'open')
+
+    let penalty = 0;
+    openIncidents.forEach(inc => {
+      if (inc.severity === 'critical') penalty += 15;
+      if (inc.severity === 'high') penalty += 5;
+      if (inc.severity === 'medium') penalty += 2;
+    });
+
+    const score = 100 - penalty;
+    return score < 0 ? 0 : score;
+  }
 }));
