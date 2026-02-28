@@ -12,7 +12,7 @@ interface AIInsightProps{
 export const IncidentDrawer = () => {
     const { selectedIncident, setSelectedIncident } = useIncidentStore();
 
-    const AIInsight = ({ description }) => {
+    const AIInsightProps: React.FC<AIInsightProps> = ({description }) => {
         const [analysis, setAnalysis] = useState(null);
       
         useEffect(() => {
