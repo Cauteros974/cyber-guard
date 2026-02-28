@@ -65,7 +65,6 @@ export const IncidentDrawer = () => {
                 <div className="detail-group">
                     <label> <Globe size={14} /> Source IP</label>
                     <code className="ip-address">192.168.1.105 </code>
-                    <AIInsightProps description={selectedIncident.description} />
                 </div>
 
                 <div className="detail-group terminal-view">
