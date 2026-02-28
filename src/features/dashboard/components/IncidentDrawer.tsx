@@ -24,8 +24,11 @@ export const IncidentDrawer = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ description })
           })
-          .then(res => res.json())
-          .then(data => setAnalysis(data.analysis));
+          .then(res => {
+            if(!res.ok) throw new Error("AI request failed");
+            return res.json();
+          })
+          .then(data => setAnalysis(data.analysis))
         }, [description]);
       
         if (!analysis) return <span>AI is thinking...</span>;
