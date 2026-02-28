@@ -3,4 +3,12 @@
     padding: 15px;
     background: #ef4444;
     color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
