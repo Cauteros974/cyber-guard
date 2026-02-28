@@ -3,6 +3,12 @@ import { Clock, X, Globe, ShieldAlert, Terminal, Bot } from "lucide-react";
 import { useIncidentStore } from "../../../store/useIncidentStore";
 import './IncidentDrawer.css';
 
+
+interface AIInsightProps{
+    description: string;
+}
+
+
 export const IncidentDrawer = () => {
     const { selectedIncident, setSelectedIncident } = useIncidentStore();
 
@@ -32,7 +38,7 @@ export const IncidentDrawer = () => {
     if(!selectedIncident) return null;
 
     return(
-        <div className="{`incident-drawer ${selectedIncident ? 'is-open' : ''}`}">
+        <div className={`incident-drawer ${selectedIncident ? 'is-open' : ''}`}>
             <div className="drawer-header">
                 <div className="drawer-title">
                     <ShieldAlert size={20} className={selectedIncident.severity} />
