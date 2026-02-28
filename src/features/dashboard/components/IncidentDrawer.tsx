@@ -15,6 +15,8 @@ export const IncidentDrawer = () => {
         predicted_type: string;
         predicted_severity: string;
     } | null>(null);
+    const [isExecuting, setIsExecuting] = useState(false);
+    const [isDone, setIsDone] = useState(false);
     const AIInsightProps: React.FC<AIInsightProps> = ({description }) => {
         const [analysis, setAnalysis] = useState(null);
       
@@ -70,9 +72,9 @@ export const IncidentDrawer = () => {
                 <div className="detail-group terminal-view">
                     <label><Terminal size={14} /> Raw Logs</label>
                     <pre>
-                    {`[RECON] Potential directory traversal attempt detected...
-                    [FILTER] Matched rule ID: 4002
-                    [ACTION] Connection logged and flagged.`}
+                        {`[RECON] Potential directory traversal attempt detected...
+                        [FILTER] Matched rule ID: 4002
+                        [ACTION] Connection logged and flagged.`}
                     </pre>
                 </div>
 
