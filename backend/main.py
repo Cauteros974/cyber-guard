@@ -110,7 +110,7 @@ async def analyze_threat(playload: dict):
     
 @app.post("/execute_countermeasures")
 async def execute_countermeasures(playload: dict):
-    incident_ip = playload.get("incident_id")
+    incident_id = playload.get("incident_id")
     target_ip = playload.get("ip", "127.0.0.1") #Example IP
     
     with open(BLOCKLIST_FILE) as f:
