@@ -95,8 +95,16 @@ export const IncidentDrawer = () => {
                             onClick={handleCountermeasure}
                             disabled={isExecuting}
                         >
+                            <Zap size={19} />
                             {isExecuting ? 'EXECUTING...' : 'EXECUTE COUNTERMEASURES'}
                         </button>
+                    )}
+
+                    {isDone && (
+                        <div className="success-badge">
+                            <ShieldAlert size={18} />
+                            THREAT NEUTRALIZED: IP BLOCKED
+                        </div>
                     )}
                 </div>
             </div>
