@@ -23,13 +23,23 @@ interface IncidentState {
   setTheme: (theme: Theme) => void;
 }
 
-export const useIncidentStore = create<IncidentState>((set) => ({
+export const useIncidentStore = create<IncidentState>((set, get) => ({
   incidents: MOCK_INCIDENTS,
   selectedIncident: null,
   isLoading: false,
   searchQuery: '',
   selectedTimeframe: '7d',
   theme: (localStorage.getItem('theme') as Theme) || 'dark',
+
+  getSecurityScore: () => {
+    const incidents = get().incidents;
+    const openIncidents = incidents.filter(inc => inc.status === 'open')
+
+    let penalty = 0;
+    openIncidents.forEach(inc => {
+      if(inc.severity === 'critical') penalty += 15;
+    });
+  }
 
   fetchIncidents: async () => {
     set({ isLoading: true });
