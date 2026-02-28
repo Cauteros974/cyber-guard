@@ -77,6 +77,7 @@ export const IncidentDrawer = () => {
         <div className={`incident-drawer ${selectedIncident ? 'is-open' : ''}`}>
             <div className="drawer-heder">
                 <div className="drawer-title">
+                    <ShieldAlert size={20} className={selectedIncident.severity} />
                     <span>Incident Details: {selectedIncident.id}</span>
                 </div>
                 <button onClick={() => setSelectedIncident(null)} className="close-btn">
