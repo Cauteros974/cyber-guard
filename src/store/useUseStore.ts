@@ -7,19 +7,19 @@ interface UserProfile{
     stats: {
         resolved_incidents: number;
         active_investigations: number;
+        security_score: number;
     };
 }
 
 interface UseStore{
-    user: UserProfile | null;
-    fetchUser: () => Promise<void>;
+    user: UserProfile;
 }
 
 export const useUserStore = create <UseStore>((set) => ({
-    user: null,
-    fetchUser: async () => {
-        const response = await fetch('http://127.0.0.1:8010/user/me'); //Write your port
-        const data = await response.json();
-        set({ user: data });
+    user: {
+        username: "Admin_Analyst",
+        role: "SOC Level 3 / Lead Hunter",
+        clearance: "TOP_SECRET",
+        
     }
 }))
