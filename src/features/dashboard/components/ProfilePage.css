@@ -66,3 +66,9 @@
     gap: 10px;
     transition: all 0.25s ease;
 }
+
+.stat-item:hover{
+    transform: translateY(-4px);
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+}
