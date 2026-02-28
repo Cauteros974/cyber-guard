@@ -44,7 +44,22 @@ const AIInsight: React.FC<AIInsightProps> = ({ description }) => {
 };
 
 export const IncidentDrawer = () => {
-    const [selected, setSelected] = useIncidentStore();
+    const {selectedIncident, setselectedIncident} = useIncidentStore();
     const [isExecuting, setIsExecuting] = useState(false);
     const [isDone, setIsDone] = useState(false);
+
+    if(!selectedIncident) return null;
+
+    const isCritical = selectedIncident.severity === 'critical';
+
+    const handleCountermeasure = async () => {
+        setIsExecuting(true);
+        try{
+            const response = await fetch('http://127.0.0.1:8002/execute-countermeasures', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json'},
+                body: JSON.stringify({ incident_id: selectedIncident.id })
+            }
+        }
+    }
 }
