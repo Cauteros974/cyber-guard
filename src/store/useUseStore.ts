@@ -11,8 +11,8 @@ interface UserProfile{
     };
 }
 
-interface UseStore{
-    user: UserProfile;
+interface UseStore {
+    user: UserProfile | null;
 }
 
 export const useUserStore = create <UseStore>((set) => ({
