@@ -23,5 +23,15 @@
 
 .panic-button.executing{
     background: #991b1b;
-    animation: flash 0.2s infinite;
+    animation: flash 0.5s infinite;
+}
+
+.success-badge{
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+    padding: 12px;
+    border: 1px solid #22c55e;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
 }
