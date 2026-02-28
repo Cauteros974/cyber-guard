@@ -21,5 +21,14 @@ const AIInsight: React.FC<AIInsightProps> = ({ description }) => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ description })
         })
+            .then(res => res.json())
+            .then(data => {
+                setAnalysis(data.analysis)
+                setLoading(false);
+            })
+            .catch(err => {
+                console.error("AI error:", err);
+                setLoading(false);
+            })
     })
 }
