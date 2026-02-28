@@ -59,6 +59,13 @@ export const IncidentDrawer = () => {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json'},
                 body: JSON.stringify({ incident_id: selectedIncident.id })
+            });
+
+            if(response) {
+                setTimeout(() => {
+                    setIsExecuting(false);
+                    setIsDone(true);
+                }, 1500);
             }
         }
     }
