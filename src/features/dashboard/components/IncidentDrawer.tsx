@@ -84,6 +84,22 @@ export const IncidentDrawer = () => {
                     <X size={20} />
                 </button>
             </div>
+
+            <div className="drawer-content">
+                <AIInsight description={selectedIncident.title} />
+
+                <div className="countermeasures-section">
+                    {isCritical && !isDone && (
+                        <button 
+                            className={`panic-button ${isExecuting ? 'executing' : ''}`}
+                            onClick={handleCountermeasure}
+                            disabled={isExecuting}
+                        >
+                            {isExecuting ? 'EXECUTING...' : 'EXECUTE COUNTERMEASURES'}
+                        </button>
+                    )}
+                </div>
+            </div>
         </div>
     )
 }
