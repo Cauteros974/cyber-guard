@@ -12,7 +12,7 @@ interface UserProfile{
 }
 
 interface UseStore {
-    user: UserProfile | null;
+    user: UserProfile;
 }
 
 export const useUserStore = create <UseStore>((set) => ({
