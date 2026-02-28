@@ -40,5 +40,11 @@ const AIInsight: React.FC<AIInsightProps> = ({ description }) => {
             <Bot size={16} />
             <span>AI Predicted: <b>{analysis.predicted_type}</b> ({analysis.predicted_severity})</span>
         </div>
-    )
+    );
+};
+
+export const IncidentDrawer = () => {
+    const [selected, setSelected] = useIncidentStore();
+    const [isExecuting, setIsExecuting] = useState(false);
+    const [isDone, setIsDone] = useState(false);
 }
