@@ -24,6 +24,8 @@ app.add_middleware(
 
 DB_FILE = "incidents.json"
 
+BLOCKLIST_FILE = "blocked_ips.txt"
+
 class Incident(BaseModel):
     id: str
     title: str
@@ -82,12 +84,13 @@ async def root():
         "status": "active",
         "version": "1.0.0"
     }
+    
 @app.get("/incidents/stats")
 async def get_stats():
-    # Simulate data for the last 7 hours
+    #Simulate data for the last 7 hours
     stats = []
     now = datetime.now()
-    for i in range(6, -1, -1):
+    for i in range(6, -1, 1):
         time_label = (now - timedelta(hours=i)).strftime("%H:00")
         stats.append({
             "time": time_label,
@@ -96,11 +99,26 @@ async def get_stats():
     return stats
 
 @app.post("/analyze-threat")
-async def analyze_threat(payload: dict):
-    description = payload.get("description", "")
+async def analyze_threat(playload: dict):
+    description = playload.get("description")
     prediction = predict_incident(description)
-    return {
+    return{
         "analysis": prediction,
         "confidence": 0.95,
         "ai_status": "verified_by_ai"
+    }
+    
+@app.post("/execute_countermeasures")
+async def execute_countermeasures(playload: dict):
+    incident_id = playload.get("incident_id")
+    target_ip = playload.get("ip", "127.0.0.1") #Example IP
+    
+    with open(BLOCKLIST_FILE) as f:
+        f.write(f"BLOCK {target_ip} # Incident {incident_id}\n")
+        
+    return{
+        "status": "success",
+        "firewall_rule": f"deny from {target_ip} to any",
+        "message": f"Countermeasures executed successfully for incident {incident_id}",
+        "action_taken": "IP_BLOCKED",
     }
