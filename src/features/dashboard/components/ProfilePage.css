@@ -1,15 +1,16 @@
-.profile-container{
+.profile-container {
     min-height: 100vh;
     padding: 60px 40px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     background: radial-gradient(circle at top, #0f172a 0%, #020617 60%);
-    color: #e2e8f0;;
+    color: #e2e8f0;
 }
 
-.profile-card{
-    width: 100;
+/* CARD */
+.profile-card {
+    width: 100%;
     max-width: 1000px;
     padding: 40px;
     border-radius: 20px;
@@ -20,45 +21,48 @@
     transition: 0.3s ease;
 }
 
-.profile-card:hover{
+.profile-card:hover {
     border: 1px solid rgba(56, 189, 248, 0.4);
 }
 
-.profile-header{
+/* HEADER */
+.profile-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
 }
 
-.header-info h1{
-    font-size: 20px;
+.header-info h1 {
+    font-size: 28px;
     font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 8px;
 }
 
-.clearence-badge{
+.clearance-badge {
     display: inline-block;
     padding: 6px 14px;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 1px;
-    border-radius: 3px;
+    border-radius: 20px;
     background: linear-gradient(90deg, #7c3aed, #2563eb);
     color: white;
     text-transform: uppercase;
 }
 
-.stats-grid{
+/* GRID */
+.stats-grid {
     display: grid;
-    gap: 25px;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
 }
 
-.stat-item{
+/* STAT CARD */
+.stat-item {
     padding: 25px;
-    border-radius: 20px;
+    border-radius: 16px;
     background: rgba(30, 41, 59, 0.6);
     border: 1px solid rgba(148, 163, 184, 0.1);
     display: flex;
@@ -67,18 +71,24 @@
     transition: all 0.25s ease;
 }
 
-.stat-item:hover{
+.stat-item:hover {
     transform: translateY(-4px);
     border: 1px solid rgba(56, 189, 248, 0.4);
     box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
 }
 
-.stat-item svg{
+.stat-item svg {
     color: #38bdf8;
 }
 
-.stat-value{
-    font-size: 14px;
+.stat-value {
+    font-size: 24px;
     font-weight: 700;
     color: #f8fafc;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
 }
