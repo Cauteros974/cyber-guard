@@ -24,6 +24,8 @@ app.add_middleware(
 
 DB_FILE = "incidents.json"
 
+BLOCKLIST_FILE = "blocked_ips.txt"
+
 class Incident(BaseModel):
     id: str
     title: str
@@ -105,3 +107,10 @@ async def analyze_threat(playload: dict):
         "confidence": 0.95,
         "ai_status": "verified_by_ai"
     }
+    
+@app.post("/execute_countermeasures")
+async def execute_countermeasures(playload: dict):
+    incident_ip = playload.get("incident_id")
+    target_ip = playload.get("ip", "127.0.0.1") #Example IP
+    
+    
