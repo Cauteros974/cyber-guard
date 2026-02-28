@@ -37,3 +37,13 @@
     letter-spacing: 1px;
     margin-bottom: 8px;
 }
+
+.clearence-badge{
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #7c3aed, #2563eb);
+}
