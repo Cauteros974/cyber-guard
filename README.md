@@ -35,6 +35,15 @@
 
         [ ] Automated incident report generation (PDF/CSV).
 
+**⚙️ Installation & Setup**
+# Navigate to server directory
+cd server
+
+# Install dependencies
+pip install fastapi uvicorn scikit-learn pandas
+
+# Run the server
+uvicorn main:app --reload --port 8002
 
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash1.png)
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash2.png)
