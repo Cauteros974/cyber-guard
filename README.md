@@ -46,7 +46,7 @@ cd server
 pip install fastapi uvicorn scikit-learn pandas
 
 # Run the server
-uvicorn main:app --reload --port 8002
+**uvicorn main:app --reload --port 8002**
 
 # 2.FrontEnd
 
