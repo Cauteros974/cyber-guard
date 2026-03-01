@@ -1,6 +1,6 @@
 # 🛡️CyberGuard SOC 
 
-** CyberGuard SOC is a modern Security Operations Center (SOC) dashboard that integrates real-time data visualization, AI-driven threat analysis, and an active incident response module.
+# CyberGuard SOC is a modern Security Operations Center (SOC) dashboard that integrates real-time data visualization, AI-driven threat analysis, and an active incident response module.
 
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash1.png)
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash2.png)
