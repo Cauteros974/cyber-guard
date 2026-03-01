@@ -37,7 +37,7 @@
 
 # 1.Backend
 
-# ⚙️ Installation & Setup
+# ⚙️Installation & Setup
 
 # Navigate to server directory 
 cd server
