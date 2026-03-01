@@ -25,6 +25,14 @@
 | Charts              | **Recharts**                                 |
 | Navigation          | **React Router Dom v6**                      |
 
+**🗺 Roadmap**
+[ ] Persistent storage integration (PostgreSQL / MongoDB).
+
+[ ] Real-time alert system using WebSockets.
+
+[ ] Anomaly detection for unusual network traffic patterns.
+
+[ ] Automated incident report generation (PDF/CSV).
 
 
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash1.png)
