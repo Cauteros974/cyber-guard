@@ -50,14 +50,14 @@ uvicorn main:app --reload --port 8002
 
 # 2.FrontEnd
 
-# Navigate to client directory
-cd client
+Navigate to client directory
+**- cd client**
 
-**Install dependencies**
-npm install
+Install dependencies
+**- npm install** 
 
 Start the development server
-**npm run dev**
+**- npm run dev**
 
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash1.png)
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash2.png)
