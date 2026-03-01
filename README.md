@@ -14,6 +14,19 @@
 
     • 📱 Responsive UI: A fully adaptive interface with smooth mobile navigation and modern "Cyber-Noir" aesthetics.
 
+**🛠 Tech Stack**
+| Layer               | Technology                                   |
+| --------------------| -------------------------------------------- |
+| Frontend            | **React 18, TypeScript, Vite**               |
+| State Management    | **Zustand**                                  |
+| Backend             | **Python 3.10+, FastAPI, Uvicorn**           |
+| Machine Learning    | **Scikit-Learn (Random Forest Classifier)**  |
+| UI & Icons          | **Tailwind CSS / CSS Modules, Lucide React** |
+| Charts              | **Recharts**                                 |
+| Navigation          | **React Router Dom v6**                      |
+
+
+
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash1.png)
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash2.png)
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash3.png)
