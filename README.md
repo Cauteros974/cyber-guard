@@ -37,9 +37,9 @@
 
 # 1.Backend
 
-**⚙️ Installation & Setup**
+# ⚙️ Installation & Setup
 
-**Navigate to server directory**
+# Navigate to server directory 
 cd server
 
 **Install dependencies**
@@ -50,7 +50,7 @@ uvicorn main:app --reload --port 8002
 
 # 2.FrontEnd
 
-**Navigate to client directory**
+# Navigate to client directory
 cd client
 
 **Install dependencies**
