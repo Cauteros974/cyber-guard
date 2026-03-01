@@ -4,7 +4,7 @@
 
 **🚀Key Features**
 
-   • 📊 Interactive Dashboard: Real-time attack velocity visualization using Recharts.
+    • 📊 Interactive Dashboard: Real-time attack velocity visualization using Recharts.
     
    • ⚡ Active Countermeasures: A "Panic Button" system for instant IP blocking and threat neutralization via backend integration.
   
