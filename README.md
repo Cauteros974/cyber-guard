@@ -56,8 +56,8 @@ cd client
 **Install dependencies**
 npm install
 
-**Start the development server**
-npm run dev
+Start the development server
+**npm run dev**
 
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash1.png)
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash2.png)
