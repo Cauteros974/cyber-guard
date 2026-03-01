@@ -35,6 +35,7 @@
 
         [ ] Automated incident report generation (PDF/CSV).
 
+**1. Backend**
 **⚙️ Installation & Setup**
 # Navigate to server directory
 cd server
