@@ -35,7 +35,7 @@
 
         [ ] Automated incident report generation (PDF/CSV).
 
-**1. Backend**
+**1.Backend**
 
 **⚙️ Installation & Setup**
 # Navigate to server directory
@@ -47,7 +47,7 @@ pip install fastapi uvicorn scikit-learn pandas
 # Run the server
 uvicorn main:app --reload --port 8002
 
-**2. FrontEnd**
+**2.FrontEnd**
 
 # Navigate to client directory
 cd client
