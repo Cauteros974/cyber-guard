@@ -4,15 +4,15 @@
 
 **🚀Key Features**
 
-    • 📊 Interactive Dashboard: Real-time attack velocity visualization using Recharts.
-
-    • ⚡ Active Countermeasures: A "Panic Button" system for instant IP blocking and threat neutralization via backend integration.
+   • 📊 Interactive Dashboard: Real-time attack velocity visualization using Recharts.
+    
+   • ⚡ Active Countermeasures: A "Panic Button" system for instant IP blocking and threat neutralization via backend integration.
   
-    • 🎯 Dynamic Security Score: A real-time system health metric that recalculates based on the quantity and severity of active threats.
+   • 🎯 Dynamic Security Score: A real-time system health metric that recalculates based on the quantity and severity of active threats.
 
-    • 👤 Analyst Profile: A dedicated workspace showing operator metrics, clearance levels, and performance stats.
+   • 👤 Analyst Profile: A dedicated workspace showing operator metrics, clearance levels, and performance stats.
 
-    • 📱 Responsive UI: A fully adaptive interface with smooth mobile navigation and modern "Cyber-Noir" aesthetics.
+   • 📱 Responsive UI: A fully adaptive interface with smooth mobile navigation and modern "Cyber-Noir" aesthetics.
 
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash1.png)
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash2.png)
