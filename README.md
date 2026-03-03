@@ -42,8 +42,8 @@
 # Navigate to server directory 
 cd server
 
-**Install dependencies**
-pip install fastapi uvicorn scikit-learn pandas
+Install dependencies
+**pip install fastapi uvicorn scikit-learn pandas**
 
 # Run the server
 **uvicorn main:app --reload --port 8002**
