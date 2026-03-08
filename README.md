@@ -1,73 +1,76 @@
-# React + TypeScript + Vite
+# 🛡️CyberGuard SOC 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# CyberGuard SOC is a modern Security Operations Center (SOC) dashboard that integrates real-time data visualization and an active incident response module.
 
-Currently, two official plugins are available:
+**🚀Key Features**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    • 📊 Interactive Dashboard: Real-time attack velocity visualization using Recharts.
+    
+    • ⚡ Active Countermeasures: A "Panic Button" system for instant IP blocking and threat neutralization via backend integration.
+  
+    • 🎯 Dynamic Security Score: A real-time system health metric that recalculates based on the quantity and severity of active threats.
 
-## React Compiler
+    • 👤 Analyst Profile: A dedicated workspace showing operator metrics, clearance levels, and performance stats.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+    • 📱 Responsive UI: A fully adaptive interface with smooth mobile navigation and modern "Cyber-Noir" aesthetics.
 
-## Expanding the ESLint configuration
+**🛠 Tech Stack**
+| Layer               | Technology                                   |
+| --------------------| -------------------------------------------- |
+| Frontend            | **React 18, TypeScript, Vite**               |
+| State Management    | **Zustand**                                  |
+| Backend             | **Python 3.10+, FastAPI, Uvicorn**           |
+| Machine Learning    | **Scikit-Learn (Random Forest Classifier)**  |
+| UI & Icons          | **Tailwind CSS / CSS Modules, Lucide React** |
+| Charts              | **Recharts**                                 |
+| Navigation          | **React Router Dom v6**                      |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**🗺 Roadmap**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+        [ ] Persistent storage integration (PostgreSQL / MongoDB).
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+        [ ] Real-time alert system using WebSockets.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+        [ ] Anomaly detection for unusual network traffic patterns.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+        [ ] Automated incident report generation (PDF/CSV).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# 1.Backend
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# ⚙️Installation & Setup
+
+# Navigate to server directory 
+cd server
+
+Install dependencies
+**pip install fastapi uvicorn scikit-learn pandas**
+
+# Run the server
+**uvicorn main:app --reload --port 8002**
+
+# 2.FrontEnd
+
+Navigate to client directory
+**- cd client**
+
+Install dependencies
+**- npm install** 
+
+Start the development server
+**- npm run dev**
+
+![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash1.png)
+![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash2.png)
+![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash3.png)
+![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash4.png)
+![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/5.png)
+![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/incidents.png)
+![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/devices.png)
+![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/incidents.png)
+![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/incidents_1.png)
+![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/incidents_2.png)
+![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/policies.png)
+![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/profile.png)
+![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/setting_%20appearance.png)
+![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/setting_%20notifications.png)
+![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/setting_security.png)
