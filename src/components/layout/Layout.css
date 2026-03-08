@@ -220,6 +220,8 @@
     border-radius: 12px;
     background: rgba(59, 130, 246, 0.08);
     border: 1px solid rgbargba(59, 130, 246, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .icon-btn{
