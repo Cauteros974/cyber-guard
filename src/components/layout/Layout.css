@@ -254,6 +254,7 @@
     font-size: 14px;
     font-weight: 600;
     color: var(--text-primary #e5e7eb);
+    letter-spacing: 0.3px;
 }
 
 .icon-btn{
