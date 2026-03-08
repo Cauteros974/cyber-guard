@@ -231,6 +231,15 @@
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
 }
 
+.user-avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    display: flex;
+    align-items: center;
+}
+
 .icon-btn{
     width: 28px;
     color: var(--accent);
