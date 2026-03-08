@@ -243,6 +243,13 @@
     flex-shrink: 0;
 }
 
+.user-info{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
 .icon-btn{
     width: 28px;
     color: var(--accent);
