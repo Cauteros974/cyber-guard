@@ -257,6 +257,11 @@
     letter-spacing: 0.3px;
 }
 
+.user-role{
+    font-size: 12px;
+    font-weight: 500;
+}
+
 .icon-btn{
     width: 28px;
     color: var(--accent);
