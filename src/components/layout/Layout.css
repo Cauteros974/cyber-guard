@@ -207,7 +207,16 @@
 }
   
 /* User Info */
+.user-profile-link{
+    text-decoration: none;
+    color: inherit;
+}
 
+.user-profile{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
 .icon-btn{
     width: 28px;
