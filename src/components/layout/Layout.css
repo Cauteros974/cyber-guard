@@ -224,6 +224,12 @@
     cursor: pointer;
 }
 
+.user-profile:hover{
+    background: rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.4);
+    transform: translateY(-2px);
+}
+
 .icon-btn{
     width: 28px;
     color: var(--accent);
