@@ -250,6 +250,12 @@
     flex: 1;
 }
 
+.user-name{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary #e5e7eb);
+}
+
 .icon-btn{
     width: 28px;
     color: var(--accent);
