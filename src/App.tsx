@@ -12,6 +12,10 @@ import { SettingPage } from './features/setttings/SettingsPage';
 import { ProfilePage } from './features/dashboard/components/ProfilePage';
 import './index.css';
 
+interface SherlockScannerProps {
+  onAnalyze: () => void;
+}
+
 export const SherlockScanner = ({ onAnalyze }) => {
   const [isScanning, setIsScanning] = useState(false);
   const [progress, setProgress] = useState(0);
