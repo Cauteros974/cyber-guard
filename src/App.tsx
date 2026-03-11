@@ -72,6 +72,12 @@ function App() {
                 <span>{status}</span>
                 <span>{progress}%</span>
               </div>
+              <div className="progress-bar-container">
+                <div
+                  className="progress-bar-fill" 
+                  style={{ width: `${progress}%` }}
+                ></div>
+              </div>
             </div>
           )}
         </div>
