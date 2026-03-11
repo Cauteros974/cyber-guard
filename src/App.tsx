@@ -22,6 +22,20 @@ export const SherlockScanner = ({ onAnalyze }) => {
     { threshold: 50, text: "Looking for matches in the breakdown database..." },
     { threshold: 80, text: "Calculating the cost of spare parts...." },
   ];
+
+  const startScan = () => {
+    setIsScanning(true);
+    setProgress(0);
+
+    const interval = setInterval(() => {
+      setProgress((prev) => {
+        if(prev >= 100) {
+          clearInterval(interval);
+          return 100;
+        }
+      })
+    })
+  }
 }
 
 function App() {
