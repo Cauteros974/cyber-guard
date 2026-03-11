@@ -83,53 +83,21 @@ function App() {
   const [appLoading, setAppLoading] = useState(true);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', savedTheme);
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    document.documentElement.setAttribute("data-theme", savedTheme);
 
     const timer = setTimeout(() => setAppLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
-  
 
   if (appLoading) {
-    return (
-      <>
-        <div className="scanner-container">
-          {!isScanning ? (
-            <button className="scan-button" onClick={startScan}>
-              <div className="button-content">
-                <span className="icon">📷</span>
-                <span>Start diagnostics</span>
-              </div>
-            </button>
-          ) ; (
-            <div className="progress-section">
-              <div className="progress-levev">
-                <span>{status}</span>
-                <span>{progress}%</span>
-              </div>
-              <div className="progress-bar-container">
-                <div
-                  className="progress-bar-fill" 
-                  style={{ width: `${progress}%` }}
-                ></div>
-              </div>
-              {progress === 100 && (
-                <button className="view-result-btn" onClick={onAnalyze}>
-                  View report
-                </button>
-              )}
-            </div>
-          )}
-        </div>
-      </>
-      
-    );
+    return <SherlockScanner onAnalyze={() => setAppLoading(false)} />;
   }
-  
+
   return (
-    <>
+    <Router>
       <Toaster theme="dark" position="top-right" richColors closeButton />
+
       <MainLayout>
         <Routes>
           <Route path="/" element={<DashboardPage />} />
@@ -138,12 +106,13 @@ function App() {
           <Route path="/devices" element={<DevicesPage />} />
           <Route path="/policies" element={<PoliciesPage />} />
           <Route path="/settings" element={<SettingPage />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
           <Route path="/profile" element={<ProfilePage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </MainLayout>
-    </>
+    </Router>
   );
 }
+
 
 export default App;
