@@ -78,6 +78,11 @@ function App() {
                   style={{ width: `${progress}%` }}
                 ></div>
               </div>
+              {progress === 100 && (
+                <button className="view-result-btn" onClick={onAnalyze}>
+                  View report
+                </button>
+              )}
             </div>
           )}
         </div>
