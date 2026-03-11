@@ -79,3 +79,7 @@
 .activity-row:not(.header):hover {
     background: rgba(30, 41, 59, 0.4);
 }
+
+.activity-title {
+    font-weight: 500;
+}
