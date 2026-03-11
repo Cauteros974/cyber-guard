@@ -59,6 +59,14 @@ export const DashboardPage = () => {
               <span>Time</span>
               <span>Host</span>
             </div>
+
+            {[1,2,3,4].map((_, i) => (
+              <div key={i} className="activity-row">
+                <span className="activity-tittle">System Update Applied</span>
+                <span className="activity-time">2 mins ago</span>
+                <span className="activity-host">WS-OFFICE-09</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
