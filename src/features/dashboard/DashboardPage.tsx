@@ -51,6 +51,10 @@ export const DashboardPage = () => {
               <span>Water filter (Geyser)</span>
               <span className="status-badge warning">Replacement in 5 days</span>
             </div>
+            <div className="inventory-item">
+              <span>E27 LED Bulbs</span>
+              <span className="status-badge ok">In stock: 4 pcs.</span>
+            </div>
           </div>
         </div>
       </div>
