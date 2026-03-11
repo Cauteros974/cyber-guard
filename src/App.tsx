@@ -15,12 +15,12 @@ import './index.css';
 export const SherlockScanner = ({ onAnalyze }) => {
   const [isScanning, setIsScanning] = useState(false);
   const [progress, setProgress] = useState(0);
-  const [status, setStatus ] = useState('');
+  const [status, setStatus] = useState("");
 
   const stages = [
     { threshold: 20, text: "Analyzing pixels..." },
     { threshold: 50, text: "Looking for matches in the breakdown database..." },
-    { threshold: 80, text: "Calculating the cost of spare parts...." },
+    { threshold: 80, text: "Calculating the cost of spare parts..." },
   ];
 
   const startScan = () => {
@@ -29,17 +29,20 @@ export const SherlockScanner = ({ onAnalyze }) => {
 
     const interval = setInterval(() => {
       setProgress((prev) => {
-        if(prev >= 100) {
+        if (prev >= 100) {
           clearInterval(interval);
           return 100;
         }
+
         const next = prev + 1;
-        const currentStage = stages.find(s => next <= s.threshold);
-        if(currentStage) setStatus(currentStage.text);
+        const currentStage = stages.find((s) => next <= s.threshold);
+
+        if (currentStage) setStatus(currentStage.text);
+
         return next;
       });
     }, 50);
-  }
+  };
 }
 
 function App() {
