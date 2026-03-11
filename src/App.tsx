@@ -33,6 +33,8 @@ export const SherlockScanner = ({ onAnalyze }) => {
           clearInterval(interval);
           return 100;
         }
+        const next = prev + 1;
+        const currentStage = stages.find(s => next <= s.threshold)
       })
     })
   }
