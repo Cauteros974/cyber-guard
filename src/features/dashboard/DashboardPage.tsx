@@ -1,4 +1,4 @@
-import { ShieldAlert, Zap, Monitor, ShieldCheck, Package, ThermometerSun, Droplets } from "lucide-react";
+import { ShieldAlert, Zap, Monitor, ShieldCheck, Package, ThermometerSun, Droplets, Droplet } from "lucide-react";
 import { StatCard } from "./components/StatCard";
 import { ActivityChart } from "./components/ActivityChart";
 import { AttackMap } from "./components/AttackMap";
@@ -58,6 +58,20 @@ export const DashboardPage = () => {
             <div className="intentory-item">
               <span>Batteries (smoke detectors)</span>
               <span className="status-badge critical">Buy!</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="climate-panel">
+          <h3>Status of zones</h3>
+          <div className="zone-grid">
+            <div className="zone-card">
+              <ThermometerSun size={18} />
+              <p>Living room: 22°C</p>
+            </div>
+            <div className="zone-card alert">
+              <Droplets size={18} />
+              <p>Basement: Humidity 80%</p>
             </div>
           </div>
         </div>
