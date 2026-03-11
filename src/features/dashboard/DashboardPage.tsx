@@ -1,4 +1,4 @@
-import { ShieldAlert, Zap, Monitor, ShieldCheck } from "lucide-react";
+import { ShieldAlert, Zap, Monitor, ShieldCheck, Package, ThermometerSun, Droplets } from "lucide-react";
 import { StatCard } from "./components/StatCard";
 import { ActivityChart } from "./components/ActivityChart";
 import { AttackMap } from "./components/AttackMap";
@@ -41,6 +41,18 @@ export const DashboardPage = () => {
         <ActivityChart />
         <AttackMap />
         <Grid />
+      </div>
+      
+      <div className="dashboard-middle-grid">
+        <div className="inventory-panel">
+          <h3>Supplies and consumables</h3>
+          <div className="inventory-list">
+            <div className="inventory-item">
+              <span>Water filter (Geyser)</span>
+              <span className="status-badge warning">Replacement in 5 days</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="dashboard-bottom">
