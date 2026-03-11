@@ -55,6 +55,10 @@ export const DashboardPage = () => {
               <span>E27 LED Bulbs</span>
               <span className="status-badge ok">In stock: 4 pcs.</span>
             </div>
+            <div className="intentory-item">
+              <span>Batteries (smoke detectors)</span>
+              <span className="status-badge critical">Buy!</span>
+            </div>
           </div>
         </div>
       </div>
