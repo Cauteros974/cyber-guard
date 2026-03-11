@@ -16,7 +16,7 @@ interface SherlockScannerProps {
   onAnalyze: () => void;
 }
 
-export const SherlockScanner = ({ onAnalyze }) => {
+export const SherlockScanner = ({ onAnalyze }: SherlockScannerProps) => {
   const [isScanning, setIsScanning] = useState(false);
   const [progress, setProgress] = useState(0);
   const [status, setStatus] = useState("");
@@ -99,7 +99,7 @@ function App() {
   }
 
   return (
-    <Router>
+    <>
       <Toaster theme="dark" position="top-right" richColors closeButton />
 
       <MainLayout>
@@ -114,7 +114,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </MainLayout>
-    </Router>
+    </>
   );
 }
 
