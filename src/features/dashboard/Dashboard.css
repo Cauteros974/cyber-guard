@@ -122,3 +122,11 @@
     border-radius: 16px;
     padding: 20px;
 }
+
+.inventory-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.9rem;
+}
