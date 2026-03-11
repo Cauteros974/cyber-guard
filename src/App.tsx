@@ -12,6 +12,12 @@ import { SettingPage } from './features/setttings/SettingsPage';
 import { ProfilePage } from './features/dashboard/components/ProfilePage';
 import './index.css';
 
+export const SherlockScanner = ({ onAnalyze }) => {
+  const [isScanning, setIsScanning] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [status, setStatus ] = useState('');
+}
+
 function App() {
   useAttackSimulator();
   const [appLoading, setAppLoading] = useState(true);
