@@ -43,6 +43,39 @@ export const SherlockScanner = ({ onAnalyze }) => {
       });
     }, 50);
   };
+
+  return (
+    <div className="scanner-container">
+      {!isScanning ? (
+        <button className="scan-button" onClick={startScan}>
+          <div className="button-content">
+            <span className="icon">📷</span>
+            <span>Start diagnostics</span>
+          </div>
+        </button>
+      ) : (
+        <div className="progress-section">
+          <div className="progress-level">
+            <span>{status}</span>
+            <span>{progress}%</span>
+          </div>
+
+          <div className="progress-bar-container">
+            <div
+              className="progress-bar-fill"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+
+          {progress === 100 && (
+            <button className="view-result-btn" onClick={onAnalyze}>
+              View report
+            </button>
+          )}
+        </div>
+      )}
+    </div>
+  );
 }
 
 function App() {
