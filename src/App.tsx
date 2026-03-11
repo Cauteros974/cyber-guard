@@ -37,8 +37,8 @@ export const SherlockScanner = ({ onAnalyze }) => {
         const currentStage = stages.find(s => next <= s.threshold);
         if(currentStage) setStatus(currentStage.text);
         return next;
-      })
-    })
+      });
+    }, 50);
   }
 }
 
@@ -58,11 +58,22 @@ function App() {
   if (appLoading) {
     return (
       <>
-        <div className="initial-loader">
-          <div className="loader-content">
-            <h2>CyberGuard <span className="blink">...</span></h2>
-            <p>Initializing security modules...</p>
-          </div>
+        <div className="scanner-container">
+          {!isScanning ? (
+            <button className="scan-button" onClick={startScan}>
+              <div className="button-content">
+                <span className="icon">📷</span>
+                <span>Start diagnostics</span>
+              </div>
+            </button>
+          ) ; (
+            <div className="progress-section">
+              <div className="progress-levev">
+                <span>{status}</span>
+                <span>{progress}%</span>
+              </div>
+            </div>
+          )}
         </div>
       </>
       
