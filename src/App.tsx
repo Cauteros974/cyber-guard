@@ -16,6 +16,12 @@ export const SherlockScanner = ({ onAnalyze }) => {
   const [isScanning, setIsScanning] = useState(false);
   const [progress, setProgress] = useState(0);
   const [status, setStatus ] = useState('');
+
+  const stages = [
+    { threshold: 20, text: "Analyzing pixels..." },
+    { threshold: 50, text: "Looking for matches in the breakdown database..." },
+    { threshold: 80, text: "Calculating the cost of spare parts...." },
+  ];
 }
 
 function App() {
