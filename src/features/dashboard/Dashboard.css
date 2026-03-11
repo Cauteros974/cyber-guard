@@ -134,5 +134,7 @@
 .stat-badge{
     padding: 2px 8px;
     border-radius: 4px;
-    font-size: 0.55rem;
+    font-size: 0.75rem;
 }
+
+.status-badge.critical { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
