@@ -1,10 +1,14 @@
 import React, {useState} from "react";
 import { ShieldCheck, Zap, Droplets, Flame, HardHat, Info, ChevronRight } from "lucide-react";
+import { useIncidentStore } from "../../../store/useIncidentStore";
 import './Rules.css';
 
 
 export const RulesPage = () => {
     const [activeCategory, setActiveCategory] = useState<Category>("safety");
+    const [selectedRule, setSelectedRule] = useState(null);
+    const [isApplying, setIsApplying] = useState(false);
+    const [appliedSuccess, setAppliedSuccess] = useState(false);
 
     type Category = keyof typeof rulesData;
     
