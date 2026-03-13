@@ -155,6 +155,16 @@ export const RulesPage = () => {
                                         <h4>Protocol description</h4>
                                         <p>{selectedRule.fullText}</p>
                                     </section>
+
+                                    <section className="checklist-section">
+                                        <h4>Checklist</h4>
+
+                                        {selectedRule.checklist?.map((item, idx) => (
+                                            <div key={idx} className="check-itm">
+                                                <span>{item}</span>
+                                            </div>
+                                        ))}
+                                    </section>
                                 </>
                             )}
                         </div>
