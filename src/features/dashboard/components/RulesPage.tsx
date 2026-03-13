@@ -1,7 +1,15 @@
 import React, {useState} from "react";
-import { ShieldCheck, Zap, Droplets, Flame, HardHat, Info, ChevronRight } from "lucide-react";
+import { ShieldCheck, Zap, Droplets, Flame, HardHat, Info, ChevronRight, type LucideIcon} from "lucide-react";
 import { useIncidentStore } from "../../../store/useIncidentStore";
 import './Rules.css';
+
+type Rule = {
+    id: number
+    title: string
+    desc: string
+    level: string
+    
+}
 
 
 export const RulesPage = () => {
@@ -57,7 +65,7 @@ export const RulesPage = () => {
                     <p className="page-description">Regulations, standards and protocols for actions in emergency situations.</p>
                 </div>
             </header>
-
+            
             <div className="rules-layout">
                 <div className="rules-sidebar">
                     {(Object.keys(rulesData) as (keyof typeof rulesData)[]).map(key => (
