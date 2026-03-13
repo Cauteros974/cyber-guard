@@ -1,6 +1,23 @@
 import React, {useState} from "react";
-import { ShieldCheck, Zap, Droplets, Flame, HardHat, Info, ChevronRight } from "lucide-react";
+import { ShieldCheck, Zap, Droplets, Flame, HardHat, Info, ChevronRight, type LucideIcon } from "lucide-react";
 import './Rules.css';
+
+type RuleLevel = "Critical" | "Important" | "Standard";
+
+interface Rule {
+  id: number;
+  title: string;
+  desc: string;
+  level: RuleLevel;
+  icon: LucideIcon;
+}
+
+interface RuleCategory {
+  title: string;
+  icon: LucideIcon;
+  rules: Rule[];
+}
+
 
 export const RulesPage = () => {
     const [activeCategory, setActiveCategory] = useState<Category>("safety");

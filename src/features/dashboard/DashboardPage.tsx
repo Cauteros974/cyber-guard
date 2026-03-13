@@ -41,7 +41,7 @@ export const DashboardPage = () => {
       <div className="activity-panel">
         <h3>Important protocols</h3>
         <div className="activity-list">
-          <div className="rule-shortcut" onClick={() => RulesPage}>
+          <div className="rule-shortcut" onClick={() => {/* переход на вкладку */}}>
             <Zap size={16} color="#f59e0b" />
             <span>Electrical safety (SOP-1)</span>
           </div>

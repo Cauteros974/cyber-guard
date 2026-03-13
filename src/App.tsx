@@ -2,6 +2,7 @@ import { Routes, Route, Navigate, BrowserRouter as Router } from 'react-router-d
 import { Toaster } from 'sonner';
 import { useState, useEffect } from 'react';
 import { MainLayout } from './components/layout/MainLayout';
+
 import { DashboardPage } from './features/dashboard/DashboardPage';
 import { IncidentsPage } from './features/incidents/IncidentsPage';
 import { IncidentDetailsPage } from './features/incidents/IncidentDetailsPage';
