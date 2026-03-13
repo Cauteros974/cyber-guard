@@ -20,6 +20,12 @@ export const RulesPage = () => {
             setAppliedSuccess(true);
 
             console.log(`Protocol ${rule.title} applied in the system`);
+
+            setTimeout(() => {
+                setAppliedSuccess(false);
+                setSelectedRule(null);
+            }, 2000);
+
         }, 1500);
     };
 
