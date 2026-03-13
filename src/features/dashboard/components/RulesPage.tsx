@@ -57,6 +57,11 @@ export const RulesPage = () => {
                                     {React.createElement(rule.icon, {size: 14, className: "rule-icon"})}
                                     <span className="rule-budge">{rule.level}</span>
                                 </div>
+                                <h3>{rule.title}</h3>
+                                <p>{rule.desc}</p>
+                                <button className="rule-more">
+                                    Read more <ChevronRight size={14} />
+                                </button>
                             </div>
                         ))}
                     </div>
