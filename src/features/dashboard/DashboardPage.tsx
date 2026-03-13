@@ -49,10 +49,11 @@ export const DashboardPage = () => {
           <span>Electrical safety (SOP-1)</span>
         </div>
 
-          <div className="rule-shortcut">
-            <Droplet size={16} color="#3b82f6" />
-            <span>Shutting off risers (SOP-2)</span>
-          </div>
+        <div className="rule-shortcut" onClick={() => navigate("/rules")}>
+          <Droplet size={16} color="#3b82f6" />
+          <span>Shutting off risers (SOP-2)</span>
+        </div>
+
         </div>
       </div>
 
