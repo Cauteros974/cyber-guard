@@ -3,7 +3,7 @@ import { ShieldCheck, Zap, Droplets, Flame, HardHat, Info, ChevronRight } from "
 import './Rules.css';
 
 export const RulesPage = () => {
-    const [activeCategory, setActiveCategory ] = useState('safety');
+    const [activeCategory, setActiveCategory] = useState<Category>("safety");
 
     type Category = keyof typeof rulesData;
     
