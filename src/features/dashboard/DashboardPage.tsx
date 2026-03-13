@@ -3,6 +3,7 @@ import { StatCard } from "./components/StatCard";
 import { ActivityChart } from "./components/ActivityChart";
 import { AttackMap } from "./components/AttackMap";
 import { Grid } from "./components/Grid";
+import { RulesPage } from "./components/RulesPage";
 import { TimeframeFilter } from "./components/TimeframeFilter";
 import { useIncidentStore } from "../../store/useIncidentStore";
 import './Dashboard.css';
@@ -35,6 +36,15 @@ export const DashboardPage = () => {
         <StatCard title="Critical Threats" value={baseData.critical.toLocaleString()} icon={Zap} />
         <StatCard title="Devices Online" value="1,240" icon={Monitor} />
         <StatCard title="Policy Compliance" value="98.2%" icon={ShieldCheck} />
+      </div>
+
+      <div className="activity-panel">
+        <h3>Important protocols</h3>
+        <div className="activity-list">
+          <div className="rule-shortcut" onClick={() => RulesPage}>
+            <Zap size={16} color="#f59e0b" />
+          </div>
+        </div>
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginTop: '24px'}}>
