@@ -106,6 +106,13 @@ export const RulesPage = () => {
                     </div>
                 </div>
             </div>
+
+            {selectedRule && (
+                <div
+                className="modal-overlay"
+                onClick={() => !isApplying && setSelectedRule(null)}
+              >
+            )}
         </div>
     )
 }
