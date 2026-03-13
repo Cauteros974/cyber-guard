@@ -49,3 +49,18 @@
 .rule-card.critical { border-left: 4px solid #ef4444; }
 .rule-card.important { border-left: 4px solid #f59e0b; }
 .rule-card.standard { border-left: 4px solid #3b82f6; }
+
+.rule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.rule-badge {
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+}
