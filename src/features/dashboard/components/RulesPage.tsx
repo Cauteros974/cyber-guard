@@ -41,7 +41,8 @@ export const RulesPage = () => {
                         className={`category-btn ${activeCategory === key ? 'active' : ''}`}
                         onClick={() => setActiveCategory(key)}
                     >
-
+                        
+                        <span>{rulesData[key].title}</span>
                     </button>
                 </div>
             </div>
