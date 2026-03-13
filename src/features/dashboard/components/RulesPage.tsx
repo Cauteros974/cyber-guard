@@ -33,6 +33,18 @@ export const RulesPage = () => {
                     <p className="page-description">Regulations, standards and protocols for actions in emergency situations.</p>
                 </div>
             </header>
+
+            <div className="rules-layout">
+                <div className="rules-sidebar">
+                    <button
+                        key={key}
+                        className={`category-btn ${activeCategory === key ? 'active' : ''}`}
+                        onClick={() => setActiveCategory(key)}
+                    >
+
+                    </button>
+                </div>
+            </div>
         </div>
     )
 }
