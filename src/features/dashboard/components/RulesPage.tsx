@@ -20,8 +20,19 @@ export const RulesPage = () => {
             icon: Info,
             rules: [
                 { id: 4, title: "Wire Color Coding", desc: "Blue — neutral, Brown/White — live, Yellow-green — ground.", level: "Standard", icon: Zap },
-{ id: 5, title: "Sewer Slopes", desc: "For 50mm pipes, the standard slope is 3cm per linear meter.", level: "Standard", icon: Droplets }
+                { id: 5, title: "Sewer Slopes", desc: "For 50mm pipes, the standard slope is 3cm per linear meter.", level: "Standard", icon: Droplets }
             ]
         }
-    }
+    };
+
+    return(
+        <div className="dashboard-container">
+            <header className="dashboard-header">
+                <div>
+                    <h1 className="page-title">Knowledge Base</h1>
+                    <p className="page-description">Regulations, standards and protocols for actions in emergency situations.</p>
+                </div>
+            </header>
+        </div>
+    )
 }
