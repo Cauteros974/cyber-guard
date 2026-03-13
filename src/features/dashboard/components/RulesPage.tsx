@@ -12,6 +12,14 @@ export const RulesPage = () => {
 
     type Category = keyof typeof rulesData;
     
+    const handleApplyProtocol = (rule) => {
+        setIsApplying(true);
+
+        setTimeout(() => {
+            setIsApplying(false);
+            setAppliedSuccess(true);
+        }
+    }
 
     const rulesData = {
         safety: {
