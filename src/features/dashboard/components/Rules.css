@@ -64,3 +64,16 @@
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.1);
 }
+
+.rule-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #f8fafc;
+}
+
+.rule-card p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
