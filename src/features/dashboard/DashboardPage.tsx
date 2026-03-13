@@ -43,6 +43,11 @@ export const DashboardPage = () => {
         <div className="activity-list">
           <div className="rule-shortcut" onClick={() => RulesPage}>
             <Zap size={16} color="#f59e0b" />
+            <span>Electrical safety (SOP-1)</span>
+          </div>
+          <div className="rule-shortcut">
+            <Droplet size={16} color="#3b82f6" />
+            <span>Shutting off risers (SOP-2)</span>
           </div>
         </div>
       </div>
