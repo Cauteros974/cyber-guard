@@ -135,6 +135,15 @@ export const RulesPage = () => {
                                 </span>
                             </div>
                         </div>
+
+                        <div className="modal-body">
+                            {appliedSuccess ? (
+                                <div className="success-state">
+                                    <h3>Protocol Activated</h3>
+                                    <p>Event added to security log</p>
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
             )}
