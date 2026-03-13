@@ -95,7 +95,10 @@ export const RulesPage = () => {
                                 </div>
                                 <h3>{rule.title}</h3>
                                 <p>{rule.desc}</p>
-                                <button className="rule-more">
+                                <button 
+                                    className="rule-more"
+                                    onClick={() => setSelectedRule(rule)}
+                                >
                                     Read more <ChevronRight size={14} />
                                 </button>
                             </div>
