@@ -8,13 +8,15 @@ type Rule = {
     title: string
     desc: string
     level: string
-    
+    icon: LucideIcon
+    fullText?: string
+    checklist?: string[]
 }
 
 
 export const RulesPage = () => {
     const [activeCategory, setActiveCategory] = useState<Category>("safety");
-    const [selectedRule, setSelectedRule] = useState(null);
+    const [selectedRule, setSelectedRule] = useState<Rule | null>(null);
     const [isApplying, setIsApplying] = useState(false);
     const [appliedSuccess, setAppliedSuccess] = useState(false);
 
