@@ -18,8 +18,10 @@ export const RulesPage = () => {
         setTimeout(() => {
             setIsApplying(false);
             setAppliedSuccess(true);
-        }
-    }
+
+            console.log(`Protocol ${rule.title} applied in the system`);
+        }, 1500);
+    };
 
     const rulesData = {
         safety: {
