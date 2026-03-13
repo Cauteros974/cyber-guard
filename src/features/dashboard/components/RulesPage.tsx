@@ -36,14 +36,17 @@ export const RulesPage = () => {
 
             <div className="rules-layout">
                 <div className="rules-sidebar">
-                    <button
-                        key={key}
-                        className={`category-btn ${activeCategory === key ? 'active' : ''}`}
-                        onClick={() => setActiveCategory(key)}
-                    >
-                        {React.createElement(rulesData[key].icon, { size: 18 })}
-                        <span>{rulesData[key].title}</span>
-                    </button>
+                    {Object.keys(rulesData).map(key => (
+                        <button
+                            key={key}
+                            className={`category-btn ${activeCategory === key ? 'active' : ''}`}
+                            onClick={() => setActiveCategory(key)}
+                        >
+                            {React.createElement(rulesData[key].icon, { size: 18 })}
+                            <span>{rulesData[key].title}</span>
+                        </button>
+                    ))}
+                    
                 </div>
             </div>
         </div>
