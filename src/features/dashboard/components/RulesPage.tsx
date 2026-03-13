@@ -122,6 +122,19 @@ export const RulesPage = () => {
                             X
                           </button>
                         )}
+
+                        <div className="modal-header">
+                            <div className={`icon-box ${selectedRule.level.toLowerCase()}`}>
+                                {React.createElement(selectedRule.icon, {size: 32})}
+                            </div>
+
+                            <div>
+                                <h2>{selectedRule.title}</h2>
+                                <span className={`status-tag ${selectedRule.level.toLowerCase()}`}>
+                                    {selectedRule.level}
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             )}
