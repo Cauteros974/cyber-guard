@@ -5,6 +5,9 @@ import './Rules.css';
 export const RulesPage = () => {
     const [activeCategory, setActiveCategory ] = useState('safety');
 
+    type Category = keyof typeof rulesData;
+    
+
     const rulesData = {
         safety: {
             title: "Security Protocols",
@@ -52,7 +55,7 @@ export const RulesPage = () => {
                 <div className="rules-content">
                     <div className="rules-grid">
                         {rulesData[activeCategory].rules.map(rule => (
-                            const Icon = rule.icon;
+                            
                             
                             <div key={rule.id} className={`rule-card ${rule.level.toLowerCase()}`}>
                                 <div className="rule-header">
