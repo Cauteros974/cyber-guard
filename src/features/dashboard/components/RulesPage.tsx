@@ -50,7 +50,16 @@ export const RulesPage = () => {
 
                 {/*Rules List*/}
                 <div className="rules-content">
-                    
+                    <div className="rules-grid">
+                        {rulesData[activeCategory].rules.map(rule => (
+                            <div key={rule.id} className={`rule-card ${rule.level.toLowerCase()}`}>
+                                <div className="rule-header">
+                                    {React.createElement(rule.icon, {size: 14, className: "rule-icon"})}
+                                    <span className="rule-budge">{rule.level}</span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
