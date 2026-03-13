@@ -77,3 +77,15 @@
   line-height: 1.5;
   margin-bottom: 15px;
 }
+
+.rule-more {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 0;
+}
