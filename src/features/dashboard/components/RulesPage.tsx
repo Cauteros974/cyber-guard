@@ -14,6 +14,14 @@ export const RulesPage = () => {
                 { id: 2, title: "Gas Leak", desc: "If you smell gas: Do not turn on the lights, open the windows, turn off the gas valve, and leave the room.", level: "Critical", icon: Flame },
                 { id: 3, title: "Protective Equipment", desc: "Wear gloves when working with chemicals and goggles when drilling into walls.", level: "Important", icon: HardHat }
             ]
+        },
+        standads: {
+            title: "Technical Standards",
+            icon: Info,
+            rules: [
+                { id: 4, title: "Wire Color Coding", desc: "Blue — neutral, Brown/White — live, Yellow-green — ground.", level: "Standard", icon: Zap },
+{ id: 5, title: "Sewer Slopes", desc: "For 50mm pipes, the standard slope is 3cm per linear meter.", level: "Standard", icon: Droplets }
+            ]
         }
     }
 }
