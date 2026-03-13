@@ -41,7 +41,7 @@ export const RulesPage = () => {
                         className={`category-btn ${activeCategory === key ? 'active' : ''}`}
                         onClick={() => setActiveCategory(key)}
                     >
-                        
+                        {React.createElement(rulesData[key].icon, { size: 18 })}
                         <span>{rulesData[key].title}</span>
                     </button>
                 </div>
