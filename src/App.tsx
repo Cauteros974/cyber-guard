@@ -2,7 +2,7 @@ import { Routes, Route, Navigate, BrowserRouter as Router } from 'react-router-d
 import { Toaster } from 'sonner';
 import { useState, useEffect } from 'react';
 import { MainLayout } from './components/layout/MainLayout';
-
+import { RulesPage } from './features/dashboard/components/RulesPage';
 import { DashboardPage } from './features/dashboard/DashboardPage';
 import { IncidentsPage } from './features/incidents/IncidentsPage';
 import { IncidentDetailsPage } from './features/incidents/IncidentDetailsPage';
@@ -113,6 +113,7 @@ function App() {
           <Route path="/settings" element={<SettingPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="/rules" element={<RulesPage />} />
         </Routes>
       </MainLayout>
     </>

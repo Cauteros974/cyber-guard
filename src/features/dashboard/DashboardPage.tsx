@@ -4,7 +4,6 @@ import { StatCard } from "./components/StatCard";
 import { ActivityChart } from "./components/ActivityChart";
 import { AttackMap } from "./components/AttackMap";
 import { Grid } from "./components/Grid";
-import { RulesPage } from "./components/RulesPage";
 import { TimeframeFilter } from "./components/TimeframeFilter";
 import { useIncidentStore } from "../../store/useIncidentStore";
 import './Dashboard.css';
