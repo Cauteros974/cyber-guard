@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { ShieldAlert, Zap, Monitor, ShieldCheck, Package, ThermometerSun, Droplets, Droplet } from "lucide-react";
 import { StatCard } from "./components/StatCard";
 import { ActivityChart } from "./components/ActivityChart";
@@ -11,6 +12,8 @@ import './Dashboard.css';
 
 export const DashboardPage = () => {
   const selectedTimeframe = useIncidentStore(state => state.selectedTimeframe);
+
+  const navigate = useNavigate();
   
   const multiplier = selectedTimeframe === 'today' ? 0.5 : selectedTimeframe === '30d' ? 4 : 1;
   const baseData = {
@@ -41,7 +44,7 @@ export const DashboardPage = () => {
       <div className="activity-panel">
         <h3>Important protocols</h3>
         <div className="activity-list">
-          <div className="rule-shortcut" onClick={() => {/* переход на вкладку */}}>
+        <div className="rule-shortcut" onClick={() => navigate("/rules")}>
             <Zap size={16} color="#f59e0b" />
             <span>Electrical safety (SOP-1)</span>
           </div>
@@ -70,7 +73,7 @@ export const DashboardPage = () => {
               <span>E27 LED Bulbs</span>
               <span className="status-badge ok">In stock: 4 pcs.</span>
             </div>
-            <div className="intentory-item">
+            <div className="inventory-item">
               <span>Batteries (smoke detectors)</span>
               <span className="status-badge critical">Buy!</span>
             </div>
