@@ -141,7 +141,21 @@ export const RulesPage = () => {
                                 <div className="success-state">
                                     <h3>Protocol Activated</h3>
                                     <p>Event added to security log</p>
-                                </div>
+                                </div> 
+                            ) : (
+                                <>
+                                    <section className="info-section">
+                                        <h3>Protocol Activated</h3>
+                                        <p>Event added to security log</p>
+                                    </section>
+                                </>
+                            ) : (
+                                <>
+                                    <section className="info-section">
+                                        <h4>Protocol description</h4>
+                                        <p>{selectedRule.fullText}</p>
+                                    </section>
+                                </>
                             )}
                         </div>
                     </div>
