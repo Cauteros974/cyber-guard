@@ -45,3 +45,7 @@
     position: relative;
     overflow: hidden;
 }
+
+.rule-card.critical { border-left: 4px solid #ef4444; }
+.rule-card.important { border-left: 4px solid #f59e0b; }
+.rule-card.standard { border-left: 4px solid #3b82f6; }
