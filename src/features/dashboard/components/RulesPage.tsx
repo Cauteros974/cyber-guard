@@ -36,7 +36,7 @@ export const RulesPage = () => {
 
             <div className="rules-layout">
                 <div className="rules-sidebar">
-                    {Object.keys(rulesData).map(key => (
+                    {(Object.keys(rulesData) as (keyof typeof rulesData)[]).map(key => (
                         <button
                             key={key}
                             className={`category-btn ${activeCategory === key ? 'active' : ''}`}
@@ -46,6 +46,10 @@ export const RulesPage = () => {
                             <span>{rulesData[key].title}</span>
                         </button>
                     ))}
+                </div>
+
+                {/*Rules List*/}
+                <div className="rules-content">
                     
                 </div>
             </div>
