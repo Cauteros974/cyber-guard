@@ -30,7 +30,7 @@ export const DashboardPage = () => {
         <TimeframeFilter />
       </header>
 
-      {/* Stats? cards */}
+      {/* Stats cards */}
       <div className="stats-grid">
         <StatCard title="Active Incidents" value={baseData.total.toLocaleString()} icon={ShieldAlert} />
         <StatCard title="Critical Threats" value={baseData.critical.toLocaleString()} icon={Zap} />
