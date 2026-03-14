@@ -175,6 +175,14 @@ export const RulesPage = () => {
                                 >
                                     Cancel
                                 </button>
+
+                                <button
+                                    className="btn-apply"
+                                    onClick={() => handleApplyProtocol(selectedRule)}
+                                    disabled={isApplying}
+                                >
+                                    {isApplying ? "Sync..." : "Apply Protocol"}
+                                </button>
                             </div>
                         )}
                     </div>
