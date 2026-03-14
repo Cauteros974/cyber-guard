@@ -155,6 +155,18 @@
     margin-top: 10px;
 }
 
+
+
+.elec-span{
+    font-size: 17px;
+    padding-left: 14px;
+}
+
+.shut-span{
+    font-size: 17px;
+    padding-left: 14px;
+}
+
 @keyframes pulse{
     0% { opacity: 1; }
     50% { opacity: 0.7; }

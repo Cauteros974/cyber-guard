@@ -22,7 +22,7 @@ export const RulesPage = () => {
 
     type Category = keyof typeof rulesData;
     
-    const handleApplyProtocol = (rule) => {
+    const handleApplyProtocol = (rule: Rule) => {
         setIsApplying(true);
 
         setTimeout(() => {
@@ -113,15 +113,6 @@ export const RulesPage = () => {
                 onClick={() => !isApplying && setSelectedRule(null)}
                 >
                     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-
-                        {!isApplying && (
-                            <button
-                            className="modal-close"
-                            onClick={() => setSelectedRule(null)}
-                          >
-                            X
-                          </button>
-                        )}
 
                         <div className="modal-header">
                             <div className={`icon-box ${selectedRule.level.toLowerCase()}`}>
