@@ -166,6 +166,17 @@ export const RulesPage = () => {
                                 </>
                             )}
                         </div>
+                        {!appliedSuccess && (
+                            <div className="modal-footer">
+                                <button 
+                                    className="btn-secondary"
+                                    onClick={() => setSelectedRule(null)}
+                                    disabled={isApplying}
+                                >
+                                    Cancel
+                                </button>
+                            </div>
+                        )}
                     </div>
                 </div>
             )}
