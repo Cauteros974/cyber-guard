@@ -61,6 +61,7 @@ export const DashboardPage = () => {
         <ActivityChart />
         <AttackMap />
         <Grid />
+        <ProcessMonitor />
       </div>
       
       <div className="dashboard-middle-grid">
