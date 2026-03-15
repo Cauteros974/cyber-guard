@@ -1,5 +1,6 @@
 import React from "react";
 import { Activity, ShieldCheck, ShieldAlert, ShieldQuestion } from "lucide-react";
+import './Dashboard.css';
 
 export const ProcessMonitor = () => {
     const process = [
@@ -16,7 +17,7 @@ export const ProcessMonitor = () => {
                 <h3>LiveGrid Reputation Monitor</h3>
             </div>
             <div className="process-list">
-                {processes.map((proc, i) => (
+                {process.map((proc, i) => (
                     <div key={i} className="process-item">
                         <div className="proc-info">
                             <proc.icon size={16} color={proc.color} />
@@ -32,5 +33,5 @@ export const ProcessMonitor = () => {
                 ))}
             </div>
         </div>
-    )
-}
+    );
+};
