@@ -24,6 +24,9 @@ export const ProcessMonitor = () => {
                         </div>
                         <div className="proc-meta">
                             <span className="trust-score">trust</span>
+                            <div className="trust-bar-bg">
+                                <div className="trust-bar-fill"style={{ width: `${proc.trust}%`, backgroundColor: proc.color }} ></div>
+                            </div>
                         </div>
                     </div>
                 ))}
