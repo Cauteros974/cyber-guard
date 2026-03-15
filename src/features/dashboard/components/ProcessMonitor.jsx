@@ -22,6 +22,9 @@ export const ProcessMonitor = () => {
                             <proc.icon size={16} color={proc.color} />
                             <span className="proc-name">{proc.name}</span>
                         </div>
+                        <div className="proc-meta">
+                            <span className="trust-score">trust</span>
+                        </div>
                     </div>
                 ))}
             </div>
