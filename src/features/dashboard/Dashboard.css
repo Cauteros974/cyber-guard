@@ -205,4 +205,15 @@
     align-items: center;
     padding: 8px 12px;
     background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+}
+
+.process-item:hover{
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.proc-info{
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
