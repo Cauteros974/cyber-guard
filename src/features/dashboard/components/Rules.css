@@ -10,6 +10,9 @@
   flex-direction: column;
   gap: 10px;
 }
+.modal-content{
+  padding-top: 30px;
+}
 
 .category-btn {
   background: rgba(255, 255, 255, 0.05);
