@@ -10,8 +10,13 @@
   flex-direction: column;
   gap: 10px;
 }
+
 .modal-content{
   padding-top: 30px;
+}
+
+.modal-body{
+  overflow-y: visible;
 }
 
 .category-btn {
