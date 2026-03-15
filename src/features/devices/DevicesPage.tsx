@@ -2,8 +2,8 @@ import { Server, Laptop, CheckCircle, AlertCircle, Cpu, MemoryStick } from "luci
 import './DevicesPage.css';
 
 const devices = [
-    {id: 'SRV-01', name: 'Main DB Cluster', type: 'server', status: 'online', cpu: 45, ram: 62},
-    {id: 'SRV-01', name: 'Web Gateway', type: 'server', status: 'online', cpu: 12, ram: 30},
+    { id: 'SRV-01', name: 'Main DB Cluster', type: 'server', status: 'online', cpu: 45, ram: 62},
+    { id: 'SRV-01', name: 'Web Gateway', type: 'server', status: 'online', cpu: 12, ram: 30},
     { id: 'WS-44', name: 'Dev-Workstation', type: 'laptop', status: 'offline', cpu: 0, ram: 0 },
     { id: 'SRV-03', name: 'Backup Storage', type: 'server', status: 'online', cpu: 5, ram: 88 },
     { id: 'WS-22', name: 'Remote-Workstation', type: 'computer', status: 'online', cpu: 60, ram: 64},
