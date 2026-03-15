@@ -9,4 +9,17 @@ export const ProcessMonitor = () => {
         {name: "miner_script.js", trust: 12, status: "Risky", icon: ShieldAlert, color: "#f59e0b"},
     ];
     
+    return(
+        <div className="security-panel">
+            <div className="panel-header">
+                <Activity size={18} />
+                <h3>LiveGrid Reputation Monitor</h3>
+            </div>
+            <div className="process-list">
+                {processes.map((proc, i) => (
+                    <div key={i} className="process-item">
+                ))}
+            </div>
+        </div>
+    )
 }
