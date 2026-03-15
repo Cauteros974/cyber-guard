@@ -42,9 +42,10 @@ export const Header = ({ onMenuClick }: { onMenuClick: () => void }) => {
       </div>
 
       <div className="header-right">
+        <span>
           <Bell size={18} />
           {hasCritical && <span className="notification-badge"></span>}
-
+        </span>
         <Link to="/profile" className="user-profile-link">
           <div className="user-profile">
             <div className="user-text">
