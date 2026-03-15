@@ -217,3 +217,15 @@
     align-items: center;
     gap: 12px;
 }
+
+.proc-name{
+    font-size: 0.9 rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.proc-meta{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100px;
+}
