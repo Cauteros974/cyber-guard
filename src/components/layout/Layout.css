@@ -252,17 +252,18 @@
 
 .user-name{
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--text-primary #e5e7eb);
     letter-spacing: 0.3px;
 }
 
 .user-role{
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     color: #3b82f6;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    padding-left: 10px;
 }
 
 .icon-btn{
