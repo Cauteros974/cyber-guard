@@ -2,7 +2,7 @@ import './AttackMap.css';
 
 const GEO = {
     MY_SERVER: { x: 420, y: 180 },
-    MOSCOW: { x: 480, y: 130 },
+    KYIV: { x: 480, y: 130 },
     BEIJING: { x: 640, y: 170 },
     NY: { x: 240, y: 160 },
     BRAZIL: { x: 290, y: 280 },
@@ -10,7 +10,7 @@ const GEO = {
 };
 
 const activeAttacks = [
-    { id: 1, from: GEO.MOSCOW, to: GEO.MY_SERVER, type: 'critical' },
+    { id: 1, from: GEO.KYIV, to: GEO.MY_SERVER, type: 'critical' },
     { id: 2, from: GEO.BEIJING, to: GEO.MY_SERVER, type: 'critical' },
     { id: 3, from: GEO.BRAZIL, to: GEO.NY, type: 'high' },
     { id: 4, from: GEO.SYDNEY, to: GEO.BEIJING, type: 'medium' },
