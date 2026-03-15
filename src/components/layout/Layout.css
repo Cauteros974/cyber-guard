@@ -316,6 +316,10 @@
     gap: 8px;
 }
 
+.notification-badge{
+    padding-left: 5px;
+}
+
 .form-group input, .form-group select {
     background: var(--bg-color);
     border: 1px solid var(--border-color);
