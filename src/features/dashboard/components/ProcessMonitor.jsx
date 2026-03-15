@@ -18,6 +18,11 @@ export const ProcessMonitor = () => {
             <div className="process-list">
                 {processes.map((proc, i) => (
                     <div key={i} className="process-item">
+                        <div className="proc-info">
+                            <proc.icon size={16} color={proc.color} />
+                            <span className="proc-name">{proc.name}</span>
+                        </div>
+                    </div>
                 ))}
             </div>
         </div>
