@@ -188,7 +188,7 @@ body{
 }
 
 /* Slider position in light theme */
-theme-switch.light .switch-thumb {
+.theme-switch.light .switch-thumb {
     transform: translateX(32px);
     background: #f59e0b;
 }
