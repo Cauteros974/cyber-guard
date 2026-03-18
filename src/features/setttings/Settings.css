@@ -152,6 +152,14 @@ body{
     color: white;
 }
 
+.theme-switch{
+    position: relative;
+    width: 64px;
+    height: 32px;
+    background: #1e293b;
+    
+}
+
 .settings-select{
     background: #0f172a;
     border: 1px solid var(--border-color);
@@ -244,6 +252,8 @@ input:checked + .slider:before { transform: translateX(22px); }
     letter-spacing: 1px;
 }
 
+
+
 @keyframes spin{
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}
@@ -260,4 +270,3 @@ input:checked + .slider:before { transform: translateX(22px); }
         grid-template-columns: 1fr;
     }
 }
-
