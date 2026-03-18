@@ -24,9 +24,9 @@ export const SettingPage = () => {
         }, 1500);
     };
 
-    useEffect = () => {
+    useEffect( () => {
         document.documentElement.setAttribute('data-theme', theme);
-    }, [theme];
+    }, [theme]);
     
     return(
         <div className="settings-container">
