@@ -87,6 +87,10 @@ export const SettingPage = () => {
                                             <Sun size={14} className="theme-icon" />
                                         )}
                                     </div>
+                                    <div className="switch-track">
+                                        <Sun size={12} className="track-icon sun" />
+                                        <Moon size={12} className="track-icon moon"/>
+                                    </div>
                                 </div>
                             </div>
 
