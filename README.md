@@ -50,9 +50,6 @@ Install dependencies
 
 # 2.FrontEnd
 
-Navigate to client directory
-**- cd client**
-
 Install dependencies
 **- npm install** 
 
