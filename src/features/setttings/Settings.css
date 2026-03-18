@@ -187,9 +187,17 @@ body{
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Slider position in light theme */
 theme-switch.light .switch-thumb {
     transform: translateX(32px);
     background: #f59e0b;
+}
+
+.switch-track {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
 }
 
 .settings-select{
