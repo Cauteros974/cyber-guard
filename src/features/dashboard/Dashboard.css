@@ -149,7 +149,7 @@
 
 .activity-panel{
     width: 50%;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--panel-bg);
     border-radius: 14px;
     overflow: hidden;
     margin-top: 10px;
