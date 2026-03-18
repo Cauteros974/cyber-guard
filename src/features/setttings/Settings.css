@@ -132,7 +132,7 @@ body{
 .theme-toggle-group{
     display: flex;
     background: #0f172a;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
     border: 1px solid var(--border-color);
 }
