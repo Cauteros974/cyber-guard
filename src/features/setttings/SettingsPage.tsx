@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Monitor, Lock, Bell, Eye, Save, ShieldCheck, Globe, Loader2 } from 'lucide-react';
+import { Monitor, Lock, Bell, Eye, Save, ShieldCheck, Globe, Loader2, Moon, Sun } from 'lucide-react';
 import { useIncidentStore } from '../../store/useIncidentStore';
 import toast from 'react-hot-toast';
 import './Settings.css';
@@ -74,20 +74,6 @@ export const SettingPage = () => {
                                 <div className="setting-info">
                                     <h4>Interface Theme</h4>
                                     <p>Select between dark, light or system default theme.</p>
-                                </div>
-                                <div className="theme-toggle-group">
-                                    <button
-                                        className={`theme-btn ${theme === 'dark' ? 'active' : ''}`}
-                                        onClick={() => setTheme('dark')}
-                                    >
-                                        Dark
-                                    </button>
-                                    <button
-                                        className={`theme-btn ${theme === 'light' ? 'active' : ''}`}
-                                        onClick={() => setTheme('light')}
-                                    >
-                                        Light
-                                    </button>
                                 </div>
                             </div>
 
