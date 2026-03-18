@@ -79,8 +79,8 @@ export const SettingPage = () => {
                                         Dark
                                     </button>
                                     <button
-                                        className={`theme-btn ${theme === 'dark' ? 'active' : ''}`}
-                                        onClick={() => setTheme('dark')}
+                                        className={`theme-btn ${theme === 'light' ? 'active' : ''}`}
+                                        onClick={() => setTheme('light')}
                                     >
                                         Light
                                     </button>
