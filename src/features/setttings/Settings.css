@@ -165,6 +165,10 @@ body{
     align-items: center;
 }
 
+[data-theme='light'] .theme-switch {
+    background: #e2e8f0;
+}
+
 .settings-select{
     background: #0f172a;
     border: 1px solid var(--border-color);
