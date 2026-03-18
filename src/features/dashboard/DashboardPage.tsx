@@ -45,12 +45,12 @@ export const DashboardPage = () => {
         <h3 className="imp-h3">Important protocols</h3>
         <div className="activity-list">
         <div className="rule-shortcut" onClick={() => navigate("/rules")}>
-          <Zap size={21} color="#f59e0b" />
+          <Zap size={19} color="#f59e0b" />
           <span className="elec-span">Electrical safety (SOP-1)</span>
         </div>
 
         <div className="rule-shortcut" onClick={() => navigate("/rules")}>
-          <Droplet size={21} color="#3b82f6" />
+          <Droplet size={19} color="#3b82f6" />
           <span className="shut-span">Shutting off risers (SOP-2)</span>
         </div>
 
