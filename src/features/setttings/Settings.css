@@ -169,6 +169,12 @@ body{
     background: #e2e8f0;
 }
 
+.switch-thumb {
+    position: absolute;
+    left: 4px;
+    width: 24px;
+}
+
 .settings-select{
     background: #0f172a;
     border: 1px solid var(--border-color);
