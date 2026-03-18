@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Monitor, Lock, Bell, Eye, Save, ShieldCheck, Globe, Loader2 } from 'lucide-react';
 import { useIncidentStore } from '../../store/useIncidentStore';
 import toast from 'react-hot-toast';
@@ -23,6 +23,10 @@ export const SettingPage = () => {
             })
         }, 1500);
     };
+
+    useEffect = () => {
+        document.documentElement.setAttribute('data-theme', theme);
+    }, [theme];
     
     return(
         <div className="settings-container">
