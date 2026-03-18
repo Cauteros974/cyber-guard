@@ -206,7 +206,7 @@ theme-switch.light .switch-thumb {
 }
 
 .theme-icon{
-    animation: scale 0.2s ease;
+    animation: scaleIn 0.2s ease;
 }
 
 /* Hover effect */
