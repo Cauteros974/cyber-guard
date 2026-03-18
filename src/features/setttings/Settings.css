@@ -165,10 +165,12 @@ body{
     align-items: center;
 }
 
+/* Light theme for the path */
 [data-theme='light'] .theme-switch {
     background: #e2e8f0;
 }
 
+/* Movable circle (slider) */
 .switch-thumb {
     position: absolute;
     left: 4px;
@@ -183,6 +185,11 @@ body{
     z-index: 2;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+theme-switch.light .switch-thumb {
+    transform: translateX(32px);
+    background: #e4bd79;
 }
 
 .settings-select{
