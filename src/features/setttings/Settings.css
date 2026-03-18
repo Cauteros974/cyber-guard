@@ -173,6 +173,10 @@ body{
     position: absolute;
     left: 4px;
     width: 24px;
+    height: 24px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
 }
 
 .settings-select{
