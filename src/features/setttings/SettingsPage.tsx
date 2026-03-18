@@ -80,6 +80,13 @@ export const SettingPage = () => {
                                     className= {`theme-switch ${theme}`}
                                     onClick = {() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                                 >
+                                    <div className="switch-thumb">
+                                        {theme === 'dark' ? (
+                                            <Moon size={14} className="theme-icon" />
+                                        ) : (
+                                            <Sun size={14} className="theme-icon" />
+                                        )}
+                                    </div>
                                 </div>
                             </div>
 
