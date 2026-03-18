@@ -75,6 +75,11 @@ export const SettingPage = () => {
                                     <h4>Interface Theme</h4>
                                     <p>Select between dark, light or system default theme.</p>
                                 </div>
+                                
+                                <div 
+                                    className= {`theme-switch ${theme}`}>
+                                    onClick = {() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                                </div>
                             </div>
 
                             <div className="setting-row">
