@@ -63,7 +63,6 @@ Start the development server
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/Technical-standart.png)
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/security-protocol.png)
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/5.png)
-![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/incidents.png)
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/devices.png)
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/incidents.png)
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/incidents_1.png)
