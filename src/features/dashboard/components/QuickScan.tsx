@@ -7,7 +7,9 @@ interface QuickScanProps{
     onClose: () => void;
 }
 
-export const QuickScan = ({isOpen, onClose}) => {
+type ScanStatus = 'scanning' | 'finished'
+
+export const QuickScan: React.FC<QuickScanProps> = ({isOpen, onClose}) => {
     const [status, setStatus] = useState('scanning'); // 'scanning' | 'finished'
     const [progress, setProgress] = useState(0);
     const [currentFile, setCurrentFile] = useState('');
