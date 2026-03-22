@@ -64,7 +64,11 @@ export const QuickScan = ({isOpen, onClose}) => {
                             <p>Your system is clean and protected</p>
                         </div>
                         
-                        
+                        <div className="progress-container">
+                            <div className="progress-bar-bg">
+                                <div className="progress-bar-fill" style={{ width: `${progress}%` }}></div>
+                            </div>
+                        </div>
 
                         
                     </div>
