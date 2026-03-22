@@ -32,7 +32,11 @@ export const QuickScan = ({isOpen, onClose}) => {
                 const fileIndex = Math.floor((prev / 100) * fakeFiles.lenght);
                 setCurrentFile(fakeFiles[fileIndex]);
 
-                return prev + Math.floor(Math.random() * 5 ) + 1;
+                const diff = prev < 90 
+                    ? Math.floor(Math.random() * 7) + 1 //In start fast load
+                    : Math.floor(Math.random() * 2);    //in the end slow load
+
+                return prev + diff;
                 
             })
         })
