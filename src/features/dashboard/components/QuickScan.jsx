@@ -63,6 +63,13 @@ export const QuickScan = ({isOpen, onClose}) => {
                             <h2>Quick System Scan</h2>
                             <p>Your system is clean and protected</p>
                         </div>
+                        
+                        <div className="report-stats">
+                            <div className="stat-item">
+                                <span className="stat-label">Objects Scanned</span>
+                                <span className="stat-value">1,248</span>
+                            </div>
+                        </div>
                     </div>
                 ) : (
                     <div className="">

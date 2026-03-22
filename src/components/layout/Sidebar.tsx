@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { LayoutDashboard, ShieldAlert, Monitor, ShieldCheck, Settings, Shield, Plus } from 'lucide-react';
 import { NewIncidentModal } from '../../features/incidents/components/NewIncidentModal';
-import { QuickScan } from '../../features/dashboard/components/QuickScan';
 import { useState } from 'react';
 import './Layout.css';
 
