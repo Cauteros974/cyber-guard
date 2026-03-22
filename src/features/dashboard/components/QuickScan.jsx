@@ -37,8 +37,13 @@ export const QuickScan = ({isOpen, onClose}) => {
                     : Math.floor(Math.random() * 2);    //in the end slow load
 
                 return prev + diff;
-                
-            })
-        })
+            });
+        }, 150);
+
+        return () => {
+            clearInterval(interval);
+            setProgress(0);
+            setStatus('scanning');
+        }
     })
 }
