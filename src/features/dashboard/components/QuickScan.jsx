@@ -73,6 +73,10 @@ export const QuickScan = ({isOpen, onClose}) => {
                                 <span className="stat-label">Threats Found</span>
                                 <span className="stat-value clean">0</span>
                             </div>
+                            <div className="stat-item">
+                                <span className="stat-label">Time Elapsed</span>
+                                <span className="stat-value">00:12s</span>
+                            </div>
                         </div>
                     </div>
                 ) : (
