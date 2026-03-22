@@ -12,10 +12,10 @@ export const QuickScan = ({isOpen, onClose}) => {
 
         const interval = setInterval(() => {
             setProgress((prev) => {
-                if(prev){
+                if(prev >= 100){
                     clearInterval(interval);
                     setStatus('finishes');
-                    
+                    return 100;
                 }
             })
         })
