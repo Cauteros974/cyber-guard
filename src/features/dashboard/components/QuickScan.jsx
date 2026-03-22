@@ -7,6 +7,13 @@ export const QuickScan = ({isOpen, onClose}) => {
     const [progress, setProgress] = useState(0);
     const [currentFile, setCurrentFile] = useState('');
 
+    const fakeFile = [
+        'C:/System32/drivers/etc/hosts',
+        'C:/Users/Admin/AppData/Local/Temp/tmp882.sys',
+        'C:/Windows/System32/kernel32.dll',
+        'C:/Program Files/CyberGuard/engine.db',
+    ]
+
     useEffect(() => {
         if(!isOpen) return;
 
@@ -18,7 +25,7 @@ export const QuickScan = ({isOpen, onClose}) => {
                     return 100;
                 }
 
-                const fileIndex = Math.floor(prev / 100) * fakeFiles.lenght;
+                const fileIndex = Math.floor((prev / 100) * fakeFiles.lenght);
             })
         })
     })
