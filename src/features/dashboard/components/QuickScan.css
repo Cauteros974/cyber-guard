@@ -80,3 +80,11 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+/*Report styles*/
+.report-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin: 32px 0;
+}
