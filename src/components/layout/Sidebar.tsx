@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { LayoutDashboard, ShieldAlert, Monitor, ShieldCheck, Settings, Shield, Plus } from 'lucide-react';
 import { NewIncidentModal } from '../../features/incidents/components/NewIncidentModal';
+import { QuickScan } from '../../features/dashboard/components/QuickScan';
 import { useState } from 'react';
 import './Layout.css';
 
@@ -10,6 +11,7 @@ interface SidebarProps {
 
 export const Sidebar = ({ isOpen }: SidebarProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isScanOpen, setIsScanOpen] = useState(false);
   const menuItems = [
     { path: '/', icon: LayoutDashboard, label: 'Dashboard' },
     { path: '/incidents', icon: ShieldAlert, label: 'Incidents' },
