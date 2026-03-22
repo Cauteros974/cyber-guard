@@ -36,14 +36,9 @@ export const QuickScan: React.FC<QuickScanProps> = ({isOpen, onClose}) => {
                     return 100;
                 }
 
-                const fileIndex = Math.floor((prev / 100) * fakeFiles.lenght);
-                setCurrentFile(fakeFiles[fileIndex]);
-
-                const diff = prev < 90 
-                    ? Math.floor(Math.random() * 7) + 1 //In start fast load
-                    : Math.floor(Math.random() * 2);    //in the end slow load
-
-                return prev + diff;
+                const step = Math.floor(Math.random() * 5) + 1;
+                const fileIndex = Math.floor((prev / 100) * fakeFiles.length);
+                
             });
         }, 150);
 
