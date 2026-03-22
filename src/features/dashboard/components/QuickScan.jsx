@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { ShieldCheck, Search, Loader2, FileText, X } from 'lucide-react';
+import { ShieldCheck, Search, Loader2, FileText, AlertTriangle, CheckCircle, X } from 'lucide-react';
 import './QuickScan.css';
 
 export const QuickScan = ({isOpen, onClose}) => {
