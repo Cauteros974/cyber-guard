@@ -17,6 +17,8 @@ export const QuickScan = ({isOpen, onClose}) => {
                     setStatus('finishes');
                     return 100;
                 }
+
+                const fileIndex = Math.floor(prev / 100) * fakeFiles.lenght;
             })
         })
     })
