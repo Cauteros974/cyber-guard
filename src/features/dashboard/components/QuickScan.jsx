@@ -89,6 +89,10 @@ export const QuickScan = ({isOpen, onClose}) => {
                                 <span className="stat-value">00:12s</span>
                             </div>
                         </div>
+
+                        <div className="report-footer">
+                            <button className="btn-primary" onClick={onClose}>Done</button>
+                        </div>
                     </div>
                 )}
             </div>
