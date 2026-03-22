@@ -51,11 +51,11 @@ export const Sidebar = ({ isOpen }: SidebarProps) => {
         <Zap size={16} fill="currentColor" />
         <span>Quick Scan</span>
       </button>
-
-<QuickScan isOpen={isScanOpen} onClose={() => setIsScanOpen(false)} />
-      <div className="sidebar-footer">
-        <div className="version-tag">v.2.4.0-stable</div>
-      </div>
+      
+      <QuickScan isOpen={isScanOpen} onClose={() => setIsScanOpen(false)} />
+        <div className="sidebar-footer">
+          <div className="version-tag">v.2.4.0-stable</div>
+        </div>
     </aside>
 
     <NewIncidentModal 
