@@ -11,3 +11,11 @@
     justify-content: center;
     z-index: 2000;
 }
+
+.scan-modal {
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    width: 480px;
+    padding: 40px;
+    
+}
