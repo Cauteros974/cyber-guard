@@ -53,6 +53,22 @@ export const QuickScan = ({isOpen, onClose}) => {
         <div className="scan-overlay">
             <div className="scan-modal">
                 <button className="close-btn" onClick={onClose}><X size={12} /></button>
+
+                {status === 'scanning' ? (
+                    <div className="scan-process">
+                        <div className="scan-header">
+                            <div className="scan-icon-wrapper">
+                                <Search className="scanning-icon" size={32} />
+                            </div>
+                            <h2>Quick System Scan</h2>
+                            <p>Your system is clean and protected</p>
+                        </div>
+                    </div>
+                ) : (
+                    <div className="">
+
+                    </div>
+                )}
             </div>
         </div>
     )
