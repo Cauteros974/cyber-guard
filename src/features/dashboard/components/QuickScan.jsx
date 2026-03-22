@@ -44,6 +44,16 @@ export const QuickScan = ({isOpen, onClose}) => {
             clearInterval(interval);
             setProgress(0);
             setStatus('scanning');
-        }
-    })
+        };
+    }, [isOpen]);
+
+    if(!isOpen) return null;
+
+    return(
+        <div className="scan-overlay">
+            <div className="scan-modal">
+                <button className="close-btn" onClick={onClose}><X size={12} /></button>
+            </div>
+        </div>
+    )
 }
