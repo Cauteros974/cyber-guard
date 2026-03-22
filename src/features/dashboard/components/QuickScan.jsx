@@ -3,6 +3,19 @@ import { ShieldCheck, Search, Loader2, FileText, AlertTriangle, CheckCircle, X }
 import './QuickScan.css';
 
 export const QuickScan = ({isOpen, onClose}) => {
-    const [status, setStatus] = useState('scanning');
+    const [status, setStatus] = useState('scanning'); // 'scanning' | 'finished'
     const [progress, setProgress] = useState(0);
+    const [currentFile, setCurrentFile] = useState('');
+
+    useEffect(() => {
+        if(!isOpen) return;
+
+        const interval = setInterval(() => {
+            setProgress((prev) => {
+                if(prev){
+                    clearInterval(interval);
+                }
+            })
+        })
+    })
 }
