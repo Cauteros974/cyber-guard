@@ -21,3 +21,13 @@
     position: relative;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+}
