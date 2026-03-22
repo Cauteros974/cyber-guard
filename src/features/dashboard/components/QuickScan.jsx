@@ -7,7 +7,7 @@ export const QuickScan = ({isOpen, onClose}) => {
     const [progress, setProgress] = useState(0);
     const [currentFile, setCurrentFile] = useState('');
 
-    const fakeFile = [
+    const fakeFiles = [
         'C:/System32/drivers/etc/hosts',
         'C:/Users/Admin/AppData/Local/Temp/tmp882.sys',
         'C:/Windows/System32/kernel32.dll',
@@ -30,6 +30,10 @@ export const QuickScan = ({isOpen, onClose}) => {
                 }
 
                 const fileIndex = Math.floor((prev / 100) * fakeFiles.lenght);
+                setCurrentFile(fakeFiles[fileIndex]);
+
+                return prev + Math.floor(Math.random() * 5 ) + 1;
+                
             })
         })
     })
