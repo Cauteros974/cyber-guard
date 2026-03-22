@@ -64,6 +64,17 @@ export const QuickScan = ({isOpen, onClose}) => {
                             <p>Your system is clean and protected</p>
                         </div>
                         
+                        
+
+                        
+                    </div>
+                ) : (
+                    <div className="scan-report animate-fade-in">
+                        <div className="report-header">
+                            <CheckCircle size={48} color="#22c55e" />
+                            <h2>Scan Completed</h2>
+                            <p>Your system is clean and protected.</p>
+                        </div>
                         <div className="report-stats">
                             <div className="stat-item">
                                 <span className="stat-label">Objects Scanned</span>
@@ -77,16 +88,6 @@ export const QuickScan = ({isOpen, onClose}) => {
                                 <span className="stat-label">Time Elapsed</span>
                                 <span className="stat-value">00:12s</span>
                             </div>
-                        </div>
-
-                        
-                    </div>
-                ) : (
-                    <div className="scan-report animate-fade-in">
-                        <div className="report-header">
-                            <CheckCircle size={48} color="#22c55e" />
-                            <h2>Scan Completed</h2>
-                            <p>Your system is clean and protected.</p>
                         </div>
                     </div>
                 )}
