@@ -104,3 +104,12 @@
     text-transform: uppercase;
     margin-bottom: 4px;
 }
+
+.stat-value {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.stat-value.clean {
+    color: #22c55e;
+}
