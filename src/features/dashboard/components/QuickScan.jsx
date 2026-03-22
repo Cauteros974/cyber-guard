@@ -12,6 +12,10 @@ export const QuickScan = ({isOpen, onClose}) => {
         'C:/Users/Admin/AppData/Local/Temp/tmp882.sys',
         'C:/Windows/System32/kernel32.dll',
         'C:/Program Files/CyberGuard/engine.db',
+        'C:/Users/Admin/Documents/passwords.txt.encrypted',
+        'HKEY_LOCAL_MACHINE/Software/Microsoft/Windows/CurrentVersion/Run',
+        'Memory/Processes/svchost.exe',
+        'C:/Windows/Prefetch/CMD.EXE-ACD12.pf'
     ]
 
     useEffect(() => {
