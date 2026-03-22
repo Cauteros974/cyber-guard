@@ -44,7 +44,6 @@ export const Sidebar = ({ isOpen }: SidebarProps) => {
           </NavLink>
         ))}
       </nav>
-
       <div className="sidebar-footer">
         <div className="version-tag">v.2.4.0-stable</div>
       </div>
