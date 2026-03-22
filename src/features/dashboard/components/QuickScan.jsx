@@ -68,7 +68,7 @@ export const QuickScan = ({isOpen, onClose}) => {
                             <div className="progress-bar-bg">
                                 <div className="progress-bar-fill" style={{ width: `${progress}%` }}></div>
                             </div>
-                            <span className="progress-value">{progress}</span>
+                            <span className="progress-value">{progress}%</span>
                         </div>
 
                         
