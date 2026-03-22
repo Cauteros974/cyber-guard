@@ -328,6 +328,12 @@
     color: white;
 }
 
+.btn-quick-scan{
+    color: var(--accent);
+    border-radius: 50px;
+    height: 30px;
+}
+
 @media (max-width: 1024px) {
     .sidebar{
         position: fixed;
