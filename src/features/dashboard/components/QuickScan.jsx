@@ -71,6 +71,11 @@ export const QuickScan = ({isOpen, onClose}) => {
                             <span className="progress-value">{progress}%</span>
                         </div>
 
+                        <div className="file-display">
+                            <FileText size={14} />
+                            <span className="file-path">{currentFile}</span>
+                        </div>
+
                         
                     </div>
                 ) : (
