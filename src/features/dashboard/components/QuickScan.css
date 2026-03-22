@@ -31,3 +31,9 @@
     color: var(--text-muted);
     cursor: pointer;
 }
+
+/*Scanning Animation*/
+.scanning-icon {
+    color: var(--accent);
+    animation: pulseScan 2s infinite ease-in-out;
+}
