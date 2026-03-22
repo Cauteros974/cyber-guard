@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, ShieldAlert, Monitor, ShieldCheck, Settings, Shield, Plus } from 'lucide-react';
+import { LayoutDashboard, ShieldAlert, Monitor, ShieldCheck, Settings, Shield, Plus, Zap } from 'lucide-react';
 import { NewIncidentModal } from '../../features/incidents/components/NewIncidentModal';
+import { QuickScan } from '../../features/dashboard/components/QuickScan';
 import { useState } from 'react';
 import './Layout.css';
 
@@ -45,6 +46,13 @@ export const Sidebar = ({ isOpen }: SidebarProps) => {
           </NavLink>
         ))}
       </nav>
+
+      <button className="btn-quick-scan" onClick={() => setIsScanOpen(true)}>
+        <Zap size={16} fill="currentColor" />
+        <span>Quick Scan</span>
+      </button>
+
+<QuickScan isOpen={isScanOpen} onClose={() => setIsScanOpen(false)} />
       <div className="sidebar-footer">
         <div className="version-tag">v.2.4.0-stable</div>
       </div>
