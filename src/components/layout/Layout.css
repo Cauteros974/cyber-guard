@@ -332,6 +332,7 @@
     color: var(--accent);
     border-radius: 50px;
     height: 30px;
+    background-color: var(--text-primary)
 }
 
 @media (max-width: 1024px) {
