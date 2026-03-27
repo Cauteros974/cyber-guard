@@ -18,5 +18,8 @@ describe ('Incident Store', () => {
     it('should change theme to light', () => {
         const { setTheme } = useIncidentStore.getState();
         setTheme('light');
+        
+        const state = useIncidentStore.getState();
+        expect(state.theme).toBe('light');
     });
 })
