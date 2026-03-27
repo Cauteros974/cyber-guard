@@ -3,6 +3,8 @@ import useIncidentStore from './useIncidentStore';
 import { it } from 'node:test';
 
 describe ('Incident Store', () => {
+
+    //Reset the state before each test
     beforeEach(() => {
         const { setTheme } = useIncidentStore.getState();
         setTheme('dark');
@@ -13,5 +15,8 @@ describe ('Incident Store', () => {
         expect(state.theme).toBe('dark');
     });
 
-
+    it('should change theme to light', () => {
+        const { setTheme } = useIncidentStore.getState();
+        setTheme('light');
+    });
 })
