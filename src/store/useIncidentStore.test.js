@@ -1,5 +1,6 @@
 import { describe, beforeEach, expect } from 'vitest';
 import useIncidentStore from './useIncidentStore';
+import { it } from 'node:test';
 
 describe ('Incident Store', () => {
     beforeEach(() => {
@@ -7,8 +8,10 @@ describe ('Incident Store', () => {
         setTheme('dark');
     });
 
-    if('should initial theme as dark', () => {
+    it('should initial theme as dark', () => {
         const state = useIncidentStore.getState();
         expect(state.theme).toBe('dark');
     });
+
+
 })
