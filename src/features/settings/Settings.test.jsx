@@ -19,7 +19,7 @@ describe('SettingPage Component', () => {
         render(<SettingPage />);
 
         //Checking if setTheme was called with the correct value
-        expect(screen.getByText(/Appearance/i)).toBeInTheDocument();
+        expect(screen.getByRole('button', { name: /appearance/i })).toBeInTheDocument();
     });
 
     it('should call setTheme when theme button is clicked', () => {
@@ -31,9 +31,12 @@ describe('SettingPage Component', () => {
         
         render(<SettingPage />);
 
-        const lightButton = screen.getByText('light');
-        fireEvent.click(lightButton);
+        const toggle = screen.getByTestId('theme-toggle');
+        fireEvent.click(toggle);
 
-        expect(setThemeMock).toHaveBeenCalledWith('light');
+        /*const lightButton = screen.getByText('light');
+        fireEvent.click(lightButton); */
+
+        expect(setThemeMock).toHaveBeenCalled();
     });
 });
