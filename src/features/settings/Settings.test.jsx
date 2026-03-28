@@ -25,6 +25,13 @@ describe('SettingPage Component', () => {
         //Simulate a click
         fireEvent.click(themeSwitch);
 
+        //Checking if setTheme was called with the correct value
         expect(setThemeMock).toHaveBeenCalledWith('light');
+    });
+
+    if('should show success toast when saving settings', async() => {
+        render(<SettingPage />);
+
+        const saveButton = screen.getByText(/Save Changes/i);
     });
 });
