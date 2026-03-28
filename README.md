@@ -58,7 +58,7 @@ Start the development server
 
 # Unit test
 
-# useIncidentStore.test.js
+# useIncidentStore.test.js (Logic of the topic)
     describe ('Incident Store', () => {
     
         beforeEach(() => {
@@ -79,6 +79,38 @@ Start the development server
             expect(state.theme).toBe('light');
         });
     })
+
+# Settings.test.jsx (UI test)
+Сheck that the new theme switcher actually responds to clicks.
+
+    describe('SettingPage Component', () => {
+        it('should render appearance section', () => {
+
+            useIncidentStore.mockReturnValue({
+                theme: 'dark',
+                setTheme: vi.fn(),
+            });
+
+            render(<SettingPage />);
+
+            expect(screen.getByRole('button', { name: /appearance/i })).toBeInTheDocument();
+        });
+
+        it('should call setTheme when theme button is clicked', () => {
+            const setThemeMock = vi.fn();
+            useIncidentStore.mockReturnValue({
+                theme: 'dark',
+                setTheme: setThemeMock,
+            });
+        
+            render(<SettingPage />);
+
+            const toggle = screen.getByTestId('theme-toggle');
+            fireEvent.click(toggle);
+
+            expect(setThemeMock).toHaveBeenCalled();
+        });
+    });
 
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash1.png)
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash2.png)
