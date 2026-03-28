@@ -20,7 +20,7 @@ describe('SettingPage Component', () => {
         render(<SettingPage />);
 
         //Looking for our new switch (theme-switch
-        const themeSwitch = screen.getByText(/Interface Theme/i)
+        const themeSwitch = screen.getByText(/Interface Theme/i).closest('.setting-row').querySelector('.theme-switch');
 
         //Simulate a click
         fireEvent.click(themeSwitch);
