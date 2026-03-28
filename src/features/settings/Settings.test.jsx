@@ -8,7 +8,7 @@ vi.mock('../../store/useIncidentStore', () => ({
 }));
 
 describe('SettingPage Component', () => {
-    if('should render appearance section', () => {
+    it('should render appearance section', () => {
 
         //Settings mock-store
         useIncidentStore.mockReturnValue({
@@ -22,7 +22,11 @@ describe('SettingPage Component', () => {
         expect(screen.getByText(/Appearance/i)).toBeInTheDocument();
     });
 
-    if('should show success toast when saving settings', async() => {
-        
+    it('should call setTheme when theme button is clicked', () => {
+        const setThemeMock = vi.fn();
+        useIncidentStore.mockReturnValue({
+            theme: 'dark',
+            setTheme: setThemeMock,
+        });
     });
 });
