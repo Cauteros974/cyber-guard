@@ -335,6 +335,11 @@
     
 }
 
+.incident{
+    font-size: 15px;
+    padding: 0 2px;
+}
+
 @media (max-width: 1024px) {
     .sidebar{
         position: fixed;
