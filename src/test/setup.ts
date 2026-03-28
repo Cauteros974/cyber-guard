@@ -6,5 +6,6 @@ const localStorage = (() => {
     let store: Record<string, string> = {};
     return(
         getItem: (key: string) => store[key] || null,
+        clear: () => (store = {}; ),
     )
 })
