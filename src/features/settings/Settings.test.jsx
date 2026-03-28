@@ -13,7 +13,12 @@ describe('SettingPage Component', () => {
 
         //Settings mock-store
         useIncidentStore.mockReturnValue({
-            them: 'dark'
-        })
-    })
-})
+            them: 'dark',
+            setTheme: setThemeMock,
+        });
+
+        render(<SettingPage />);
+
+        const themeSwitch = screen.getByText(/Interface Theme/i)
+    });
+});
