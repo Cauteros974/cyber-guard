@@ -28,5 +28,9 @@ describe('SettingPage Component', () => {
             theme: 'dark',
             setTheme: setThemeMock,
         });
+        
+        render(<SettingPage />);
+
+        const lightButton = screen.getByText('light');
     });
 });
