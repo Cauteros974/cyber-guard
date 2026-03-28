@@ -5,4 +5,15 @@ import { useIncidentStore } from '../../store/useIncidentStore';
 
 vi.mock('../../store/useIncidentStore', () => ({
     useIncidentStore: vi.fn(),
-}))
+}));
+
+describe('SettingPage Component', () => {
+    if('should toggle theme when switch is clicked', () => {
+        const setThemeMock = vi.fn();
+
+        //Settings mock-store
+        useIncidentStore.mockReturnValue({
+            them: 'dark'
+        })
+    })
+})
