@@ -33,5 +33,6 @@ describe('SettingPage Component', () => {
         render(<SettingPage />);
 
         const saveButton = screen.getByText(/Save Changes/i);
+        fireEvent.click(saveButton);
     });
 });
