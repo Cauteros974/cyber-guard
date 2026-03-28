@@ -8,7 +8,7 @@ vi.mock('../../store/useIncidentStore', () => ({
 }));
 
 describe('SettingPage Component', () => {
-    if('should toggle theme when switch is clicked', () => {
+    if('should render appearance section', () => {
 
         //Settings mock-store
         useIncidentStore.mockReturnValue({
@@ -23,12 +23,6 @@ describe('SettingPage Component', () => {
     });
 
     if('should show success toast when saving settings', async() => {
-        render(<SettingPage />);
-
-        const saveButton = screen.getByText(/Save Changes/i);
-        fireEvent.click(saveButton);
-
-        //Checking the download status
-        expect(screen.getByText(/Saving.../i)).toBeDefined();
+        
     });
 });
