@@ -57,7 +57,7 @@ Start the development server
 **- npm run dev**
 
 # Unit test
-**Test for useIncidentStore**
+
 # useIncidentStore.test.js
     describe ('Incident Store', () => {
 
