@@ -19,6 +19,6 @@ describe('SettingPage Component', () => {
 
         render(<SettingPage />);
 
-        const themeSwitch = screen.getByText(/Interface Theme/)
+        const themeSwitch = screen.getByText(/Interface Theme/i)
     });
 });
