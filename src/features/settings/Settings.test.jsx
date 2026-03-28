@@ -12,7 +12,7 @@ describe('SettingPage Component', () => {
 
         //Settings mock-store
         useIncidentStore.mockReturnValue({
-            them: 'dark',
+            theme: 'dark',
             setTheme: vi.fn(),
         });
 
