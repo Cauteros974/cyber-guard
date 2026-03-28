@@ -9,7 +9,7 @@ import { IncidentDetailsPage } from './features/incidents/IncidentDetailsPage';
 import { DevicesPage } from './features/devices/DevicesPage';
 import { PoliciesPage } from './features/policies/PoliciesPage';
 import { useAttackSimulator } from './hooks/useAttackSimulator';
-import { SettingPage } from './features/setttings/SettingsPage';
+import { SettingPage } from './features/settings/SettingsPage';
 import { ProfilePage } from './features/dashboard/components/ProfilePage';
 import './index.css';
 
