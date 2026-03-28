@@ -34,5 +34,8 @@ describe('SettingPage Component', () => {
 
         const saveButton = screen.getByText(/Save Changes/i);
         fireEvent.click(saveButton);
+
+        //Checking the download status
+        expect(screen.getByText(/Saving.../i)).toBeDefined();
     });
 });
