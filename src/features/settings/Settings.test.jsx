@@ -24,5 +24,7 @@ describe('SettingPage Component', () => {
 
         //Simulate a click
         fireEvent.click(themeSwitch);
+
+        expect(setThemeMock).toHaveBeenCalledWith('light');
     });
 });
