@@ -29,7 +29,8 @@ export const useIncidentStore = create<IncidentState>((set, get) => ({
   isLoading: false,
   searchQuery: '',
   selectedTimeframe: '7d',
-  theme: (localStorage.getItem('theme') as Theme) || 'dark',
+  theme: (typeof window !== 'undefined' && localStorage.getItem('theme') as Theme) || 'dark',
+  
 
   fetchIncidents: async () => {
     set({ isLoading: true });
