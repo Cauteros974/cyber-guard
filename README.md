@@ -72,3 +72,4 @@ Start the development server
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/setting_%20appearance.png)
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/setting_%20notifications.png)
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/setting_security.png)
+![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/scan.png)
