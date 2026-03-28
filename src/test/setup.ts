@@ -12,3 +12,8 @@ const localStorageMock = (() => {
 })();
 
 Object.defineProperty(window, 'localStorage', {value: localStorageMock});
+
+//Clearing the store before each test (optional)
+beforeEach(() => {
+    window.localStorage.clear();
+});
