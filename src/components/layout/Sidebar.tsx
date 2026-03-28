@@ -30,7 +30,7 @@ export const Sidebar = ({ isOpen }: SidebarProps) => {
       </div>
 
       <button className="btn-create-incident" onClick={() => setIsModalOpen(true)}>
-        <Plus size={18} />
+        <Plus size={16} />
         <span className="incident">New Incident</span>
       </button>
       
