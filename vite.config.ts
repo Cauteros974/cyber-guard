@@ -6,4 +6,9 @@ export default defineConfig({
   plugins: [
     react(),
   ],
-})
+  test: {
+    enviroment: 'jsdom', //for locastorage
+    globals: true,
+    setupFiles: './src/test/setup.ts',
+  },
+});
