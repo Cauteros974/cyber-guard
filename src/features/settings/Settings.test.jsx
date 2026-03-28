@@ -9,12 +9,11 @@ vi.mock('../../store/useIncidentStore', () => ({
 
 describe('SettingPage Component', () => {
     if('should toggle theme when switch is clicked', () => {
-        const setThemeMock = vi.fn();
 
         //Settings mock-store
         useIncidentStore.mockReturnValue({
             them: 'dark',
-            setTheme: setThemeMock,
+            setTheme: vi.fn(),
         });
 
         render(<SettingPage />);
