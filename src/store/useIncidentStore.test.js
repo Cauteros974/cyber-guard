@@ -1,5 +1,5 @@
 import { describe, beforeEach, expect, it } from 'vitest';
-import useIncidentStore from './useIncidentStore';
+import { useIncidentStore } from './useIncidentStore';
 
 
 describe ('Incident Store', () => {
