@@ -9,6 +9,6 @@ export default defineConfig({
   test: {
     enviroment: 'jsdom', //for locastorage
     globals: true,
-    setupFiles: './src/test/setup.ts',
+    setupFiles: './src/test/setup.ts', //File for setting
   },
 });
