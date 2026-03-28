@@ -32,5 +32,8 @@ describe('SettingPage Component', () => {
         render(<SettingPage />);
 
         const lightButton = screen.getByText('light');
+        fireEvent.click(lightButton);
+
+        expect(setThemeMock).toHaveBeenCalledWith('light');
     });
 });
