@@ -56,6 +56,31 @@ Install dependencies
 Start the development server
 **- npm run dev**
 
+# Unit test
+**Test for useIncidentStore**
+# useIncidentStore.test.js
+    describe ('Incident Store', () => {
+
+    //Reset the state before each test
+    beforeEach(() => {
+        const { setTheme } = useIncidentStore.getState();
+        setTheme('dark');
+    });
+
+    it('should initial theme as dark', () => {
+        const state = useIncidentStore.getState();
+        expect(state.theme).toBe('dark');
+    });
+
+    it('should change theme to light', () => {
+        const { setTheme } = useIncidentStore.getState();
+        setTheme('light');
+        
+        const state = useIncidentStore.getState();
+        expect(state.theme).toBe('light');
+    });
+})
+
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash1.png)
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash2.png)
 ![alt text](https://github.com/Cauteros974/cyber-guard/blob/main/public/images/dash3.png)
