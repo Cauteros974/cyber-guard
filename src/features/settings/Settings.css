@@ -85,6 +85,11 @@ body{
     animation: slideUpFade 0.6s ease forwards;
 }
 
+/*Delay for the second section to create a queue effect*/
+.settings-section:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
 .section-header{
     margin-bottom: 20px;
     border-radius: 1px solid var(--border-color);
