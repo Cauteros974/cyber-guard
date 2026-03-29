@@ -88,6 +88,7 @@ body{
 /*Delay for the second section to create a queue effect*/
 .settings-section:nth-child(2) {
     animation-delay: 0.2s;
+    opacity: 0;
 }
 
 .section-header{
