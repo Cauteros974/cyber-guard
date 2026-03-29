@@ -23,12 +23,6 @@ export const SettingPage = () => {
             })
         }, 1500);
     };
-
-    useEffect( () => {
-        document.documentElement.setAttribute('data-theme', theme);
-
-        localStorage.setItem('theme', theme);
-    }, [theme]);
     
     return(
         <div className="settings-container">
