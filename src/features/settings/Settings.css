@@ -66,7 +66,7 @@ body{
 }
   
 .nav-item:hover {
-    background: #1e293b;
+    background: var(--border-color);
     color: var(--accent);
 }
 
@@ -120,7 +120,7 @@ body{
     padding: 5px;
     background:local;
     border: none;
-    color: white;
+    color: var(--text-main);
     border-radius: 8px;
     cursor: pointer;
     text-align: left;
